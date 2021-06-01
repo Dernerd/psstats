@@ -51,7 +51,7 @@ class EnvironmentValidator
 
         if(SettingsServer::isTrackerApiRequest()) {
             // if Piwik is not installed yet, the piwik.php should do nothing and not return an error
-            throw new NotYetInstalledException("As Psstats is not installed yet, the Tracking API cannot proceed and will exit without error.");
+            throw new NotYetInstalledException("Da Psstats noch nicht installiert ist, kann die Tracking-API nicht fortgesetzt werden und wird ohne Fehler beendet.");
         }
 
         if(Common::isPhpCliMode()) {
@@ -80,7 +80,7 @@ class EnvironmentValidator
         if (isset($general['enable_installer'])
             && !$general['enable_installer']
         ) {
-            throw new NotYetInstalledException('Psstats is not set up yet');
+            throw new NotYetInstalledException('Psstats ist noch nicht eingerichtet');
         }
 
         $message = $this->getSpecificMessageWhetherFileExistsOrNot($path);

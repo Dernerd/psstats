@@ -95,20 +95,20 @@ class ArchivePurger
 
         $archiveIds = $this->model->getInvalidatedArchiveIdsSafeToDelete($numericTable);
         if (empty($archiveIds)) {
-            $this->logger->debug("No invalidated archives found in {table} with newer, valid archives.", array('table' => $numericTable));
+            $this->logger->debug("Keine ungültigen Archive in {table} mit neueren, gültigen Archiven gefunden.", array('table' => $numericTable));
             return 0;
         }
 
         $emptyIdArchives = $this->model->getPlaceholderArchiveIds($numericTable);
         $archiveIds = array_merge($archiveIds, $emptyIdArchives);
 
-        $this->logger->info("Found {countArchiveIds} invalidated archives safe to delete in {table}.", array(
+        $this->logger->info("Es wurde festgestellt, dass {countArchiveIds} ungültige Archive in {table} sicher gelöscht werden können.", array(
             'table' => $numericTable, 'countArchiveIds' => count($archiveIds)
         ));
 
         $deletedRowCount = $this->deleteArchiveIds($date, $archiveIds);
 
-        $this->logger->debug("Deleted {count} rows in {table} and its associated blob table.", array(
+        $this->logger->debug("{count} Zeilen in {table} und der zugehörigen Blob-Tabelle gelöscht.", array(
             'table' => $numericTable, 'count' => $deletedRowCount
         ));
 
@@ -131,15 +131,15 @@ class ArchivePurger
         if (!empty($idArchivesToDelete)) {
             $deletedRowCount = $this->deleteArchiveIds($dateStart, $idArchivesToDelete);
 
-            $this->logger->info("Deleted {count} rows in archive tables (numeric + blob) for {date}.", array(
+            $this->logger->info("{count} Zeilen in Archivtabellen (numerisch + Blob) für {date} gelöscht.", array(
                 'count' => $deletedRowCount,
                 'date' => $dateStart
             ));
         } else {
-            $this->logger->debug("No outdated archives found in archive numeric table for {date}.", array('date' => $dateStart));
+            $this->logger->debug("In der numerischen Archivtabelle für {Datum} wurden keine veralteten Archive gefunden.", array('date' => $dateStart));
         }
 
-        $this->logger->debug("Purging temporary archives: done [ purged archives older than {date} in {yearMonth} ] [Deleted IDs count: {deletedIds}]", array(
+        $this->logger->debug("Temporäre Archive bereinigen: erledigt [ Gelöschte Archive älter als {date} in {yearMonth} ] [Gelöschte IDs: {deletedIds}]", array(
             'date' => $purgeArchivesOlderThan,
             'yearMonth' => $dateStart->toString('Y-m'),
             'deletedIds' => count($idArchivesToDelete),
@@ -183,7 +183,7 @@ class ArchivePurger
             $deletedRowCount = $this->deleteArchiveIds($dateStart, $idArchivesToDelete);
 
             $this->logger->info(
-                "Deleted {count} rows in archive tables (numeric + blob) for {reason} for {date}.",
+                "{count} Zeilen in Archivtabellen (numerisch + Blob) aus {reason} für {date} gelöscht.",
                 array(
                     'count' => $deletedRowCount,
                     'date' => $dateStart,
@@ -191,12 +191,12 @@ class ArchivePurger
                 )
             );
 
-            $this->logger->debug("[Deleted IDs count: {deletedIds}]", array(
+            $this->logger->debug("[Gelöschte IDs: {deletedIds}]", array(
                 'deletedIds' => count($idArchivesToDelete),
             ));
         } else {
             $this->logger->debug(
-                "No archives for {reason} found in archive numeric table for {date}.",
+                "Keine Archive für {reason} in numerischer Archivtabelle für {date} gefunden.",
                 array('date' => $dateStart, 'reason' => $reason)
             );
         }
@@ -243,7 +243,7 @@ class ArchivePurger
             $numericTable, $blobTable, Piwik::$idPeriods['range'], $this->purgeCustomRangesOlderThan);
 
         $level = $deletedCount == 0 ? LogLevel::DEBUG : LogLevel::INFO;
-        $this->logger->log($level, "Purged {count} range archive rows from {numericTable} & {blobTable}.", array(
+        $this->logger->log($level, "Bereinigte {count} Bereichsarchivzeilen aus {numericTable} & {blobTable}.", array(
             'count' => $deletedCount,
             'numericTable' => $numericTable,
             'blobTable' => $blobTable

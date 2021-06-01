@@ -52,7 +52,7 @@ class DocumentationGenerator
     {
         list($toc, $str) = $this->generateDocumentation($outputExampleUrls, $prefixUrls = '', $displayTitlesAsAngularDirective = true);
 
-        return "<div piwik-content-block content-title='Quick access to APIs' id='topApiRef' name='topApiRef'>
+        return "<div piwik-content-block content-title='Schneller Zugriff auf APIs' id='topApiRef' name='topApiRef'>
 				$toc</div>
 				$str";
     }
@@ -68,7 +68,7 @@ class DocumentationGenerator
     {
         list($toc, $str) = $this->generateDocumentation($outputExampleUrls, $prefixUrls, $displayTitlesAsAngularDirective = false);
 
-        return "<h2 id='topApiRef' name='topApiRef'>Quick access to APIs</h2>
+        return "<h2 id='topApiRef' name='topApiRef'>Schneller Zugriff auf APIs</h2>
 				$toc
 				$str";
     }
@@ -85,7 +85,7 @@ class DocumentationGenerator
         if($displayTitlesAsAngularDirective) {
             $str .= "<div piwik-content-block content-title='Module " . $moduleName . "'>";
         } else {
-            $str .= "<h2>Module " . $moduleName . "</h2>";
+            $str .= "<h2>Modul " . $moduleName . "</h2>";
         }
         $info['__documentation'] = $this->checkDocumentation($info['__documentation']);
         $str .= "<div class='apiDescription'> " . $info['__documentation'] . " </div>";
@@ -155,7 +155,7 @@ class DocumentationGenerator
                                                                     $lastNUrls
                                                                     ]";
         } else {
-            $str .= " [ No example available ]";
+            $str .= " [ Kein Beispiel verfügbar ]";
         }
         $str .= "</span>";
         return $str;

@@ -79,13 +79,13 @@ abstract class ApiRenderer
 
     public function renderObject($object)
     {
-        $exception = new Exception('The API cannot handle this data structure.');
+        $exception = new Exception('Die API kann diese Datenstruktur nicht verarbeiten.');
         return $this->renderException($exception->getMessage(), $exception);
     }
 
     public function renderResource($resource)
     {
-        $exception = new Exception('The API cannot handle this data structure.');
+        $exception = new Exception('Die API kann diese Datenstruktur nicht verarbeiten.');
         return $this->renderException($exception->getMessage(), $exception);
     }
 

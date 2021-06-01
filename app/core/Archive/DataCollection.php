@@ -270,13 +270,13 @@ class DataCollection
     public function getExpandedDataTable($resultIndices, $idSubTable = null, $depth = null, $addMetadataSubTableId = false)
     {
         if ($this->dataType != 'blob') {
-            throw new Exception("DataCollection: cannot call getExpandedDataTable with "
-                . "{$this->dataType} data types. Only works with blob data.");
+            throw new Exception("DataCollection: getExpandedDataTable kann nicht aufgerufen werden mit "
+                . "{$this->dataType} Datentypen. Funktioniert nur mit Blob-Daten.");
         }
 
         if (count($this->dataNames) !== 1) {
-            throw new Exception("DataCollection: cannot call getExpandedDataTable with "
-                . "more than one record.");
+            throw new Exception("DataCollection: getExpandedDataTable kann nicht aufgerufen werden mit "
+                . "mehr als einen Datensatz.");
         }
 
         $dataTableFactory = new DataTableFactory(

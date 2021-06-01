@@ -44,13 +44,13 @@ class InvalidationResult
     {
         $output = array();
         if ($this->warningDates) {
-            $output[] = 'Warning: the following Dates have not been invalidated, because they are earlier than your Log Deletion limit: ' .
+            $output[] = 'Warnung: Die folgenden Daten wurden nicht ungültig gemacht, da sie vor Deinem Limit für die Protokolllöschung liegen: ' .
                 implode(", ", $this->warningDates) .
-                "\n The last day with logs is " . $this->minimumDateWithLogs . ". " .
-                "\n Please disable 'Delete old Logs' or set it to a higher deletion threshold (eg. 180 days or 365 years).'.";
+                "\n Der letzte Tag mit Protokollen ist " . $this->minimumDateWithLogs . ". " .
+                "\n Bitte deaktiviere 'Alte Logs löschen' oder stelle einen höheren Löschschwellenwert ein (z.B. 180 Tage oder 365 Jahre)..'.";
         }
 
-        $output[] = "Success. The following dates were invalidated successfully: " . implode(", ", $this->processedDates);
+        $output[] = "Erfolg. Die folgenden Daten wurden erfolgreich ungültig gemacht: " . implode(", ", $this->processedDates);
         return $output;
     }
 }

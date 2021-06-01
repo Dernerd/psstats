@@ -134,7 +134,7 @@ class CapabilitiesProvider
         foreach ($capabilities as $capability) {
             $id = $capability->getId();
             if (preg_match('/[^a-zA-Z0-9_-]/', $id)) {
-                throw new \Exception("Capability with invalid ID found: '$id'. Valid characters are 'a-zA-Z0-9_-'.");
+                throw new \Exception("Funktion mit ungültiger ID gefunden: '$id'. Gültige Zeichen sind 'a-zA-Z0-9_-'.");
             }
         }
     }

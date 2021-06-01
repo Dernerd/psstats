@@ -169,7 +169,7 @@ abstract class DataTableManipulator
 
             if (empty($meta)) {
                 throw new Exception(sprintf(
-                    "The DataTable cannot be manipulated: Metadata for report %s.%s could not be found. You can define the metadata in a hook, see example at: https://developer.psstats.org/api-reference/events#apigetreportmetadata",
+                    "Die DataTable kann nicht manipuliert werden: Metadaten für Bericht %s.%s konnten nicht gefunden werden. Du kannst die Metadaten in einem Hook definieren.",
                     $this->apiModule, $this->apiMethod
                 ));
             }

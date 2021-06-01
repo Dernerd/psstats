@@ -149,8 +149,8 @@ class DataTableFactory
     public function useSubtable($idSubtable)
     {
         if (count($this->dataNames) !== 1) {
-            throw new \Exception("DataTableFactory: Getting subtables for multiple records in one"
-                . " archive query is not currently supported.");
+            throw new \Exception("DataTableFactory: Abrufen von Untertabellen für mehrere Datensätze in einer"
+                . " Archivabfrage wird derzeit nicht unterstützt.");
         }
 
         $this->idSubtable = $idSubtable;
@@ -208,7 +208,7 @@ class DataTableFactory
     public function makeMerged($index, $resultIndices)
     {
         if (!$this->isNumericDataType()) {
-            throw new \Exception('This method is supposed to work with non-numeric data types but it is not tested. To use it, remove this exception and write tests to be sure it works.');
+            throw new \Exception('Diese Methode soll mit nicht-numerischen Datentypen funktionieren, wird aber nicht getestet. Um es zu verwenden, entferne diese Ausnahme und schreibe Tests, um sicherzustellen, dass es funktioniert.');
         }
 
         $hasSiteIndex   = isset($resultIndices[self::TABLE_METADATA_SITE_INDEX]);

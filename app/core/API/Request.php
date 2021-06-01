@@ -272,7 +272,7 @@ class Request
                 return $response->getResponse($returnedValue, $module, $method);
             });
         } catch (Exception $e) {
-            StaticContainer::get(LoggerInterface::class)->error('Uncaught exception in API: {exception}', [
+            StaticContainer::get(LoggerInterface::class)->error('Nicht erfasste Ausnahme in API: {exception}', [
                 'exception' => $e,
                 'ignoreInScreenWriter' => true,
             ]);
@@ -526,7 +526,7 @@ class Request
     {
         $a = explode('.', $parameter);
         if (count($a) != 2) {
-            throw new Exception("The method name is invalid. Expected 'module.methodName'");
+            throw new Exception("Der Methodenname ist ungültig. Erwartet 'module.methodName'");
         }
         return $a;
     }

@@ -575,7 +575,7 @@ class Proxy
     private function checkClassIsSingleton($className)
     {
         if (!method_exists($className, "getInstance")) {
-            throw new Exception("$className that provide an API must be Singleton and have a 'public static function getInstance()' method.");
+            throw new Exception("$className die eine API bereitstellen, müssen Singleton sein und eine public static function getInstance()'-Methode haben.");
         }
     }
 }

@@ -159,7 +159,7 @@ class ResponseBuilder
             if ($this->shouldPrintBacktrace) {
                 $message = $e->getMessage() . " in \n " . $e->getFile() . ":" . $e->getLine() . " \n " . $e->getTraceAsString();
             } else {
-                $message = $e->getMessage() . "\n \n --> To temporarily debug this error further, set const PIWIK_PRINT_ERROR_BACKTRACE=true; in index.php";
+                $message = $e->getMessage() . "\n \n --> Um diesen Fehler vorübergehend weiter zu debuggen, setze const PIWIK_PRINT_ERROR_BACKTRACE=true; in index.php";
             }
 
             return new Exception($message);

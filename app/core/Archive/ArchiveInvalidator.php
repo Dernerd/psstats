@@ -556,7 +556,7 @@ class ArchiveInvalidator
                 'segment' => $segment ? $segment->getOriginalString() : null,
             ]));
         } catch (\Throwable $ex) {
-            $this->logger->info("Failed to schedule rearchiving of past reports for $pluginName plugin.");
+            $this->logger->info("Fehler beim Planen der erneuten Archivierung früherer Berichte für das $pluginName Plugin.");
         }
     }
 
@@ -585,7 +585,7 @@ class ArchiveInvalidator
                     !empty($entry['segment']) ? new Segment($entry['segment'], $idSites) : null
                 );
             } catch (\Throwable $ex) {
-                $this->logger->info("Failed to create invalidations for report re-archiving (idSites = {idSites}, pluginName = {pluginName}, report = {report}, startDate = {startDateTs}): {ex}", [
+                $this->logger->info("Fehler beim Erstellen von Ungültigmachungen für die erneute Archivierung von Berichten (idSites = {idSites}, pluginName = {pluginName}, report = {report}, startDate = {startDateTs}): {ex}", [
                     'idSites' => json_encode($entry['idSites']),
                     'pluginName' => $entry['pluginName'],
                     'report' => $entry['report'],
@@ -612,7 +612,7 @@ class ArchiveInvalidator
             $this->removeInvalidationsFromDistributedList($idSites, $pluginName, $report);
         } catch (\Throwable $ex) {
             $logger = StaticContainer::get(LoggerInterface::class);
-            $logger->debug("Failed to remove invalidations the for $pluginName plugin.");
+            $logger->debug("Ungültigkeitserklärungen für das $pluginName Plugin konnten nicht entfernt werden.");
         }
     }
 
