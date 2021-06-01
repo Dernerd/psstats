@@ -213,7 +213,7 @@ class Rules
                 return false;
             }
 
-            Log::debug("Not forcing archiving for range period.");
+            Log::debug("Archivierung für Bereichszeitraum nicht erzwingen.");
             $processOneReportOnly = false;
 
         } else {
@@ -229,7 +229,7 @@ class Rules
                 && !self::isBrowserArchivingAvailableForSegments()
                 && !SettingsServer::isArchivePhpTriggered() // Only applies when we are not running core:archive command
             ) {
-                Log::debug("Archiving is disabled because of config setting browser_archiving_disabled_enforce=1");
+                Log::debug("Die Archivierung ist aufgrund der Konfigurationseinstellung browser_archiving_disabled_enforce=1 deaktiviert");
                 return true;
             }
 
@@ -273,7 +273,7 @@ class Rules
     public static function setBrowserTriggerArchiving($enabled)
     {
         if (!is_bool($enabled)) {
-            throw new Exception('Browser trigger archiving must be set to true or false.');
+            throw new Exception('Die Browser-Trigger-Archivierung muss auf "true" oder "false" gesetzt werden..');
         }
         Option::set(self::OPTION_BROWSER_TRIGGER_ARCHIVING, (int)$enabled, $autoLoad = true);
         Cache::clearCacheGeneral();

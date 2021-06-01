@@ -69,7 +69,7 @@ class OnDiskUIAsset extends UIAsset
     public function validateFile()
     {
         if (!$this->assetIsReadable()) {
-            throw new Exception("The ui asset with 'href' = " . $this->getAbsoluteLocation() . " is not readable");
+            throw new Exception("Das ui-Asset mit 'href' = " . $this->getAbsoluteLocation() . " ist nicht lesbar");
         }
     }
 
@@ -79,7 +79,7 @@ class OnDiskUIAsset extends UIAsset
             try {
                 Filesystem::remove($this->getAbsoluteLocation());
             } catch (Exception $e) {
-                throw new Exception("Unable to delete merged file : " . $this->getAbsoluteLocation() . ". Please delete the file and refresh");
+                throw new Exception("Zusammengeführte Datei kann nicht gelöscht werden : " . $this->getAbsoluteLocation() . ". Bitte die Datei löschen und aktualisieren");
             }
 
             // try to remove compressed version of the merged file.
@@ -99,7 +99,7 @@ class OnDiskUIAsset extends UIAsset
         $newFile = @fopen($this->getAbsoluteLocation(), "w");
 
         if (!$newFile) {
-            throw new Exception("The file : " . $newFile . " can not be opened in write mode.");
+            throw new Exception("Die Datei : " . $newFile . " kann nicht im Schreibmodus geöffnet werden.");
         }
 
         fwrite($newFile, $content);

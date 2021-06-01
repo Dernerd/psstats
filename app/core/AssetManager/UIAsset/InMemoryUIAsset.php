@@ -22,17 +22,17 @@ class InMemoryUIAsset extends UIAsset
 
     public function getAbsoluteLocation()
     {
-        throw new Exception('invalid operation');
+        throw new Exception('ungültige Operation');
     }
 
     public function getRelativeLocation()
     {
-        throw new Exception('invalid operation');
+        throw new Exception('ungültige Operation');
     }
 
     public function getBaseDirectory()
     {
-        throw new Exception('invalid operation');
+        throw new Exception('ungültige Operation');
     }
 
     public function delete()
@@ -57,6 +57,6 @@ class InMemoryUIAsset extends UIAsset
 
     public function getModificationDate()
     {
-        throw new Exception('invalid operation');
+        throw new Exception('ungültige Operation');
     }
 }

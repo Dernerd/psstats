@@ -114,7 +114,7 @@ class StylesheetUIAssetMerger extends UIAssetMerger
     private static function getLessCompiler()
     {
         if (!class_exists("lessc")) {
-            throw new Exception("Less was added to composer during 2.0. ==> Execute this command to update composer packages: \$ php composer.phar install");
+            throw new Exception("In der Version 2.0 wurde Composer weniger hinzugefügt. ==> Führe diesen Befehl aus, um Composer-Pakete zu aktualisieren: \$ php composer.phar install");
         }
         $less = new lessc();
         return $less;
@@ -129,7 +129,7 @@ class StylesheetUIAssetMerger extends UIAssetMerger
     protected function getPreamble()
     {
         return $this->getCacheBusterValue() . "\n"
-        . "/* Psstats CSS file is compiled with Less. You may be interested in writing a custom Theme for Psstats! */\n";
+        . "/* Die CSS-Datei von Psstats wird mit Less kompiliert. Du könntest daran interessiert sein, ein benutzerdefiniertes Theme für Psstats zu schreiben! */\n";
     }
 
     protected function postEvent(&$mergedContent)

@@ -40,7 +40,7 @@ class DevelopmentManageTestFiles extends ConsoleCommand
         if ($operation == 'copy') {
             $this->copy($input, $output);
         } else {
-            throw new \Exception("Invalid operation '$operation'.");
+            throw new \Exception("ungültige Operation '$operation'.");
         }
     }
 

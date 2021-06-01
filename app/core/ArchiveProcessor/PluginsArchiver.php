@@ -122,7 +122,7 @@ class PluginsArchiver
      */
     public function callAggregateAllPlugins($visits, $visitsConverted, $forceArchivingWithoutVisits = false)
     {
-        Log::debug("PluginsArchiver::%s: Initializing archiving process for all plugins [visits = %s, visits converted = %s]",
+        Log::debug("PluginsArchiver::%s: Initialisierung des Archivierungsprozesses für alle Plugins [Besuche = %s, Besuche konvertiert = %s]",
             __FUNCTION__, $visits, $visitsConverted);
 
         /** @var Logger $performanceLogger */
@@ -140,12 +140,12 @@ class PluginsArchiver
             $archiver = $this->makeNewArchiverObject($archiverClass, $pluginName);
 
             if (!$archiver->isEnabled()) {
-                Log::debug("PluginsArchiver::%s: Skipping archiving for plugin '%s' (disabled).", __FUNCTION__, $pluginName);
+                Log::debug("PluginsArchiver::%s: Archivierung für Plugin '%s' überspringen (deaktiviert).", __FUNCTION__, $pluginName);
                 continue;
             }
 
             if (!$forceArchivingWithoutVisits && !$visits && !$archiver->shouldRunEvenWhenNoVisits()) {
-                Log::debug("PluginsArchiver::%s: Skipping archiving for plugin '%s' (no visits).", __FUNCTION__, $pluginName);
+                Log::debug("PluginsArchiver::%s: Archivierung für Plugin '%s' überspringen (keine Besuche).", __FUNCTION__, $pluginName);
                 continue;
             }
 
@@ -159,11 +159,11 @@ class PluginsArchiver
 
                     $timer = new Timer();
                     if ($this->shouldAggregateFromRawData) {
-                        Log::debug("PluginsArchiver::%s: Archiving $period reports for plugin '%s' from raw data.", __FUNCTION__, $pluginName);
+                        Log::debug("PluginsArchiver::%s: Archivieren von $period Berichten für das Plugin '%s' aus Rohdaten.", __FUNCTION__, $pluginName);
 
                         $archiver->callAggregateDayReport();
                     } else {
-                        Log::debug("PluginsArchiver::%s: Archiving $period reports for plugin '%s' using reports for smaller periods.", __FUNCTION__, $pluginName);
+                        Log::debug("PluginsArchiver::%s: Archivieren von $period Berichten für das Plugin '%s' mit Berichten für kleinere Zeiträume.", __FUNCTION__, $pluginName);
 
                         $archiver->callAggregateMultipleReports();
                     }
@@ -172,20 +172,20 @@ class PluginsArchiver
 
                     $performanceLogger->logMeasurement('plugin', $pluginName, $this->params, $timer);
 
-                    Log::debug("PluginsArchiver::%s: %s while archiving %s reports for plugin '%s' %s.",
+                    Log::debug("PluginsArchiver::%s: %s beim Archivieren von %s Berichten für das Plugin '%s' %s.",
                         __FUNCTION__,
                         $timer->getMemoryLeak(),
                         $this->params->getPeriod()->getLabel(),
                         $pluginName,
-                        $this->params->getSegment() ? sprintf("(for segment = '%s')", $this->params->getSegment()->getString()) : ''
+                        $this->params->getSegment() ? sprintf("(für Segment = '%s')", $this->params->getSegment()->getString()) : ''
                     );
                 } catch (Exception $e) {
-                    throw new PluginsArchiverException($e->getMessage() . " - in plugin $pluginName.", $e->getCode(), $e);
+                    throw new PluginsArchiverException($e->getMessage() . " - in Plugin $pluginName.", $e->getCode(), $e);
                 } finally {
                     self::$currentPluginBeingArchived = null;
                 }
             } else {
-                Log::debug("PluginsArchiver::%s: Not archiving reports for plugin '%s'.", __FUNCTION__, $pluginName);
+                Log::debug("PluginsArchiver::%s: Berichte für Plugin '%s' werden nicht archiviert.", __FUNCTION__, $pluginName);
             }
 
             Manager::getInstance()->deleteAll($latestUsedTableId);

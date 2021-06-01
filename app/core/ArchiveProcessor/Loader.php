@@ -151,7 +151,7 @@ class Loader
         }
 
         if (SettingsServer::isArchivePhpTriggered()) {
-            $this->logger->info("initiating archiving via core:archive for " . $this->params);
+            $this->logger->info("Einleiten der Archivierung über core:archive für " . $this->params);
         }
 
         /** @var ArchivingStatus $archivingStatus */
@@ -266,7 +266,7 @@ class Loader
     public function loadExistingArchiveIdFromDb()
     {
         if ($this->isArchivingForcedToTrigger()) {
-            $this->logger->debug("Archiving forced to trigger for {$this->params}.");
+            $this->logger->debug("Archivierung zum Auslösen gezwungen für {$this->params}.");
 
             // return no usable archive found, and no existing archive. this will skip invalidation, which should
             // be fine since we just force archiving.
