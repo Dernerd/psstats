@@ -238,7 +238,7 @@ class IniFileChain
                     $contents = $reader->readFile($file);
                     $this->settingsChain[$file] = $this->decodeValues($contents);
                 } catch (IniReadingException $ex) {
-                    throw new IniReadingException('Unable to read INI file {' . $file . '}: ' . $ex->getMessage() . "\n Your host may have disabled parse_ini_file().");
+                    throw new IniReadingException('INI-Datei kann nicht gelesen werden {' . $file . '}: ' . $ex->getMessage() . "\n Dein Host hat möglicherweise parse_ini_file() deaktiviert.");
                 }
 
                 $this->decodeValues($this->settingsChain[$file]);

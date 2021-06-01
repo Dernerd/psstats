@@ -683,7 +683,7 @@ abstract class Dimension
         // parse plugin name & dimension name
         $regex = "/Piwik\\\\Plugins\\\\([^\\\\]+)\\\\" . self::COMPONENT_SUBNAMESPACE . "\\\\([^\\\\]+)/";
         if (!preg_match($regex, $className, $matches)) {
-            throw new Exception("'$className' is located in the wrong directory.");
+            throw new Exception("'$className' befindet sich im falschen Verzeichnis.");
         }
 
         $pluginName = $matches[1];

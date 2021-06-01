@@ -31,7 +31,7 @@ class Discriminator
     public function __construct($table, $discriminatorColumn = null, $discriminatorValue = null)
     {
         if (empty($discriminatorColumn) || !isset($discriminatorValue)) {
-            throw new Exception('Both discriminatorColumn and discriminatorValue need to be defined');
+            throw new Exception('Sowohl discriminatorColumn als auch discriminatorValue müssen definiert werden');
         }
         $this->table = $table;
         $this->discriminatorColumn = $discriminatorColumn;
@@ -39,7 +39,7 @@ class Discriminator
 
         if (!$this->isValid()) {
             // if adding another string value please post an event instead to get a list of allowed values
-            throw new Exception('$discriminatorValue needs to be null or numeric');
+            throw new Exception('$discriminatorValue muss null oder numerisch sein');
         }
     }
 

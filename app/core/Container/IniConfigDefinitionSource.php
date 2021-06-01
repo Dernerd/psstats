@@ -101,7 +101,7 @@ class IniConfigDefinitionSource implements DefinitionSource
 
         if (!is_array($section)) {
             throw new InvalidDefinition(sprintf(
-                'IniFileChain did not return an array for the config section %s',
+                'IniFileChain hat kein Array für den Konfigurationsabschnitt %s zurückgegeben',
                 $section
             ));
         }

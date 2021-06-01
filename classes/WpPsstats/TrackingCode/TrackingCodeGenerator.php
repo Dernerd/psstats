@@ -64,7 +64,7 @@ class TrackingCodeGenerator {
 		$idsite  = Site::get_psstats_site_id( $blod_id );
 
 		if ( ! $idsite ) {
-			$this->logger->log( 'Not found related idSite for blog ' . get_current_blog_id() );
+			$this->logger->log( 'Keine verwandte idSite für Blog gefunden ' . get_current_blog_id() );
 
 			return false;
 		}
@@ -79,7 +79,7 @@ class TrackingCodeGenerator {
 			$result = $this->prepare_tagmanger_code( $this->settings, $this->logger );
 		} else {
 			$result = array(
-				'script'   => '<!-- Psstats: no supported track_mode selected -->',
+				'script'   => '<!-- Psstats: kein unterstützter track_mode ausgewählt -->',
 				'noscript' => '',
 			);
 		}
@@ -126,7 +126,7 @@ class TrackingCodeGenerator {
 	 * @return array
 	 */
 	private function prepare_tagmanger_code( $settings, $logger ) {
-		$logger->log( 'Apply tag manager code changes:' );
+		$logger->log( 'Änderungen am Tag-Manager-Code anwenden:' );
 
 		$container_ids = $settings->get_global_option( 'tagmanger_container_ids' );
 
@@ -162,7 +162,7 @@ g.type=\'text/javascript\'; g.async=true; g.src="' . $container_url . '"; s.pare
 			}
 		}
 
-		$code .= '<!-- End Psstats Tag Manager -->';
+		$code .= '<!-- Ende Psstats Tag Manager -->';
 
 		return array(
 			'script'   => $code,
@@ -215,7 +215,7 @@ g.type=\'text/javascript\'; g.async=true; g.src="' . $container_url . '"; s.pare
 	public function prepare_tracking_code( $idsite ) {
 		$logLevel = is_admin() ? Logger::LEVEL_DEBUG : Logger::LEVEL_INFO;
 
-		$this->logger->log( 'Apply tracking code changes:', $logLevel );
+		$this->logger->log( 'Übernehmen von Tracking-Code-Änderungen:', $logLevel );
 
 		$tracker_endpoint = $this->get_tracker_endpoint();
 		$js_endpoint      = $this->get_js_endpoint();
@@ -298,7 +298,7 @@ g.type=\'text/javascript\'; g.async=true; g.src="' . $container_url . '"; s.pare
 		$script .= "var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 g.type='text/javascript'; g.async=true; g.src=" . wp_json_encode( $js_endpoint ) . '; s.parentNode.insertBefore(g,s);';
 		$script .= '</script>';
-		$script .= '<!-- End Psstats Code -->';
+		$script .= '<!-- Ende Psstats Code -->';
 
 		$no_script = '<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="' . esc_url( $tracker_endpoint ) . '?idsite=' . intval( $idsite ) . '&amp;rec=1" style="border:0;" alt="" /></p></noscript>';
 
@@ -315,7 +315,7 @@ g.type='text/javascript'; g.async=true; g.src=" . wp_json_encode( $js_endpoint )
 	}
 
 	private function apply_404_changes( $tracking_code ) {
-		$this->logger->log( 'Apply 404 tracking changes. Blog ID: ' . get_current_blog_id() );
+		$this->logger->log( 'Wende 404-Tracking-Änderungen an. Blog-ID: ' . get_current_blog_id() );
 
 		$code          = "_paq.push(['setDocumentTitle', '404/URL = '+String(document.location.pathname+document.location.search).replace(/\//g,'%2f') + '/From = ' + String(document.referrer).replace(/\//g,'%2f')]);";
 		$tracking_code = str_replace( self::TRACKPAGEVIEW, $code . self::TRACKPAGEVIEW, $tracking_code );
@@ -325,7 +325,7 @@ g.type='text/javascript'; g.async=true; g.src=" . wp_json_encode( $js_endpoint )
 	}
 
 	private function apply_search_changes( $tracking_code ) {
-		$this->logger->log( 'Apply search tracking changes. Blog ID: ' . get_current_blog_id() );
+		$this->logger->log( 'Wende Änderungen an der Suchverfolgung an Blog-ID: ' . get_current_blog_id() );
 		$obj_search       = new \WP_Query( 's=' . get_search_query() . '&showposts=-1' );
 		$int_result_count = $obj_search->post_count;
 

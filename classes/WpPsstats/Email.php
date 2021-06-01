@@ -141,19 +141,19 @@ class Email {
 		remove_filter('wp_mail_content_type', array($this, 'setContentType'));
 
 		if (!$success) {
-			$message = 'Error unknown.';
+			$message = 'Fehler unbekannt.';
 			if (!empty($this->wpMailError) && is_object($this->wpMailError) && $this->wpMailError instanceof \WP_Error) {
 				$message = $this->wpMailError->get_error_message();
 			}
 			if ($this->mail && $this->mail->getAttachments()) {
-				$message .= ' (has attachments)';
+				$message .= ' (hat Anhänge)';
 			}
 			if ($this->wpContentType) {
-				$message .= ' (type '. $this->wpContentType .')';
+				$message .= ' (Typ '. $this->wpContentType .')';
 			}
 			$logger = new Logger();
 			$logger->log_exception('mail_error', new \Exception($message));
-			$logger->log('Psstats mail failed with subject '. $subject . ': ' . $message);
+			$logger->log('Psstats-Mail mit Betreff fehlgeschlagen '. $subject . ': ' . $message);
 		}
 
 		$this->wpContentType = null;

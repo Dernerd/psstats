@@ -156,10 +156,10 @@ class Sync {
 	protected function sync_users( $users, $idsite ) {
 		Bootstrap::do_bootstrap();
 
-		$this->logger->log( 'Psstats will now sync ' . count( $users ) . ' users' );
+		$this->logger->log( 'Psstats synchronisiert jetzt ' . count( $users ) . ' Benutzer' );
 
 		$super_users                  = array();
-		$logins_with_some_view_access = array( 'anonmyous' ); // may or may not exist... we don't want to delete this user though
+		$logins_with_some_view_access = array( 'nonmyous' ); // may or may not exist... we don't want to delete this user though
 		$user_model                   = new Model();
 
 		// need to make sure we recreate new instance later with latest dependencies in case they changed
@@ -306,7 +306,7 @@ class Sync {
 		}
 
 		if ( ! $psstats_user_login || empty( $user_in_psstats ) ) {
-			$this->logger->log( 'Psstats is now creating a user forUserId ' . $user_id . ' with psstats login ' . $psstats_user_login );
+			$this->logger->log( 'Psstats erstellt jetzt einen Benutzer für UserId ' . $user_id . ' mit Psstats-Login ' . $psstats_user_login );
 
 			$now      = Date::now()->getDatetime();
 			$password = new Password();
@@ -317,7 +317,7 @@ class Sync {
 
 			User::map_psstats_user_login( $user_id, $psstats_user_login );
 		} elseif ( $user_in_psstats['email'] !== $wp_user->user_email ) {
-			$this->logger->log( 'Psstats is now updating the email for wpUserID ' . $user_id . ' psstats login ' . $psstats_user_login );
+			$this->logger->log( 'Psstats aktualisiert jetzt die E-Mail für wpUserID ' . $user_id . ' Psstats-Login ' . $psstats_user_login );
 			$user_model->updateUserFields( $psstats_user_login, array( 'email' => $wp_user->user_email ) );
 		}
 

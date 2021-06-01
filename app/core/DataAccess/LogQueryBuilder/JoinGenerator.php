@@ -100,7 +100,7 @@ class JoinGenerator
                     if (isset($this->tables[$j]) && is_array($this->tables[$j]) && !isset($this->tables[$j]['tableAlias'])) {
                         $tableOther = $this->tables[$j];
                         if ($table === $tableOther['table']) {
-                            $message = sprintf('Please reorganize the joined tables as the table %s in %s cannot be joined correctly. We recommend to join tables with arrays first. %s', $table, json_encode($this->tables), json_encode(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 10)));
+                            $message = sprintf('Bitte organisiere die verknüpften Tabellen neu, da die Tabelle %s in %s nicht korrekt verknüpft werden kann. Wir empfehlen, zuerst Tabellen mit Arrays zu verknüpfen. %s', $table, json_encode($this->tables), json_encode(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 10)));
                             throw new Exception($message);
                         }
                     }
@@ -268,7 +268,7 @@ class JoinGenerator
         }
 
         if (!isset($join)) {
-            throw new Exception("Table '$table' can't be joined for segmentation");
+            throw new Exception("Tabelle '$table' kann nicht zur Segmentierung verknüpft werden");
         }
 
         if ($this->tables->hasJoinedTableManually($table, $join)

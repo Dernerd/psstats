@@ -40,7 +40,7 @@ class DimensionMetricFactory
     public function createCustomMetric($metricName, $readableName, $aggregation, $documentation = '')
     {
         if (!$this->dimension->getDbTableName() || !$this->dimension->getColumnName()) {
-            throw new \Exception(sprintf('Cannot make metric from dimension %s because DB table or column missing', $this->dimension->getId()));
+            throw new \Exception(sprintf('Messwert aus Dimension %s kann nicht erstellt werden, da DB-Tabelle oder -Spalte fehlt', $this->dimension->getId()));
         }
 
         $metric = new ArchivedMetric($this->dimension, $aggregation);
@@ -73,7 +73,7 @@ class DimensionMetricFactory
         $dimension = $this->dimension;
 
         if (!$dimension->getNamePlural()) {
-            throw new \Exception(sprintf('No metric can be created for this dimension %s automatically because no $namePlural is set.', $dimension->getId()));
+            throw new \Exception(sprintf('Für diese Dimension %s kann automatisch kein Messwert erstellt werden, da kein $namePlural festgelegt ist.', $dimension->getId()));
         }
 
         $prefix = '';

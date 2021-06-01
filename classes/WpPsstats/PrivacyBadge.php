@@ -36,7 +36,7 @@ class PrivacyBadge {
 
 		$url = plugins_url( 'assets/img/privacybadge.png', PSSTATS_ANALYTICS_FILE );
 
-		$title = __( 'Your privacy protected! This website uses Psstats.', 'psstats' );
+		$title = __( 'Deine Privatsphäre geschützt! Diese Webseite verwendet Psstats.', 'psstats' );
 
 		return sprintf( '<img alt="%s" src="%s" %s>', $title, esc_attr( $url ), $option );
 	}

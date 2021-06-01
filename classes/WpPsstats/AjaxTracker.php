@@ -70,7 +70,7 @@ class AjaxTracker extends \PsstatsTracker {
 
 	protected function sendRequest( $url, $method = 'GET', $data = null, $force = false ) {
 		if ( ! $this->idSite ) {
-			$this->logger->log('ecommerce tracking could not find idSite, cannot send request');
+			$this->logger->log('E-Commerce-Tracking konnte idSite nicht finden, kann keine Anfrage senden');
 			return; // not installed or synced yet
 		}
 		$args = array(

@@ -13,10 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="notice notice-info is-dismissible" id="psstats-referral">
     <p>
-        <?php esc_html_e( 'Like Psstats? We would really appreciate if you took 1 minute to rate us.', 'psstats' ); ?>
+        <?php esc_html_e( 'Wie findest Du Psstats? Wir würden uns sehr freuen, wenn Du Dir 1 Minute Zeit nehmen würdest, um uns zu bewerten.', 'psstats' ); ?>
 
-        <a href="https://wordpress.org/support/plugin/psstats/reviews/?rate=5#new-post" target="_blank" rel="noreferrer noopener"
-           class="button psstats-dismiss-forever"><?php esc_html_e( 'Rate Psstats', 'psstats' ) ?></a>
+        <a href="https://n3rds.work/bewertungen" target="_blank" rel="noreferrer noopener"
+           class="button psstats-dismiss-forever"><?php esc_html_e( 'Bewerte Psstats', 'psstats' ) ?></a>
     </p>
     <div style="clear:both;"></div>
 </div>

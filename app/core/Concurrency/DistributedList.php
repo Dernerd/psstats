@@ -57,7 +57,7 @@ class DistributedList
         foreach ($result as $key => $item) {
             // remove non-array items (unexpected state, though can happen when upgrading from an old Piwik)
             if (is_array($item)) {
-                $this->logger->info("Found array item in DistributedList option value '{name}': {data}", array(
+                $this->logger->info("Array-Element im DistributedList-Optionswert '{name}' gefunden: {data}", array(
                     'name' => $this->optionName,
                     'data' => var_export($result, true)
                 ));
@@ -78,7 +78,7 @@ class DistributedList
     {
         foreach ($items as $key => &$item) {
             if (is_array($item)) {
-                throw new \InvalidArgumentException("Array item encountered in DistributedList::setAll() [ key = $key ].");
+                throw new \InvalidArgumentException("Gefundenes Array-Element in DistributedList::setAll() [ key = $key ].");
             } else {
                 $item = (string)$item;
             }

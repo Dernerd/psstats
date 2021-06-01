@@ -76,7 +76,7 @@ class DimensionSegmentFactory
             } elseif ($dimension->getDbTableName() && $dimension->getColumnName()) {
                 $segment->setSqlSegment($dimension->getDbTableName() . '.' . $dimension->getColumnName());
             } else {
-                throw new \Exception('Segment cannot be added because no sql segment is set');
+                throw new \Exception('Segment kann nicht hinzugefügt werden, da kein SQL-Segment festgelegt ist');
             }
         }
 
@@ -134,7 +134,7 @@ class DimensionSegmentFactory
                     $id = array_search(strtolower(trim(urldecode($value))), $enum);
 
                     if ($id === false) {
-                        throw new \Exception("Invalid '$sqlSegmentName' segment value $value");
+                        throw new \Exception("Ungültiger '$sqlSegmentName' Segmentwert $value");
                     }
                 }
 

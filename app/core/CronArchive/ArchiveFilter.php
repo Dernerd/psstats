@@ -76,12 +76,12 @@ class ArchiveFilter
         if ($this->disableSegmentsArchiving
             && !empty($segment)
         ) {
-            return 'segment archiving disabled';
+            return 'Segmentarchivierung deaktiviert';
         }
 
         if (!empty($this->segmentsToForce)) {
             if (!empty($this->segmentsToForce) && !in_array($segment, $this->segmentsToForce)) {
-                return "segment '$segment' is not in --force-idsegments";
+                return "Segment '$segment' ist nicht in --force-idsegments";
             }
         }
 
@@ -90,7 +90,7 @@ class ArchiveFilter
             $period = Factory::build($this->periodIdsToLabels[$archive['period']], $archive['date1']);
             $segment = new Segment($segment, [$archive['idsite']]);
             if (Archive::shouldSkipArchiveIfSkippingSegmentArchiveForToday($site, $period, $segment)) {
-                return "skipping segment archives for today";
+                return "Segmentarchive für heute überspringen";
             }
         }
 
@@ -99,14 +99,14 @@ class ArchiveFilter
                 || $this->restrictToDateRange[1]->isEarlier(Date::factory($archive['date1']))
             )
         ) {
-            return "archive date range ({$archive['date1']},{$archive['date2']}) is not within --force-date-range";
+            return "Archivierungszeitraum ({$archive['date1']},{$archive['date2']}) ist nicht in --force-date-range";
         }
 
         $periodLabel = $this->periodIdsToLabels[$archive['period']];
         if (!empty($this->restrictToPeriods)
             && !in_array($periodLabel, $this->restrictToPeriods)
         ) {
-            return "period is not specified in --force-periods";
+            return "Zeitraum ist nicht angegeben in --force-periods";
         }
 
         if (!empty($this->forceReport)
@@ -114,7 +114,7 @@ class ArchiveFilter
                 || empty($archive['report'])
                 || $archive['plugin'] . '.' . $archive['report'] != $this->forceReport)
         ) {
-            return "report is not the same as value specified in --force-report";
+            return "Bericht ist nicht identisch mit dem angegebenen Wert in --force-report";
         }
 
         return false;
@@ -133,7 +133,7 @@ class ArchiveFilter
             return;
         }
 
-        $logger->info("- Limiting segment archiving to following segments:");
+        $logger->info("- Beschränkung der Segmentarchivierung auf folgende Segmente:");
         foreach ($this->segmentsToForce as $segmentDefinition) {
             $logger->info("  * " . $segmentDefinition);
         }
@@ -142,7 +142,7 @@ class ArchiveFilter
     private function logForcedPeriodInfo(LoggerInterface $logger)
     {
         if (!empty($this->restrictToPeriods)) {
-            $logger->info("- Will only process the following periods: " . implode(", ", $this->restrictToPeriods) . " (--force-periods)");
+            $logger->info("- Wird nur die folgenden Zeiträume verarbeiten: " . implode(", ", $this->restrictToPeriods) . " (--force-periods)");
         }
     }
 
@@ -215,7 +215,7 @@ class ArchiveFilter
                 Date::factory($parts[1]),
             ];
         } catch (\Exception $ex) {
-            throw new \Exception('Invalid restrict to date range argument: ' . $restrictToDateRange);
+            throw new \Exception('Ungültiges Argument zur Beschränkung auf Datumsbereich: ' . $restrictToDateRange);
         }
 
         $this->restrictToDateRange = $parts;
@@ -286,7 +286,7 @@ class ArchiveFilter
     private function logSkipSegmentInfo(LoggerInterface $logger)
     {
         if ($this->skipSegmentsForToday) {
-            $logger->info('Will skip segments archiving for today unless they were created recently');
+            $logger->info('Überspringt die Archivierung von Segmenten für heute, es sei denn, sie wurden kürzlich erstellt.');
         }
     }
 }

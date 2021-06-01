@@ -235,7 +235,7 @@ class JoinTables extends \ArrayObject
     private function checkTableCanBeUsedForSegmentation($tableName)
     {
         if (!is_array($tableName) && !$this->getLogTable($tableName)) {
-            throw new Exception("Table '$tableName' can't be used for segmentation");
+            throw new Exception("Tabelle '$tableName' kann nicht zur Segmentierung verwendet werden");
         }
     }
 

@@ -91,12 +91,12 @@ class Installer {
 			Bootstrap::do_bootstrap();
 
 			if ( ! SettingsPiwik::isPsstatsInstalled() || ! $this->looks_like_it_is_installed() ) {
-				throw new NotYetInstalledException( 'Not yet installed' );
+				throw new NotYetInstalledException( 'Noch nicht installiert' );
 			}
 
 			return false;
 		} catch ( NotYetInstalledException $e ) {
-			$this->logger->log( 'Psstats is not yet installed... installing now' );
+			$this->logger->log( 'Psstats ist noch nicht installiert... wird jetzt installiert' );
 
 			$db_info = $this->create_db();
 			$this->create_config( $db_info );
@@ -124,22 +124,22 @@ class Installer {
 			$this->install_tracker();
 
 			try {
-				$this->logger->log( 'Psstats will now init the environment' );
+				$this->logger->log( 'Psstats initialisiert nun die Umgebung' );
 				$environment = new \Piwik\Application\Environment( null );
 				$environment->init();
 			} catch ( \Exception $e ) {
-				$this->logger->log( 'Ignoring error environment init' );
+				$this->logger->log( 'Ignorieren der Fehlerumgebung init' );
 				$this->logger->log_exception( 'install_env_init', $e );
 			}
 
 			try {
 				// should load and install plugins
-				$this->logger->log( 'Psstats will now init the front controller and install plugins etc' );
+				$this->logger->log( 'Psstats initiiert nun den Front-Controller und installiert Plugins usw.' );
 				\Piwik\FrontController::unsetInstance(); // make sure we're loading the latest instance
 				$controller = \Piwik\FrontController::getInstance();
 				$controller->init();
 			} catch ( \Exception $e ) {
-				$this->logger->log( 'Ignoring error frontcontroller init' );
+				$this->logger->log( 'Ignorieren des Fehlers Frontcontroller init' );
 				$this->logger->log_exception( 'install_front_init', $e );
 			}
 
@@ -158,19 +158,19 @@ class Installer {
 				$this->logger->log_exception( 'install_update_comp', $e );
 			}
 
-			$this->logger->log( 'Recording version and url' );
+			$this->logger->log( 'Aufnahmeversion und URL' );
 
 			DbHelper::recordInstallVersion();
 
 			$this->set_psstats_url();
 
-			$this->logger->log( 'Emptying some caches' );
+			$this->logger->log( 'Einige Caches leeren' );
 
 			\Piwik\Singleton::clearAll();
 			PluginApi::unsetAllInstances();
 			\Piwik\Cache::flushAll();
 
-			$this->logger->log( 'Psstats install finished' );
+			$this->logger->log( 'Psstats-Installation abgeschlossen' );
 		}
 
 		return true;
@@ -215,14 +215,14 @@ class Installer {
 	}
 
 	private function install_tracker() {
-		$this->logger->log( 'Psstats is now installing the tracker' );
+		$this->logger->log( 'Psstats installiert jetzt den Tracker' );
 		// making sure the tracker will be created in the wp uploads directory
 		$updater = StaticContainer::get( 'Piwik\Plugins\CustomJsTracker\TrackerUpdater' );
 		$updater->update();
 	}
 
 	private function create_db() {
-		$this->logger->log( 'Psstats will now create the database' );
+		$this->logger->log( 'Psstats erstellt nun die Datenbank' );
 
 		try {
 			$db_infos = self::get_db_infos();
@@ -252,7 +252,7 @@ class Installer {
 	}
 
 	private function create_config( $db_info ) {
-		$this->logger->log( 'Psstats is now creating the config' );
+		$this->logger->log( 'Psstats erstellt jetzt die Konfiguration' );
 		$domain  = home_url();
 		$general = array(
 			'trusted_hosts' => array( $domain ),
@@ -346,7 +346,7 @@ class Installer {
 	}
 
 	private function update_components() {
-		$this->logger->log( 'Psstats will now trigger an update' );
+		$this->logger->log( 'Psstats löst jetzt ein Update aus' );
 		Updater::unlock(); // make sure the update can be executed
 		$updater = new Updater( $this->settings );
 		$updater->update();

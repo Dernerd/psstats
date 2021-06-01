@@ -55,7 +55,7 @@ class Cache extends File
             || strpos($host, '..') !== false
             || strpos($host, '\\') !== false
             || strpos($host, '/') !== false) {
-            throw new \Exception('Unsupported host');
+            throw new \Exception('Nicht unterstützter Host');
         }
 
         $this->host = $host;

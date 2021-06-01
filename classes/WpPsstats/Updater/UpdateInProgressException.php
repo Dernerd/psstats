@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class UpdateInProgressException extends \Exception {
 
-	public function __construct( $message = "Psstats upgrade is already in progress", $code = 0, $previous = null ) {
+	public function __construct( $message = "Psstats-Upgrade ist bereits im Gange", $code = 0, $previous = null ) {
 		parent::__construct( $message, $code, $previous );
 	}
 }

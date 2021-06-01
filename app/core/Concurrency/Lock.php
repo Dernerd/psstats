@@ -68,7 +68,7 @@ class Lock
             $i++;
             usleep( 100 * 1000 ); // 100ms
             if ($i > 50) { // give up after 5seconds (50 * 100ms)
-                throw new \Exception('Could not get the lock for ID: ' . $id);
+                throw new \Exception('Die Sperre für die ID konnte nicht abgerufen werden: ' . $id);
             }
         };
         try {
@@ -128,13 +128,13 @@ class Lock
                     $message = sprintf('Failed to expire key %s (%s / %s).', $this->lockKey, $this->lockValue, (string)$value);
 
                     if ($value === false) {
-                        Common::printDebug($message . ' It seems like the key already expired as it no longer exists.');
+                        Common::printDebug($message . ' Der Schlüssel scheint bereits abgelaufen zu sein, da er nicht mehr existiert.');
                     } elseif (!empty($value) && $value == $this->lockValue) {
-                        Common::printDebug($message . ' We still have the lock but for some reason it did not expire.');
+                        Common::printDebug($message . ' Wir haben die Sperre noch, aber aus irgendeinem Grund ist es nicht abgelaufen.');
                     } elseif (!empty($value)) {
-                        Common::printDebug($message . ' This lock has been acquired by another process/server.');
+                        Common::printDebug($message . ' Diese Sperre wurde von einem anderen Prozess/Server erworben.');
                     } else {
-                        Common::printDebug($message . ' Failed to expire key.');
+                        Common::printDebug($message . ' Schlüssel konnte nicht abgelaufen werden.');
                     }
 
                     return false;
@@ -144,10 +144,10 @@ class Lock
 
                 return true;
             } else {
-                Common::printDebug('Lock is not acquired, cannot update expiration.');
+                Common::printDebug('Sperre wird nicht erworben, Ablauf kann nicht aktualisiert werden.');
             }
         } else {
-            Common::printDebug('Provided TTL ' . $ttlInSeconds . ' is in valid in Lock::expireLock().');
+            Common::printDebug('Provided TTL ' . $ttlInSeconds . ' ist gültig im Lock::expireLock().');
         }
 
         return false;

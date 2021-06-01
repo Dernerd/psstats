@@ -186,7 +186,7 @@ class API {
 			$idsite = $site->get_current_psstats_site_id();
 
 			if ( ! $idsite ) {
-				return new \WP_Error( 'Site not found. Make sure it is synced' );
+				return new \WP_Error( 'Seite nicht gefunden. Stelle sicher, dass es synchronisiert ist' );
 			}
 
 			$params['idSite']  = $idsite;

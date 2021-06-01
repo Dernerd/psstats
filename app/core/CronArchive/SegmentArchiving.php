@@ -92,7 +92,7 @@ class SegmentArchiving
             try {
                 $segmentObj = new Segment($segment['definition'], [$idSite]);
             } catch (\Exception $ex) {
-                $this->logger->debug("Could not process segment {$segment['definition']} for site {$idSite}. Segment should not exist for the site, but does.");
+                $this->logger->debug("Segment {$segment['definition']} für Seite {$idSite} konnte nicht verarbeitet werden. Segment sollte für die Seite nicht vorhanden sein, tut es aber.");
                 continue;
             }
 
@@ -115,14 +115,14 @@ class SegmentArchiving
             if (empty($segmentCreatedTime)) {
                 return null;
             }
-            $this->logger->debug("process_new_segments_from set to segment_creation_time, oldest date to process is {time}", array('time' => $segmentCreatedTime));
+            $this->logger->debug("process_new_segments_from gesetzt auf segment_creation_time, ältestes zu verarbeitendes Datum ist {time}", array('time' => $segmentCreatedTime));
 
             return $segmentCreatedTime;
         } else if ($this->processNewSegmentsFrom == SegmentArchiving::LAST_EDIT_TIME) {
             if (empty($segmentLastEditedTime)) {
                 return null;
             }
-            $this->logger->debug("process_new_segments_from set to segment_last_edit_time, segment last edit time is {time}",
+            $this->logger->debug("process_new_segments_from gesetzt auf segment_last_edit_time, Zeitpunkt der letzten Bearbeitung des Segments ist {time}",
                 array('time' => $segmentLastEditedTime));
 
             return $segmentLastEditedTime;
@@ -135,7 +135,7 @@ class SegmentArchiving
             list($lastDate, $lastPeriod) = Range::getDateXPeriodsAgo($lastN, $segmentLastEditedTime, 'day');
             $result = Date::factory($lastDate);
 
-            $this->logger->debug("process_new_segments_from set to editLast{N}, oldest date to process is {time}", array('N' => $lastN, 'time' => $result));
+            $this->logger->debug("process_new_segments_from gesetzt auf editLast{N}, ältestes zu verarbeitendes Datum ist {time}", array('N' => $lastN, 'time' => $result));
 
             return $result;
         } else if (preg_match("/^last([0-9]+)$/", $this->processNewSegmentsFrom, $matches)) {
@@ -147,11 +147,11 @@ class SegmentArchiving
             list($lastDate, $lastPeriod) = Range::getDateXPeriodsAgo($lastN, $segmentCreatedTime, 'day');
             $result = Date::factory($lastDate);
 
-            $this->logger->debug("process_new_segments_from set to last{N}, oldest date to process is {time}", array('N' => $lastN, 'time' => $result));
+            $this->logger->debug("process_new_segments_from gesetzt auf last{N}, ältestes zu verarbeitendes Datum ist {time}", array('N' => $lastN, 'time' => $result));
 
             return $result;
         } else {
-            $this->logger->debug("process_new_segments_from set to beginning_of_time or cannot recognize value");
+            $this->logger->debug("process_new_segments_from gesetzt auf beginning_of_time oder kann den Wert nicht erkennen");
 
             $result = Date::factory('today')->subYear($this->beginningOfTimeLastNInYears);
 

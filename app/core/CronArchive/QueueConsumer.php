@@ -136,7 +136,7 @@ class QueueConsumer
         if (empty($this->idSite)) {
             $this->idSite = $this->getNextIdSiteToArchive();
             if (empty($this->idSite)) { // no sites left to archive, stop
-                $this->logger->debug("No more sites left to archive, stopping.");
+                $this->logger->debug("Keine Seiten mehr zum Archivieren übrig, Stoppen.");
                 return null;
             }
 
@@ -153,7 +153,7 @@ class QueueConsumer
              */
             Piwik::postEvent('CronArchive.archiveSingleSite.start', array($this->idSite, $this->pid));
 
-            $this->logger->info("Start processing archives for site {idSite}.", ['idSite' => $this->idSite]);
+            $this->logger->info("Beginne mit der Verarbeitung von Archiven für die Seite {idSite}.", ['idSite' => $this->idSite]);
 
             $this->siteTimer = new Timer();
             $this->siteRequests = 0;
@@ -179,14 +179,14 @@ class QueueConsumer
         while (count($archivesToProcess) < $this->countOfProcesses) {
             $invalidatedArchive = $this->getNextInvalidatedArchive($this->idSite, array_keys($invalidationsToExcludeInBatch));
             if (empty($invalidatedArchive)) {
-                $this->logger->debug("No next invalidated archive.");
+                $this->logger->debug("Kein nächstes ungültiges Archiv.");
                 break;
             }
 
             $invalidationDesc = $this->getInvalidationDescription($invalidatedArchive);
 
             if ($invalidatedArchive['periodObj']->getDateEnd()->isEarlier($siteCreationTime)) {
-                $this->logger->debug("Invalidation is for period that is older than the site's creation time, ignoring: $invalidationDesc");
+                $this->logger->debug("Die Aufhebung gilt für einen Zeitraum, der älter ist als die Erstellungszeit der Webseite, wobei Folgendes ignoriert wird: $invalidationDesc");
                 $this->model->deleteInvalidations([$invalidatedArchive]);
                 continue;
             }
@@ -194,33 +194,33 @@ class QueueConsumer
             if (!empty($invalidatedArchive['plugin'])
                 && !Manager::getInstance()->isPluginActivated($invalidatedArchive['plugin'])
             ) {
-                $this->logger->debug("Plugin specific archive {$invalidatedArchive['idarchive']}'s plugin is deactivated, ignoring $invalidationDesc.");
+                $this->logger->debug("Plugin-spezifisches Archiv {$invalidatedArchive['idarchive']}' Plugin ist deaktiviert, wird ignoriert $invalidationDesc.");
                 $this->model->deleteInvalidations([$invalidatedArchive]);
                 continue;
             }
 
             if ($invalidatedArchive['segment'] === null) {
-                $this->logger->debug("Found archive for segment that is not auto archived, ignoring: $invalidationDesc");
+                $this->logger->debug("Archiv für Segment gefunden, das nicht automatisch archiviert wird, ignoriert: $invalidationDesc");
                 $this->addInvalidationToExclude($invalidatedArchive);
                 continue;
             }
 
             if ($this->archiveArrayContainsArchive($archivesToProcess, $invalidatedArchive)) {
-                $this->logger->debug("Found duplicate invalidated archive {$invalidatedArchive['idarchive']}, ignoring: $invalidationDesc");
+                $this->logger->debug("Doppeltes ungültiges Archiv gefunden {$invalidatedArchive['idarchive']}, ignoriere: $invalidationDesc");
                 $this->addInvalidationToExclude($invalidatedArchive);
                 $this->model->deleteInvalidations([$invalidatedArchive]);
                 continue;
             }
 
             if ($this->model->isSimilarArchiveInProgress($invalidatedArchive)) {
-                $this->logger->debug("Found duplicate invalidated archive (same archive currently in progress), ignoring: $invalidationDesc");
+                $this->logger->debug("Doppeltes ungültiges Archiv gefunden (dasselbe Archiv wird derzeit bearbeitet), ignoriere: $invalidationDesc");
                 $this->addInvalidationToExclude($invalidatedArchive);
                 $this->model->deleteInvalidations([$invalidatedArchive]);
                 continue;
             }
 
             if (self::hasIntersectingPeriod($archivesToProcess, $invalidatedArchive)) {
-                $this->logger->debug("Found archive with intersecting period with others in concurrent batch, skipping until next batch: $invalidationDesc");
+                $this->logger->debug("Archiv mit Schnittpunkt mit anderen im gleichzeitigen Stapel gefunden, bis zum nächsten Stapel überspringen: $invalidationDesc");
 
                 $idinvalidation = $invalidatedArchive['idinvalidation'];
                 $invalidationsToExcludeInBatch[$idinvalidation] = true;
@@ -229,7 +229,7 @@ class QueueConsumer
 
             $reason = $this->shouldSkipArchive($invalidatedArchive);
             if ($reason) {
-                $this->logger->debug("Skipping invalidated archive {$invalidatedArchive['idinvalidation']}, $reason: $invalidationDesc");
+                $this->logger->debug("Ungültiges Archiv überspringen {$invalidatedArchive['idinvalidation']}, $reason: $invalidationDesc");
                 $this->addInvalidationToExclude($invalidatedArchive);
                 continue;
             }
@@ -237,28 +237,28 @@ class QueueConsumer
             list($isUsableExists, $archivedTime) = $this->usableArchiveExists($invalidatedArchive);
             if ($isUsableExists) {
                 $now = Date::now()->getDatetime();
-                $this->logger->debug("Found invalidation with usable archive (not yet outdated, ts_archived of existing = $archivedTime, now = $now) skipping until archive is out of date: $invalidationDesc");
+                $this->logger->debug("Entwertung mit verwendbarem Archiv gefunden (noch nicht veraltet, ts_archived vorhanden von = $archivedTime, jetzt = $now) überspringen, bis das Archiv veraltet ist: $invalidationDesc");
                 $this->addInvalidationToExclude($invalidatedArchive);
                 continue;
             } else {
                 $now = Date::now()->getDatetime();
-                $this->logger->debug("No usable archive exists (ts_archived of existing = $archivedTime, now = $now).");
+                $this->logger->debug("Kein verwendbares Archiv vorhanden (ts_archived von bestehenden = $archivedTime, jetzt = $now).");
             }
 
             $alreadyInProgressId = $this->model->isArchiveAlreadyInProgress($invalidatedArchive);
             if ($alreadyInProgressId) {
                 $this->addInvalidationToExclude($invalidatedArchive);
                 if ($alreadyInProgressId < $invalidatedArchive['idinvalidation']) {
-                    $this->logger->debug("Skipping invalidated archive {$invalidatedArchive['idinvalidation']}, invalidation already in progress. Since in progress is older, not removing invalidation.");
+                    $this->logger->debug("Das ungültig gemachte Archiv {$invalidatedArchive['idinvalidation']} wird übersprungen, die Entwertung läuft bereits. Da in Bearbeitung älter ist, wird die Entwertung nicht entfernt.");
                } else if ($alreadyInProgressId > $invalidatedArchive['idinvalidation']) {
-                    $this->logger->debug("Skipping invalidated archive {$invalidatedArchive['idinvalidation']}, invalidation already in progress. Since in progress is newer, will remove invalidation.");
+                    $this->logger->debug("Das ungültig gemachte Archiv {$invalidatedArchive['idinvalidation']} wird übersprungen, die Entwertung läuft bereits. Da in Bearbeitung ist neuer, wird die Entwertung entfernt.");
                     $this->model->deleteInvalidations([$invalidatedArchive['idinvalidation']]);
                 }
                 continue;
             }
 
             if ($this->canSkipArchiveBecauseNoPoint($invalidatedArchive)) {
-                $this->logger->debug("Found invalidated archive we can skip (no visits): $invalidationDesc");
+                $this->logger->debug("Ungültiges Archiv gefunden, das wir überspringen können (keine Besuche): $invalidationDesc");
                 $this->addInvalidationToExclude($invalidatedArchive);
                 $this->model->deleteInvalidations([$invalidatedArchive]);
                 continue;
@@ -266,7 +266,7 @@ class QueueConsumer
 
             $reason = $this->shouldSkipArchiveBecauseLowerPeriodOrSegmentIsInProgress($invalidatedArchive);
             if ($reason) {
-                $this->logger->debug("Skipping invalidated archive, $reason: $invalidationDesc");
+                $this->logger->debug("Ungültiges Archiv überspringen, $reason: $invalidationDesc");
                 $invalidationsToExcludeInBatch[$invalidatedArchive['idinvalidation']] = true;
                 $this->addInvalidationToExclude($invalidatedArchive);
                 continue;
@@ -274,14 +274,14 @@ class QueueConsumer
 
             $started = $this->model->startArchive($invalidatedArchive);
             if (!$started) { // another process started on this archive, pull another one
-                $this->logger->debug("Archive invalidation is being handled by another process: $invalidationDesc");
+                $this->logger->debug("Die Entwertung des Archivs wird von einem anderen Prozess verarbeitet: $invalidationDesc");
                 $this->addInvalidationToExclude($invalidatedArchive);
                 continue;
             }
 
             $this->addInvalidationToExclude($invalidatedArchive);
 
-            $this->logger->debug("Processing invalidation: $invalidationDesc.");
+            $this->logger->debug("Ungültigmachung der Verarbeitung: $invalidationDesc.");
 
             $archivesToProcess[] = $invalidatedArchive;
         }
@@ -300,7 +300,7 @@ class QueueConsumer
              */
             Piwik::postEvent('CronArchive.archiveSingleSite.finish', array($this->idSite, $this->pid));
 
-            $this->logger->info("Finished archiving for site {idSite}, {requests} API requests, {timer} [{processed} / {totalNum} done]", [
+            $this->logger->info("Archivierung abgeschlossen für Seite {idSite}, {requests} API-Anfragen, {timer} [{processed} / {totalNum} erledigt]", [
                 'idSite' => $this->idSite,
                 'processed' => $this->processedSiteCount,
                 'totalNum' => $this->websiteIdArchiveList->getNumSites(),
@@ -355,7 +355,7 @@ class QueueConsumer
                 return $nextArchive;
             }
 
-            $this->logger->debug("Found invalidation for segment that does not have auto archiving enabled, skipping: {$nextArchive['idinvalidation']}");
+            $this->logger->debug("Ungültigkeitserklärung für Segment gefunden, für das die automatische Archivierung nicht aktiviert ist. Überspringe: {$nextArchive['idinvalidation']}");
             $this->model->deleteInvalidations([$nextArchive]);
 
             ++$iterations;
@@ -419,11 +419,11 @@ class QueueConsumer
             $archiveBeingProcessed['periodObj'] = PeriodFactory::build($archiveBeingProcessed['period'], $archiveBeingProcessed['date']);
 
             if ($this->isArchiveOfLowerPeriod($archiveToProcess, $archiveBeingProcessed)) {
-                return "lower or same period in progress in another local climulti process (period = {$archiveBeingProcessed['period']}, date = {$archiveBeingProcessed['date']})";
+                return "niedrigerer oder gleicher Zeitraum in einem anderen lokalen climulti-Prozess im Gange (period = {$archiveBeingProcessed['period']}, date = {$archiveBeingProcessed['date']})";
             }
 
             if ($this->isArchiveNonSegmentAndInProgressArchiveSegment($archiveToProcess, $archiveBeingProcessed)) {
-                return "segment archive in progress for same site/period ({$archiveBeingProcessed['segment']})";
+                return "Segmentarchiv für denselben Standort/Zeitraum in Bearbeitung ({$archiveBeingProcessed['segment']})";
             }
         }
 
@@ -510,7 +510,7 @@ class QueueConsumer
         $hash = substr($flag, 4);
         $storedSegment = $this->segmentArchiving->findSegmentForHash($hash, $archive['idsite']);
         if (!isset($storedSegment['definition'])) {
-            $this->logger->debug("Could not find stored segment for done flag hash: $flag");
+            $this->logger->debug("Gespeichertes Segment für erledigten Flag-Hash konnte nicht gefunden werden: $flag");
             $archive['segment'] = null;
             return false;
         }

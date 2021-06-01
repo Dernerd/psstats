@@ -52,7 +52,7 @@ class OptOut {
 		} catch (\Throwable $e ) {
 			$logger = new Logger();
 			$logger->log_exception('optout', $e);
-			return '<p>An error occurred. Please check Psstats system report in WP-Admin.</p>';
+			return '<p>Ein Fehler ist aufgetreten. Bitte überprüfe den Psstats-Systembericht in WP-Admin.</p>';
 		}
 
 		$dnt_checker = new DoNotTrackHeaderChecker();
@@ -85,7 +85,7 @@ class OptOut {
         <span id="psstats_opted_in_label" '.$style_tracking_disabled.'>'.$this->translate('CoreAdminHome_YouAreNotOptedOut') .' ' . $this->translate('CoreAdminHome_UncheckToOptOut') . '</span>
 		<span id="psstats_opted_out_label" '.$style_tracking_enabled.'>'.$this->translate('CoreAdminHome_YouAreOptedOut') .' ' . $this->translate('CoreAdminHome_CheckToOptIn') . '</span>
         </strong></label></form>';
-		$content .= '<noscript><p><strong style="color: #ff0000;">This opt out feature requires JavaScript.</strong></p></noscript>';
+		$content .= '<noscript><p><strong style="color: #ff0000;">Diese Opt-Out-Funktion erfordert JavaScript.</strong></p></noscript>';
 		$content .= '<p id="psstats_outout_err_cookies" style="display: none;"><strong>' . $this->translate('CoreAdminHome_OptOutErrorNoCookies') . '</strong></p>';
 		return $content;
 	}

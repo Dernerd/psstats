@@ -135,7 +135,7 @@ class WpPsstats {
 						add_action(
 							'admin_notices',
 							function () use ( $upload_path ) {
-								echo '<div class="error"><p>' . sprintf(__( 'Psstats Analytics requires the uploads directory %s to be writable. Please make the directory writable for it to work.', 'psstats' ), '(' . esc_html( dirname( $upload_path ) ) . ')') . '</p></div>';
+								echo '<div class="error"><p>' . sprintf(__( 'Psstats Analytics erfordert, dass das Upload-Verzeichnis %s beschreibbar ist. Bitte mache das Verzeichnis beschreibbar, damit es funktioniert.', 'psstats' ), '(' . esc_html( dirname( $upload_path ) ) . ')') . '</p></div>';
 							}
 						);
 					}
@@ -189,9 +189,9 @@ class WpPsstats {
 		$get_started = new \WpPsstats\Admin\GetStarted( self::$settings );
 
 		if ( self::$settings->get_global_option( Settings::SHOW_GET_STARTED_PAGE ) && $get_started->can_user_manage() ) {
-			$links[] = '<a href="' . menu_page_url( Menu::SLUG_GET_STARTED, false ) . '">' . __( 'Get Started', 'psstats' ) . '</a>';
+			$links[] = '<a href="' . menu_page_url( Menu::SLUG_GET_STARTED, false ) . '">' . __( 'Loslegen', 'psstats' ) . '</a>';
 		} elseif ( current_user_can( Capabilities::KEY_SUPERUSER ) ) {
-			$links[] = '<a href="' . menu_page_url( Menu::SLUG_SETTINGS, false ) . '">' . __( 'Settings', 'psstats' ) . '</a>';
+			$links[] = '<a href="' . menu_page_url( Menu::SLUG_SETTINGS, false ) . '">' . __( 'Einstellungen', 'psstats' ) . '</a>';
 		}
 
 		return $links;
