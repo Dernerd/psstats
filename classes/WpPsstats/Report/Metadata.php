@@ -60,7 +60,7 @@ class Metadata {
 
 	public function find_report_by_unique_id( $unique_id ) {
 		if ($unique_id === Renderer::CUSTOM_UNIQUE_ID_VISITS_OVER_TIME) {
-			return array('uniqueId' => Renderer::CUSTOM_UNIQUE_ID_VISITS_OVER_TIME, 'name' => 'Visits over time');
+			return array('uniqueId' => Renderer::CUSTOM_UNIQUE_ID_VISITS_OVER_TIME, 'name' => 'Besuche im Laufe der Zeit');
 		}
 		$all_reports = self::get_all_reports();
 

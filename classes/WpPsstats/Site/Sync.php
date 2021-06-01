@@ -66,7 +66,7 @@ class Sync {
 		try {
 			$this->sync_current_site();
 		} catch (\Exception $e) {
-			$this->logger->log( 'Ignoring site sync error: ' . $e->getMessage());
+			$this->logger->log( 'Fehler bei der Seiten-Synchronisierung ignorieren: ' . $e->getMessage());
 			$this->logger->log_exception('sync_site_ignore', $e);
 		}
 	}
@@ -83,7 +83,7 @@ class Sync {
 				try {
 					$installer = new Installer( $this->settings );
 					if ( ! $installer->looks_like_it_is_installed() ) {
-						$this->logger->log( sprintf( 'Psstats was not installed yet for blog: %s installing now.', $site->blog_id ) );
+						$this->logger->log( sprintf( 'Psstats wurde noch nicht für Blog installiert: %s wird jetzt installiert.', $site->blog_id ) );
 
 						// prevents error that it wouldn't fully install psstats for a different site as it would think it already did install it etc.
 						// and would otherwise think plugins are already activated etc
@@ -104,7 +104,7 @@ class Sync {
 				} catch ( \Exception $e ) {
 					$success = false;
 					// we don't want to rethrow exception otherwise some other blogs might never sync
-					$this->logger->log( 'Psstats error syncing site: ' . $e->getMessage() );
+					$this->logger->log( 'Psstats-Fehler beim Synchronisieren der Webseite: ' . $e->getMessage() );
 				}
 
 				$succeed_all = $succeed_all && $success;
@@ -124,12 +124,12 @@ class Sync {
 
 	public function sync_site( $blog_id, $blog_name, $blog_url ) {
 		Bootstrap::do_bootstrap();
-		$this->logger->log( 'Psstats is now syncing blogId ' . $blog_id );
+		$this->logger->log( 'Psstats synchronisiert jetzt blogId ' . $blog_id );
 
 		$idsite = Site::get_psstats_site_id( $blog_id );
 
 		if ( empty( $blog_name ) ) {
-			$blog_name = esc_html__( 'Default', 'psstats' );
+			$blog_name = esc_html__( 'Standard', 'psstats' );
 		} else {
 			$blog_name = substr( $blog_name, 0, self::MAX_LENGTH_SITE_NAME );
 		}
@@ -145,7 +145,7 @@ class Sync {
 		}
 
 		if ( ! empty( $idsite ) ) {
-			$this->logger->log( 'Psstats site is known for blog (' . $idsite . ')... will update' );
+			$this->logger->log( 'Psstats-Site ist bekannt für Blog (' . $idsite . ')... wird aktualisiert' );
 
             $sites_manager_model = new Model();
             $site = $sites_manager_model->getSiteFromId($idsite);
@@ -179,7 +179,7 @@ class Sync {
             }
 		}
 
-		$this->logger->log( 'Psstats site is not known for blog... will create site' );
+		$this->logger->log( 'Psstats-Site ist nicht für Blog bekannt... wird Seite erstellen' );
 
 		/** @var \WP_Site $site */
 		$idsite   = null;
@@ -208,10 +208,10 @@ class Sync {
 		);
 		$this->set_enable_sites_admin( 0 );
 
-		$this->logger->log( 'Psstats created site with ID ' . $idsite . ' for blog' );
+		$this->logger->log( 'Psstats erstellte Seite mit ID ' . $idsite . ' for blog' );
 
 		if ( ! is_numeric( $idsite ) || 0 === $idsite || '0' === $idsite ) {
-			$this->logger->log( sprintf( 'Creating the website failed: %s', wp_json_encode( $blog_id ) ) );
+			$this->logger->log( sprintf( 'Das Erstellen der Seite ist fehlgeschlagen: %s', wp_json_encode( $blog_id ) ) );
 
 			return false;
 		}

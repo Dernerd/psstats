@@ -24,13 +24,13 @@ class Dates {
 
 	public function get_supported_dates() {
 		return array(
-			self::YESTERDAY  => 'Yesterday',
-			self::TODAY      => 'Today',
-			self::THIS_WEEK  => 'This week',
-			self::LAST_WEEK  => 'Last week',
-			self::THIS_MONTH => 'This month',
-			self::LAST_MONTH => 'Last month',
-			self::THIS_YEAR  => 'This year',
+			self::YESTERDAY  => 'Gestern',
+			self::TODAY      => 'Heute',
+			self::THIS_WEEK  => 'Diese Woche',
+			self::LAST_WEEK  => 'Letzte Woche',
+			self::THIS_MONTH => 'Diesen Monat',
+			self::LAST_MONTH => 'Letzten Monat',
+			self::THIS_YEAR  => 'Dieses Jahr',
 		);
 	}
 
@@ -53,7 +53,7 @@ class Dates {
 				break;
 			case self::LAST_MONTH:
 				$period = 'month';
-				$date   = gmdate( 'Y-m-d', strtotime( '1 month ago' ) );
+				$date   = gmdate( 'Y-m-d', strtotime( 'Vor 1 Monat' ) );
 				break;
 			case self::THIS_WEEK:
 				$period = 'week';
@@ -61,7 +61,7 @@ class Dates {
 				break;
 			case self::LAST_WEEK:
 				$period = 'week';
-				$date   = gmdate( 'Y-m-d', strtotime( '1 week ago' ) );
+				$date   = gmdate( 'Y-m-d', strtotime( 'Vor 1 Woche' ) );
 				break;
 			case self::THIS_YEAR:
 				$period = 'year';

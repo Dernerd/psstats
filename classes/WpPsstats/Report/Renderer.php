@@ -53,7 +53,7 @@ class Renderer {
 		if ( ! current_user_can( Capabilities::KEY_VIEW ) ) {
 			// not needed as processRequest checks permission anyway but it's faster this way and double ensures to not
 			// letting users view it when they have no access.
-			return esc_html__( 'Sorry, you are not allowed to view this report.', 'psstats' );
+			return esc_html__( 'Du darfst diesen Bericht leider nicht anzeigen.', 'psstats' );
 		}
 	}
 
@@ -84,7 +84,7 @@ class Renderer {
 		$report_meta = $metadata->find_report_by_unique_id( $a['unique_id'] );
 
 		if ( empty( $report_meta ) ) {
-			return sprintf( esc_html__( 'Report %s not found', 'psstats' ), esc_html( $a['unique_id'] ) );
+			return sprintf( esc_html__( 'Bericht %s nicht gefunden', 'psstats' ), esc_html( $a['unique_id'] ) );
 		}
 
 		$metric_keys               = array_keys( $report_meta['metrics'] );
