@@ -1,0 +1,14 @@
+{
+    "name": "WordPress",
+    "description": "Psstats WordPress extension",
+    "version": "0.1.0",
+    "theme": false,
+    "authors": [{
+        "name": "Psstats",
+        "email": "hello@psstats.org",
+        "homepage": "https://psstats.org"
+    }],
+    "homepage": "https://psstats.org",
+    "license": "GPL v3+",
+    "keywords": ["wordpress"]
+}

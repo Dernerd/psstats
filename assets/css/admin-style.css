@@ -1,0 +1,107 @@
+.psstats-tracking-form th {
+    width: 30%;
+}
+
+.psstats-tracking-form th {
+    width: 30%;
+}
+
+.psstats-systemreport-comment {
+    word-break: break-all;
+}
+
+ul.psstats-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ol.psstats-list {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.psstats-plugin-list .plugin-card-top {
+    min-height: auto;
+}
+
+.psstats-plugin-list .plugin-card-top .psstats-description {
+    min-height: 80px;
+}
+
+.psstats-plugin-row-2 {
+    max-width: 1082px;
+}
+
+.psstats-plugin-row-2 .plugin-card-top .psstats-description {
+    min-height: 50px;
+}
+
+.psstats-marketplace-notice .dashicons-video-alt3 {
+    display: inline-block;
+}
+
+.psstats-blockquote {
+    margin: .5em 10px;
+    border-left: 4px solid #ccc;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.psstats-footer {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.psstats-footer ul {
+    list-style: none;
+    padding: 0 0 0 20px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.psstats-footer ul li {
+    display: inline-block;
+    margin: 0 20px 10px;
+}
+
+.psstats-header-icon {
+    height: 32px;
+    vertical-align: top;
+}
+
+.psstats-footer ul a {
+    color: #37474f;
+}
+
+.psstats-systemreport .widefat .warning td {
+    color: orange;
+}
+
+.psstats-systemreport .widefat .error td {
+    color: red;
+}
+
+.psstats-systemreport .widefat .section {
+    font-weight: bold;
+}
+
+.psstats-dashboard-container .postbox-container {
+    min-width: 40%;
+}
+
+.postbox .table .widefat.psstats-table {
+    border: 0;
+}
+
+#psstats_default_tracking_code {
+    margin-top: 100px;
+}
+
+#psstats_default_tracking_code textarea {
+    width: 100%;
+    height: 140px;
+}
+
+#psstats_default_tracking_code textarea.no_script {
+    height: 50px;
+}

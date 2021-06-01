@@ -1,0 +1,41 @@
+{% if showPsstatsLinks %}** {{ 'General_JsTrackingTag'|translate }}{% endif %}
+
+{{ 'CoreAdminHome_JSTracking_CodeNoteBeforeClosingHeadEmail'|translate("'head'") }}
+
+{{ jsTag|raw }}
+
+{% if showPsstatsLinks %}{{ 'SitesManager_EmailInstructionsDocsPlainText'|translate('https://developer.psstats.org/guides/tracking-javascript-guide')|raw }}{% endif %}
+
+{{ 'SitesManager_EmailInstructionsGenerateTrackingCode'|translate(piwikUrl ~ linkTo({'module': 'CoreAdminHome', 'action': 'trackingCodeGenerator'}))|raw }}
+
+{% if showPsstatsLinks %}
+** {{ 'SitesManager_InstallationGuides'|translate }}
+WordPress: https://psstats.org/faq/new-to-piwik/how-do-i-install-the-psstats-tracking-code-on-wordpress/
+Squarespace: https://psstats.org/faq/new-to-piwik/how-do-i-integrate-psstats-with-squarespace-website/
+Wix: https://psstats.org/faq/new-to-piwik/how-do-i-install-the-psstats-analytics-tracking-code-on-wix/
+SharePoint: https://psstats.org/faq/how-to-install/faq_19424/
+Joomla: https://psstats.org/faq/new-to-piwik/how-do-i-install-the-psstats-analytics-tracking-code-on-joomla/
+Shopify: https://psstats.org/faq/new-to-piwik/how-do-i-install-the-psstats-tracking-code-on-my-shopify-store/
+Google Tag Manager: https://psstats.org/faq/new-to-piwik/how-do-i-use-psstats-analytics-within-gtm-google-tag-manager/
+
+** {{ 'SitesManager_Integrations'|translate }}
+{{ 'CoreAdminHome_JSTrackingIntro3a'|translate('', '') }}
+https://psstats.org/integrate/
+
+** {{ 'SitesManager_LogAnalytics'|translate }}
+{{ 'SitesManager_LogAnalyticsDescription'|translate('', '') }}
+https://psstats.org/log-analytics/
+
+** {{ 'SitesManager_MobileAppsAndSDKs'|translate }}
+{{ 'SitesManager_MobileAppsAndSDKsDescription'|translate('', '') }}
+https://psstats.org/integrate/#programming-language-platforms-and-frameworks
+
+** {{ 'CoreAdminHome_HttpTrackingApi'|translate }}
+{{ 'CoreAdminHome_HttpTrackingApiDescription'|translate('', '') }}
+https://developer.psstats.org/api-reference/tracking-api
+    
+** {{ 'SitesManager_EmailInstructionsSiteDetailsHeading'|translate }}
+{{ 'SitesManager_EmailInstructionsSiteDetails'|translate }}
+* {{ 'SitesManager_EmailInstructionsYourSiteId'|translate(idSite) }}
+* {{ 'SitesManager_EmailInstructionsYourTrackingUrl'|translate(trackingUrl) }}
+{% endif %}

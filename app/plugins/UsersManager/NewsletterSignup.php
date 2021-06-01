@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * Psstats - free/libre analytics platform
+ *
+ * @link http://psstats.org
+ * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
+ *
+ */
+namespace Piwik\Plugins\UsersManager;
+
+use Exception;
+use Piwik\Config;
+use Piwik\Container\StaticContainer;
+use Piwik\Http;
+use Piwik\Option;
+use Piwik\SettingsPiwik;
+use Piwik\Url;
+
+class NewsletterSignup
+{
+    const NEWSLETTER_SIGNUP_OPTION = 'UsersManager.newsletterSignup.';
+
+    public static function signupForNewsletter($userLogin, $email, $psstatsOrg = false, $professionalServices = false)
+    {
+        // Don't bother if they aren't signing up for at least one newsletter, or if we don't have internet access
+        $doSignup = ($psstatsOrg || $professionalServices) && SettingsPiwik::isInternetEnabled();
+        if (!$doSignup) {
+            return false;
+        }
+
+        $url = Config::getInstance()->General['api_service_url'];
+        $url .= '/1.0/subscribeNewsletter/';
+
+        $params = array(
+            'email'     => $email,
+            'piwikorg'  => (int)$psstatsOrg,
+            'piwikpro'  => (int)$professionalServices,
+            'language'  => StaticContainer::get('Piwik\Translation\Translator')->getCurrentLanguage(),
+        );
+
+        $url .= '?' . Http::buildQuery($params);
+        try {
+            Http::sendHttpRequest($url, $timeout = 2);
+            $optionKey = self::NEWSLETTER_SIGNUP_OPTION . $userLogin;
+            Option::set($optionKey, 1);
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+}
