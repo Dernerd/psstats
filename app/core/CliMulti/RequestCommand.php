@@ -35,9 +35,9 @@ class RequestCommand extends ConsoleCommand
     protected function configure()
     {
         $this->setName('climulti:request');
-        $this->setDescription('Parses and executes the given query. See Piwik\CliMulti. Intended only for system usage.');
-        $this->addArgument('url-query', InputArgument::REQUIRED, 'Psstats URL query string, for instance: "module=API&method=API.getPiwikVersion&token_auth=123456789"');
-        $this->addOption('superuser', null, InputOption::VALUE_NONE, 'If supplied, runs the code as superuser.');
+        $this->setDescription('Analysiert und führt die angegebene Abfrage aus. Siehe Piwik\CliMulti. Nur für die Systemnutzung vorgesehen.');
+        $this->addArgument('url-query', InputArgument::REQUIRED, 'Psstats URL-Abfragezeichenfolge, zum Beispiel: "module=API&method=API.getPiwikVersion&token_auth=123456789"');
+        $this->addOption('superuser', null, InputOption::VALUE_NONE, 'Führt den Code, falls angegeben, als Superuser aus.');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

@@ -32,7 +32,7 @@ class Process
     public function __construct($pid)
     {
         if (!Filesystem::isValidFilename($pid)) {
-            throw new \Exception('The given pid has an invalid format');
+            throw new \Exception('Die angegebene pid hat ein ungültiges Format');
         }
 
         $pidDir = CliMulti::getTmpPath();

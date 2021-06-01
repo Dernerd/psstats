@@ -28,7 +28,7 @@ class CategoryList
         $categoryId = $category->getId();
 
         if ($this->hasCategory($categoryId)) {
-            throw new \Exception(sprintf('Category %s already exists', $categoryId));
+            throw new \Exception(sprintf('Kategorie %s existiert bereits', $categoryId));
         }
 
         $this->categories[$categoryId] = $category;

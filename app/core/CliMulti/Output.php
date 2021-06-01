@@ -20,7 +20,7 @@ class Output
     public function __construct($outputId)
     {
         if (!Filesystem::isValidFilename($outputId)) {
-            throw new \Exception('The given output id has an invalid format');
+            throw new \Exception('Die angegebene Ausgabe-ID hat ein ungültiges Format');
         }
 
         $dir = CliMulti::getTmpPath();

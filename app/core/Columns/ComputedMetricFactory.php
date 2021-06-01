@@ -41,7 +41,7 @@ class ComputedMetricFactory
         $metric1 = $this->metricsList->getMetric($metricName1);
 
         if (!$metric1 instanceof ArchivedMetric || !$metric1->getDimension()) {
-            throw new \Exception('Only possible to create computed metric for an archived metric with a dimension');
+            throw new \Exception('Es ist nur möglich, einen berechneten Messwert für einen archivierten Messwert mit einer Dimension zu erstellen');
         }
 
         $dimension1 = $metric1->getDimension();

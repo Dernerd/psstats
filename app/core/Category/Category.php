@@ -79,7 +79,7 @@ class Category
         $subcategoryId = $subcategory->getId();
 
         if ($this->hasSubcategory($subcategoryId)) {
-            throw new \Exception(sprintf('Subcategory %s already exists for category %s', $subcategoryId, $this->getId()));
+            throw new \Exception(sprintf('Unterkategorie %s existiert bereits für Kategorie %s', $subcategoryId, $this->getId()));
         }
 
         $this->subcategories[$subcategoryId] = $subcategory;
