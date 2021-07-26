@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ($invalid_format) { ?>
     <div class="updated notice error">
-        <p><?php esc_html_e( 'It looks like the MaxMind license key has a wrong format.', 'psstats' ); ?></p>
+        <p><?php esc_html_e( 'Es sieht so aus, als ob der MaxMind-Lizenzschlüssel ein falsches Format hat.', 'psstats' ); ?></p>
     </div>
 <?php
 }
@@ -33,7 +33,7 @@ if ($invalid_format) { ?>
 	<?php wp_nonce_field( GeolocationSettings::NONCE_NAME ); ?>
 
 	<p>
-        <?php esc_html_e( 'On this page you can configure how Psstats detects the locations of your visitors.', 'psstats' ); ?>
+        <?php esc_html_e( 'Auf dieser Seite kannst Du konfigurieren, wie Psstats die Standorte Deiner Besucher erkennt.', 'psstats' ); ?>
     </p>
     <p>
         <?php esc_html_e('To detect the location of a visitor, the IP address of a visitor is looked up in a so called geolocation database. This is automatically taken care of for you. However, the freely available database DB-IP we are using is sometimes less accurate than other freely available geolocation databases. This applies to the free and paid version of DB-IP. An alternative geolocation database is called MaxMind which has a free and a paid version as well. Because of GDPR we cannot configure this database automatically for you.', 'psstats'); ?>
