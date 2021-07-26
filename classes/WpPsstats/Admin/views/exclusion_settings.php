@@ -46,12 +46,12 @@ if ( $was_updated ) {
 <form method="post">
 	<?php wp_nonce_field( ExclusionSettings::NONCE_NAME ); ?>
 
-	<p><?php esc_html_e( 'Configure exclusions.', 'psstats' ); ?></p>
+	<p><?php esc_html_e( 'Ausschlüsse konfigurieren.', 'psstats' ); ?></p>
 	<table class="psstats-tracking-form widefat">
 		<tbody>
 
 		<tr>
-			<th width="20%" scope="row"><label><?php esc_html_e( 'Tracking filter', 'psstats' ); ?></label>:
+			<th width="20%" scope="row"><label><?php esc_html_e( 'Tracking-Filter', 'psstats' ); ?></label>:
 			</th>
 			<td>
 				<?php
@@ -63,9 +63,9 @@ if ( $was_updated ) {
 				?>
 			</td>
 			<td width="50%">
-				<?php echo sprintf( esc_html__( 'Choose users by user role you do %1$snot%2$s want to track.', 'psstats' ), '<strong>', '</strong>' ); ?>
+				<?php echo sprintf( esc_html__( 'Wähle Benutzer nach Benutzerrolle aus, die Du %1$snicht%2$s verfolgen möchtest.', 'psstats' ), '<strong>', '</strong>' ); ?>
                  <?php if ($settings->is_network_enabled()) { ?>
-                     <br><p><strong>This setting will be applied to all blogs. Changing it here also changes it for other blogs.</strong></p>
+                     <br><p><strong>Diese Einstellung wird auf alle Blogs angewendet. Wenn DuSie es hier änderst, ändert es sich auch für andere Blogs.</strong></p>
                 <?php } ?>
 			</td>
 		</tr>
@@ -142,7 +142,7 @@ if ( $was_updated ) {
 		<tr>
 			<td colspan="3">
 				<p class="submit"><input name="Submit" type="submit" class="button-primary"
-										 value="<?php echo esc_attr__( 'Save Changes', 'psstats' ); ?>"/></p>
+										 value="<?php echo esc_attr__( 'Änderungen speichern', 'psstats' ); ?>"/></p>
 			</td>
 		</tr>
 

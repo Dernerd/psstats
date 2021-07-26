@@ -18,7 +18,7 @@ use WpPsstats\Admin\AccessSettings;
 /** @var \WpPsstats\Capabilities $capabilites */
 ?>
 
-<p><?php esc_html_e( 'Manage which roles can view and manage your reporting data.', 'psstats' ); ?></p>
+<p><?php esc_html_e( 'Verwalte, welche Rollen Deine Berichtsdaten anzeigen und verwalten können.', 'psstats' ); ?></p>
 
 <form method="post">
 	<?php wp_nonce_field( AccessSettings::NONCE_NAME ); ?>
@@ -26,8 +26,8 @@ use WpPsstats\Admin\AccessSettings;
 	<table class="psstats-form widefat">
 		<thead>
 		<tr>
-			<th width="30%"><?php esc_html_e( 'WordPress Role', 'psstats' ); ?></th>
-			<th><?php esc_html_e( 'Psstats Role', 'psstats' ); ?></th>
+			<th width="30%"><?php esc_html_e( 'WordPress-Rolle', 'psstats' ); ?></th>
+			<th><?php esc_html_e( 'Psstats-Rolle', 'psstats' ); ?></th>
 		</tr>
 		</thead>
 		<tbody>
@@ -45,7 +45,7 @@ use WpPsstats\Admin\AccessSettings;
 		?>
 		<tr>
 			<td colspan="2"><input name="Submit" type="submit" class="button-primary"
-								   value="<?php echo esc_attr__( 'Save Changes', 'psstats' ); ?>"/></td>
+								   value="<?php echo esc_attr__( 'Änderungen speichern', 'psstats' ); ?>"/></td>
 		</tr>
 		</tbody>
 	</table>
@@ -54,25 +54,25 @@ use WpPsstats\Admin\AccessSettings;
 <p>
     <?php
         if (!is_multisite()) {
-	        esc_html_e( 'A user with role administrator automatically has the super user role.', 'psstats' );
+	        esc_html_e( 'Ein Benutzer mit der Rolle Administrator hat automatisch die Superuser-Rolle.', 'psstats' );
         }
     ?>
-	<?php esc_html_e( 'Learn about the differences between these Psstats roles:', 'psstats' ); ?>
-	<a href="https://psstats.org/faq/general/faq_70/" target="_blank" rel="noopener"><?php esc_html_e( 'View', 'psstats' ); ?></a>,
+	<?php esc_html_e( 'Erfahre mehr über die Unterschiede zwischen diesen Psstats-Rollen:', 'psstats' ); ?>
+	<a href="https://psstats.org/faq/general/faq_70/" target="_blank" rel="noopener"><?php esc_html_e( 'Ansicht', 'psstats' ); ?></a>,
 	<a href="https://psstats.org/faq/general/faq_26910/" target="_blank"
-	   rel="noopener"><?php esc_html_e( 'Write', 'psstats' ); ?></a>,
+	   rel="noopener"><?php esc_html_e( 'Schreiben', 'psstats' ); ?></a>,
 	<a href="https://psstats.org/faq/general/faq_69/" target="_blank" rel="noopener"><?php esc_html_e( 'Admin', 'psstats' ); ?></a>,
 	<a href="https://psstats.org/faq/general/faq_35/" target="_blank"
-	   rel="noopener"><?php esc_html_e( 'Super User', 'psstats' ); ?></a><br/>
-	<?php esc_html_e( 'Want to redirect to the home page when not logged in?', 'psstats' ); ?> <a href="https://psstats.org/faq/wordpress/how-do-i-hide-my-wordpress-login-url-when-someone-accesses-a-psstats-report-directly/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Learn more', 'psstats' ); ?></a>
+	   rel="noopener"><?php esc_html_e( 'Superuser', 'psstats' ); ?></a><br/>
+	<?php esc_html_e( 'Möchtest Du auf die Startseite umleiten, wenn sie nicht eingeloggt sind?', 'psstats' ); ?> <a href="https://psstats.org/faq/wordpress/how-do-i-hide-my-wordpress-login-url-when-someone-accesses-a-psstats-report-directly/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Mehr erfahren', 'psstats' ); ?></a>
 </p>
 
-<h2><?php esc_html_e( 'Roles', 'psstats' ); ?></h2>
+<h2><?php esc_html_e( 'Rollen', 'psstats' ); ?></h2>
 <p>
 <?php
 esc_html_e(
-	'Want to give individual users access to Psstats? Simply create a user in your WordPress and assign of these roles
-    to the user:',
+	'Möchtest Du einzelnen Benutzern Zugriff auf Psstats gewähren? Erstelle einfach einen Benutzer in Deinem WordPress und weise diese Rollen
+	 den Benutzer zu:',
 	'psstats'
 )
 ?>
@@ -83,12 +83,12 @@ esc_html_e(
 	<?php } ?>
 </ul>
 
-<h2><?php esc_html_e( 'Capabilities', 'psstats' ); ?></h2>
+<h2><?php esc_html_e( 'Fähigkeiten', 'psstats' ); ?></h2>
 <p>
 <?php
 esc_html_e(
-	'You can also install a WordPress plugin which lets you manage capabilities for each individual users. These are
-    the supported capabilities:',
+	'Du kannst auch ein WordPress-Plugin installieren, mit dem Du die Funktionen für jeden einzelnen Benutzer verwalten kannst. Diese sind
+	die unterstützten Fähigkeiten:',
 	'psstats'
 )
 ?>

@@ -78,8 +78,8 @@ class Menu {
 		    if (!is_multisite() || !is_network_admin()) {
                 add_submenu_page(
                     self::$parent_slug,
-                    __( 'Get Started', 'psstats' ),
-                    __( 'Get Started', 'psstats' ),
+                    __( 'Loslegen', 'psstats' ),
+                    __( 'Loslegen', 'psstats' ),
                     Capabilities::KEY_SUPERUSER,
                     self::SLUG_GET_STARTED,
                     array(
@@ -93,8 +93,8 @@ class Menu {
 		if ( is_network_admin() ) {
 			add_submenu_page(
 				self::$parent_slug,
-				__( 'Multi Site', 'psstats' ),
-				__( 'Multi Site', 'psstats' ),
+				__( 'Multisite', 'psstats' ),
+				__( 'Multisite', 'psstats' ),
 				Capabilities::KEY_SUPERUSER,
 				'psstats-multisite',
 				array(
@@ -105,8 +105,8 @@ class Menu {
 		} else {
 			add_submenu_page(
 				self::$parent_slug,
-				__( 'Summary', 'psstats' ),
-				__( 'Summary', 'psstats' ),
+				__( 'Zusammenfassung', 'psstats' ),
+				__( 'Zusammenfassung', 'psstats' ),
 				Capabilities::KEY_VIEW,
 				self::SLUG_REPORT_SUMMARY,
 				array(
@@ -118,8 +118,8 @@ class Menu {
 			// the network itself is not a blog
 			add_submenu_page(
 				self::$parent_slug,
-				__( 'Reporting', 'psstats' ),
-				__( 'Reporting', 'psstats' ),
+				__( 'Berichte', 'psstats' ),
+				__( 'Berichte', 'psstats' ),
 				Capabilities::KEY_VIEW,
 				self::SLUG_REPORTING,
 				array(
@@ -164,8 +164,8 @@ class Menu {
 		if ( ! is_plugin_active( PSSTATS_MARKETPLACE_PLUGIN_NAME ) ) {
 			add_submenu_page(
 				self::$parent_slug,
-				__( 'Marketplace', 'psstats' ),
-				__( 'Marketplace', 'psstats' ),
+				__( 'Marktplatz', 'psstats' ),
+				__( 'Marktplatz', 'psstats' ),
 				Capabilities::KEY_VIEW,
 				self::SLUG_MARKETPLACE,
 				array(
@@ -178,8 +178,8 @@ class Menu {
 		if ( $this->settings->is_network_enabled() || ! is_network_admin() ) {
 			add_submenu_page(
 				self::$parent_slug,
-				__( 'Diagnostics', 'psstats' ),
-				__( 'Diagnostics', 'psstats' ),
+				__( 'Diagnose', 'psstats' ),
+				__( 'Diagnose', 'psstats' ),
 				Capabilities::KEY_SUPERUSER,
 				self::SLUG_SYSTEM_REPORT,
 				array(
@@ -191,8 +191,8 @@ class Menu {
 
 		add_submenu_page(
 			self::$parent_slug,
-			__( 'About', 'psstats' ),
-			__( 'About', 'psstats' ),
+			__( 'Über', 'psstats' ),
+			__( 'Über', 'psstats' ),
 			Capabilities::KEY_VIEW,
 			self::SLUG_ABOUT,
 			array(
@@ -206,7 +206,7 @@ class Menu {
 		global $submenu;
 
 		if ( isset( $submenu[ self::$parent_slug ] ) ) {
-			$reporting  = __( 'Reporting', 'psstats' );
+			$reporting  = __( 'Berichte', 'psstats' );
 			$tagmanager = __( 'Tag Manager', 'psstats' );
 			foreach ( $submenu[ self::$parent_slug ] as $key => $menu_item ) {
 				if ( 0 === strpos( $menu_item[0], $reporting ) || 0 === strpos( $menu_item[0], $tagmanager ) ) {

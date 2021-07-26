@@ -22,15 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="wrap">
 	<div id="icon-plugins" class="icon32"></div>
-    <h1><?php psstats_header_icon(); ?> <?php esc_html_e( 'Settings', 'psstats' ); ?></h1>
+    <h1><?php psstats_header_icon(); ?> <?php esc_html_e( 'Einstellungen', 'psstats' ); ?></h1>
     <?php
         if ( $psstats_settings->is_network_enabled() && is_network_admin() ) {
-            echo '<div class="notice notice-info is-dismissible"><br>You are running Psstats in network mode. This means below settings will be applied to all blogs in your network.<br><br></div>';
+            echo '<div class="notice notice-info is-dismissible"><br>Du führst Psstats im Netzwerkmodus aus. Dies bedeutet, dass die folgenden Einstellungen auf alle Blogs in Deinem Netzwerk angewendet werden.<br><br></div>';
         } elseif ($psstats_settings->is_network_enabled() && !is_network_admin()) {
             echo '<div class="notice notice-info is-dismissible"><br>';
-            esc_html_e('You are running Psstats in network mode.', 'psstats');
+            esc_html_e('Du führst Psstats im Netzwerkmodus aus.', 'psstats');
             echo ' ';
-            echo 'Below settings aren\'t applied for all blogs but have to be configured for each blog separately. We are hoping to improve this in the future. Any setting within the Psstats admin is configured on a per blog basis as well. Only you as a Psstats super user can see these settings.<br><br></div>';
+            echo 'Die folgenden Einstellungen gelten nicht für alle Blogs, sondern müssen für jeden Blog separat konfiguriert werden. Wir hoffen, dies in Zukunft verbessern zu können. Jede Einstellung innerhalb des Psstats-Administrators wird auch pro Blog konfiguriert. Nur Du als Psstats-Superuser kannst diese Einstellungen sehen.<br><br></div>';
         }
     ?>
 	<h2 class="nav-tab-wrapper">
