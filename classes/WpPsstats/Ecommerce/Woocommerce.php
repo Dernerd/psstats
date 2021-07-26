@@ -159,19 +159,19 @@ class Woocommerce extends Base {
 		$tracking_code .= $this->make_psstats_js_tracker_call( array( 'trackEcommerceCartUpdate', $total ) );
 
 		$this->cart_update_queue = $this->wrap_script( $tracking_code );
-		$this->logger->log( 'Tracked ecommerce cart update: ' . $this->cart_update_queue );
+		$this->logger->log( 'Update des E-Commerce-Warenkorbs verfolgt: ' . $this->cart_update_queue );
 
 		return $val;
 	}
 
 	public function on_order( $order_id ) {
 		if ( $this->has_order_been_tracked_already( $order_id ) ) {
-			$this->logger->log( sprintf( 'Ignoring already tracked order %d', $order_id ) );
+			$this->logger->log( sprintf( 'Ignorieren bereits verfolgter Bestellung %d', $order_id ) );
 
 			return '';
 		}
 
-		$this->logger->log( sprintf( 'Psstats new order %d', $order_id ) );
+		$this->logger->log( sprintf( 'Psstats neue Bestellung %d', $order_id ) );
 
 		$order = wc_get_order( $order_id );
 
@@ -182,10 +182,10 @@ class Woocommerce extends Base {
 
 		$order_status = $order->get_status();
 
-		$this->logger->log( sprintf( 'Order %s with order number %s has status: %s', $order_id, $order_id_to_track, $order_status ) );
+		$this->logger->log( sprintf( 'Bestellung %s mit Bestellnummer %s hat Status: %s', $order_id, $order_id_to_track, $order_status ) );
 
 		if ( in_array( $order_status, $this->order_status_ignore, true ) ) {
-			$this->logger->log( 'Ignoring ecommerce order ' . $order_id . ' becauses of status: ' . $order_status );
+			$this->logger->log( 'E-Commerce-Bestellung ignorieren ' . $order_id . ' wegen Status: ' . $order_status );
 
 			return '';
 		}
@@ -224,7 +224,7 @@ class Woocommerce extends Base {
 		);
 		$tracking_code .= $this->make_psstats_js_tracker_call( $params );
 
-		$this->logger->log( sprintf( 'Tracked ecommerce order %s with number %s', $order_id, $order_id_to_track ) );
+		$this->logger->log( sprintf( 'Nachverfolgte E-Commerce-Bestellung %s mit der Nummer %s', $order_id, $order_id_to_track ) );
 
 		$this->set_order_been_tracked( $order_id );
 
