@@ -1,8 +1,8 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '4.3.1-rc1',
-    'version' => '4.3.1.0-RC1',
+    'pretty_version' => '4.3.2-rc1',
+    'version' => '4.3.2.0-RC1',
     'aliases' => 
     array (
     ),
@@ -94,8 +94,8 @@
     ),
     'psstats/psstats' => 
     array (
-      'pretty_version' => '4.3.1-rc1',
-      'version' => '4.3.1.0-RC1',
+      'pretty_version' => '4.3.2-rc1',
+      'version' => '4.3.2.0-RC1',
       'aliases' => 
       array (
       ),
