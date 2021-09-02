@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL v3 or later
  */
 

@@ -6,9 +6,9 @@
     "authors": [{
         "name": "Psstats",
         "email": "hello@psstats.org",
-        "homepage": "https://psstats.org"
+        "homepage": "https://n3rds.work"
     }],
-    "homepage": "https://psstats.org",
+    "homepage": "https://n3rds.work",
     "license": "GPL v3+",
     "keywords": ["wordpress"]
 }

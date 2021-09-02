@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -39,7 +39,7 @@ class RssPiwik extends \Piwik\Widget\Widget
     public function render()
     {
         try {
-            return $this->getFeed('https://psstats.org/feed/');
+            return $this->getFeed('https://n3rds.work/feed/');
         } catch (\Exception $e) {
             return $this->error($e);
         }  

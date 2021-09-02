@@ -120,14 +120,14 @@ Psstats Tag Manager is released under the GPL v3 (or later) license, see [LICENS
 
 ## Installation & Requirements
 
-Psstats Tag Manager requires an installed [Psstats Analytics](https://github.com/psstats-org/psstats) see our [installation guide](https://psstats.org/docs/installation/) and [requirements guide](https://psstats.org/docs/requirements/).
+Psstats Tag Manager requires an installed [Psstats Analytics](https://github.com/psstats-org/psstats) see our [installation guide](https://n3rds.work/docs/installation/) and [requirements guide](https://n3rds.work/docs/requirements/).
 
 Afterwards you can install the Tag Manager plugin in one click by going to "Administration => Marketplace".
 
 ## Get involved!
 
 We believe in liberating Web Analytics, providing a free platform for simple and advanced analytics and tag manager. Psstats was built by dozens of people like you,
-and we need your help to make Psstats better. Why not participate in a useful project today? [Learn how you can contribute to Psstats.](https://psstats.org/get-involved)
+and we need your help to make Psstats better. Why not participate in a useful project today? [Learn how you can contribute to Psstats.](https://n3rds.work/get-involved)
 
 Developer guides are available at [developer.psstats.org/guides/tagmanager/settingup](https://developer.psstats.org/guides/tagmanager/settingup).
 
@@ -135,19 +135,19 @@ Developer guides are available at [developer.psstats.org/guides/tagmanager/setti
 
 Security is a top priority at Psstats. As potential issues are discovered, we validate, patch and release fixes as quickly as we can. We have a security bug bounty program in place that rewards researchers for finding security issues and disclosing them to us.
 
-[Learn more](https://psstats.org/security/)
+[Learn more](https://n3rds.work/security/)
 
 ## Support for Psstats Tag Manager
 
 For **Free support**, post a message in our community forums: [forum.psstats.org](https://forum.psstats.org/)
 
-For **Professional paid support**, send a message to our network of Psstats professionals: [psstats.org/support](https://psstats.org/contact/)
+For **Professional paid support**, send a message to our network of Psstats professionals: [psstats.org/support](https://n3rds.work/contact/)
 
 ## Contact
 
-Website: [psstats.org](https://psstats.org)
+Website: [psstats.org](https://n3rds.work)
 
-About us: [psstats.org/team/](https://psstats.org/team/)
+About us: [psstats.org/team/](https://n3rds.work/team/)
 
-Contact us: [psstats.org/contact/](https://psstats.org/contact/)
+Contact us: [psstats.org/contact/](https://n3rds.work/contact/)
 

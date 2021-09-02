@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -82,8 +82,8 @@ class MetadataLoader
         $descriptionKey = $this->pluginName . '_PluginDescription';
         return array(
             'description'      => $descriptionKey,
-            'homepage'         => 'https://psstats.org/',
-            'authors'          => array(array('name' => 'Psstats', 'homepage'  => 'https://psstats.org/')),
+            'homepage'         => 'https://n3rds.work/',
+            'authors'          => array(array('name' => 'Psstats', 'homepage'  => 'https://n3rds.work/')),
             'license'          => 'GPL v3+',
             'version'          => Version::VERSION,
             'theme'            => false,

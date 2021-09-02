@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -32,7 +32,7 @@ class View extends Role
 
     public function getHelpUrl(): string
     {
-        return 'https://psstats.org/faq/general/faq_70/';
+        return 'https://n3rds.work/faq/general/faq_70/';
     }
 
 

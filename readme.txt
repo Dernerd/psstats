@@ -80,8 +80,8 @@ Running Psstats Analytics on your server can use significant resources. Whenever
 
 * The minimum PHP memory limit is 128Mb, but we recommend to use a higher limit (memory_limit = 256M).
 * PHP 7.2 at minimum is required.
-* If you have high traffic website, or manage a lot of websites with WordPress MultiSite, we recommend installing [Psstats On-Premise](https://psstats.org/docs/installation/) or signup to [Psstats Cloud](https://psstats.org/hosting/) and install the [WP-Psstats plugin](https://wordpress.org/plugins/wp-piwik/) instead.
-* Needing to know more before you install? Have a [read through the most popular FAQs to ensure you’re making the right choice for you](https://psstats.org/faq/wordpress/what-are-the-requirements-for-psstats-for-wordpress/).
+* If you have high traffic website, or manage a lot of websites with WordPress MultiSite, we recommend installing [Psstats On-Premise](https://n3rds.work/docs/installation/) or signup to [Psstats Cloud](https://n3rds.work/hosting/) and install the [WP-Psstats plugin](https://wordpress.org/plugins/wp-piwik/) instead.
+* Needing to know more before you install? Have a [read through the most popular FAQs to ensure you’re making the right choice for you](https://n3rds.work/faq/wordpress/what-are-the-requirements-for-psstats-for-wordpress/).
 
 Over 1 million websites in over 190 countries are using Psstats already. Join the revolution too! Install Psstats on your Wordpress website completely free and take back full control of your data!
 
@@ -125,7 +125,7 @@ Security is a top priority at Psstats. As potential issues are discovered, we va
 
 = How can I get involved?
 We believe in liberating Web Analytics, providing a free platform for simple and advanced analytics. Psstats was built by dozens of people like you,
-and we need your help to make Psstats better… Why not participate in a useful project today? [Learn how you can contribute to Psstats.](https://psstats.org/get-involved)
+and we need your help to make Psstats better… Why not participate in a useful project today? [Learn how you can contribute to Psstats.](https://n3rds.work/get-involved)
 
 = How do you ensure quality?
 The Psstats project uses an ever-expanding comprehensive set of thousands of unit tests and hundreds of automated integration tests, system tests, JavaScript tests, and screenshot UI tests, running on a continuous integration server as part of its software quality assurance. [Learn more](https://developer.psstats.org/guides/tests)
@@ -136,7 +136,7 @@ The Tag Manager can be disabled by placing `define('PSSTATS_ENABLE_TAG_MANAGER',
 The Tag Manager does currently not work in WP Multisite mode.
 
 = How do you support WP Multisite?
-[Click here to learn more](https://psstats.org/faq/wordpress/does-it-support-wp-multisite/)
+[Click here to learn more](https://n3rds.work/faq/wordpress/does-it-support-wp-multisite/)
 
 = Which MySQL versions are supported?
 Psstats should run on most MySQL versions. However, we only support MySQL 5.5 and newer. It should also work with MariaDB and other MySQL compatible databases.

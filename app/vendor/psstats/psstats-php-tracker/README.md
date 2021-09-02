@@ -3,7 +3,7 @@
 The PHP Tracker Client provides all features of the [Psstats Javascript Tracker](https://developer.psstats.org/api-reference/tracking-javascript), such as Ecommerce Tracking, Custom Variables, Event Tracking and more. 
 
 ## Documentation and examples 
-Check out our [Psstats-PHP-Tracker developer documentation](https://developer.psstats.org/api-reference/PHP-Piwik-Tracker) and [Psstats Tracking API guide](https://psstats.org/docs/tracking-api/).
+Check out our [Psstats-PHP-Tracker developer documentation](https://developer.psstats.org/api-reference/PHP-Piwik-Tracker) and [Psstats Tracking API guide](https://n3rds.work/docs/tracking-api/).
 
 
 ```php

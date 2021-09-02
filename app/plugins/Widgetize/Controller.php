@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -55,7 +55,7 @@ class Controller extends \Piwik\Plugin\Controller
             $message = 'CoreHome cannot be widgetized. '  . 
                 'You can enable it to be embedded directly into an iframe (passing module=CoreHome instead of module=Widgetize) ' .
                 'instead by enabling the \'enable_framed_pages\' setting in your config. ' .
-                'See https://psstats.org/faq/how-to/faq_193/ for more info.';
+                'See https://n3rds.work/faq/how-to/faq_193/ for more info.';
             throw new \Exception($message);
         }
 

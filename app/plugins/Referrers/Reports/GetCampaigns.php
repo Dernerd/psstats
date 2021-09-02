@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -21,7 +21,7 @@ class GetCampaigns extends Base
         $this->dimension     = new Campaign();
         $this->name          = Piwik::translate('Referrers_Campaigns');
         $this->documentation = Piwik::translate('Referrers_CampaignsReportDocumentation');
-        $this->onlineGuideUrl = 'https://psstats.org/docs/tracking-campaigns/';
+        $this->onlineGuideUrl = 'https://n3rds.work/docs/tracking-campaigns/';
         $this->actionToLoadSubTables = 'getKeywordsFromCampaignId';
         $this->hasGoalMetrics = true;
         $this->order = 9;

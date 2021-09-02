@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -56,7 +56,7 @@ class Goals extends HtmlTable
         if (1 == Common::getRequestVar('documentationForGoalsPage', 0, 'int')) {
             // TODO: should not use query parameter
             $this->config->documentation = Piwik::translate('Goals_ConversionByTypeReportDocumentation',
-                array('<br />', '<br />', '<a href="https://psstats.org/docs/tracking-goals-web-analytics/" rel="noreferrer noopener" target="_blank">', '</a>'));
+                array('<br />', '<br />', '<a href="https://n3rds.work/docs/tracking-goals-web-analytics/" rel="noreferrer noopener" target="_blank">', '</a>'));
         }
 
         parent::beforeRender();

@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 namespace Piwik\Plugins\Diagnostics\Diagnostic;
@@ -64,7 +64,7 @@ class DatabaseAbilitiesCheck implements Diagnostic
                 DiagnosticResult::STATUS_WARNING, 'UTF8mb4 charset<br/><br/>' .
                 $this->translator->translate('Diagnostics_DatabaseUtf8mb4CharsetAvailableButNotUsed', '<code>' . PIWIK_INCLUDE_PATH . '/console core:convert-to-utf8mb4</code>') .
                 '<br/><br/>' .
-                $this->translator->translate('Diagnostics_DatabaseUtf8Requirement', ['�', '<a href="https://psstats.org/faq/how-to-update/how-to-convert-the-database-to-utf8mb4-charset/" rel="noreferrer noopener" target="_blank">', '</a>']) .
+                $this->translator->translate('Diagnostics_DatabaseUtf8Requirement', ['�', '<a href="https://n3rds.work/faq/how-to-update/how-to-convert-the-database-to-utf8mb4-charset/" rel="noreferrer noopener" target="_blank">', '</a>']) .
                 '<br/>'
             );
         }
@@ -73,7 +73,7 @@ class DatabaseAbilitiesCheck implements Diagnostic
             DiagnosticResult::STATUS_WARNING, 'UTF8mb4 charset<br/><br/>' .
             $this->translator->translate('Diagnostics_DatabaseUtf8mb4CharsetRecommended') .
             '<br/><br/>' .
-            $this->translator->translate('Diagnostics_DatabaseUtf8Requirement', ['�', '<a href="https://psstats.org/faq/how-to-update/how-to-convert-the-database-to-utf8mb4-charset/" rel="noreferrer noopener" target="_blank">', '</a>']) .
+            $this->translator->translate('Diagnostics_DatabaseUtf8Requirement', ['�', '<a href="https://n3rds.work/faq/how-to-update/how-to-convert-the-database-to-utf8mb4-charset/" rel="noreferrer noopener" target="_blank">', '</a>']) .
             '<br/>'
         );
     }
@@ -121,7 +121,7 @@ class DatabaseAbilitiesCheck implements Diagnostic
                 '<br/><strong>%s:</strong> %s<br/>%s',
                 $this->translator->translate('General_Error'),
                 $errorMessage,
-                'Troubleshooting: <a target="_blank" rel="noreferrer noopener" href="https://psstats.org/faq/troubleshooting/#faq_194">FAQ on psstats.org</a>'
+                'Troubleshooting: <a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/faq/troubleshooting/#faq_194">FAQ on psstats.org</a>'
             );
         }
 
@@ -155,7 +155,7 @@ class DatabaseAbilitiesCheck implements Diagnostic
         } catch (\Exception $e) {
             $status = DiagnosticResult::STATUS_ERROR;
             $comment .= '<br/>' . $this->translator->translate('Diagnostics_MysqlTemporaryTablesWarning');
-            $comment .= '<br/>Troubleshooting: <a target="_blank" rel="noreferrer noopener" href="https://psstats.org/faq/how-to-install/faq_23484/">FAQ on psstats.org</a>';
+            $comment .= '<br/>Troubleshooting: <a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/faq/how-to-install/faq_23484/">FAQ on psstats.org</a>';
         }
 
         return new DiagnosticResultItem($status, $comment);

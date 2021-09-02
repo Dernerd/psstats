@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -44,7 +44,7 @@ class CronArchivingCheck implements Diagnostic
             $isBrowserTriggerEnabled = Rules::isBrowserTriggerEnabled();
             if ($isBrowserTriggerEnabled) {
                 $comment = $this->translator->translate('Diagnostics_BrowserTriggeredArchivingEnabled', [
-                    '<a href="https://psstats.org/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>']);
+                    '<a href="https://n3rds.work/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>']);
                 $result[] = DiagnosticResult::singleResult($label, DiagnosticResult::STATUS_WARNING, $comment);
 
                 $archiveLastStarted = Option::get(CronArchive::OPTION_ARCHIVING_STARTED_TS);
@@ -56,7 +56,7 @@ class CronArchivingCheck implements Diagnostic
                     $lastStarted = $formatter->getPrettyTimeFromSeconds(time() - $archiveLastStarted, true);
                     $label = $this->translator->translate('Diagnostics_BrowserAndAutoArchivingEnabledLabel');
                     $comment = $this->translator->translate('Diagnostics_BrowserAndAutoArchivingEnabledComment', [
-                        '<a href="https://psstats.org/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>', $lastStarted]);
+                        '<a href="https://n3rds.work/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>', $lastStarted]);
                     $result[] = DiagnosticResult::singleResult($label, DiagnosticResult::STATUS_WARNING, $comment);
                 }
             }

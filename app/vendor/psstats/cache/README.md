@@ -1,7 +1,7 @@
 # Psstats/Cache
 
 This is a PHP caching library based on [Doctrine cache](https://github.com/doctrine/cache) that supports different backends. 
-At [Psstats](https://psstats.org) we developed this library with the focus on speed as we make heavy use of caching and 
+At [Psstats](https://n3rds.work) we developed this library with the focus on speed as we make heavy use of caching and 
 sometimes fetch hundreds of entries from the cache in one request.
 
 [![Build Status](https://travis-ci.org/psstats-org/component-cache.svg?branch=master)](https://travis-ci.org/psstats-org/component-cache)

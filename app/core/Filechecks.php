@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -90,7 +90,7 @@ class Filechecks
             . "<blockquote>$directoryList</blockquote>"
             . "<p>If this doesn't work, you can try to create the directories with your FTP software, and set the CHMOD to 0755 (or 0777 if 0755 is not enough). To do so with your FTP software, right click on the directories then click permissions.</p>"
             . "<p>After applying the modifications, you can <a href='index.php'>refresh the page</a>.</p>"
-            . "<p>If you need more help, try <a target='_blank' rel='noreferrer noopener' href='https://psstats.org'>Psstats.org</a>.</p>";
+            . "<p>If you need more help, try <a target='_blank' rel='noreferrer noopener' href='https://n3rds.work'>Psstats.org</a>.</p>";
 
         $ex = new MissingFilePermissionException($directoryMessage);
         $ex->setIsHtmlMessage();

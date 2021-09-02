@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -54,7 +54,7 @@ abstract class Base extends \Piwik\Plugin\Report
                                 '</a>'));
                 } else {
                     $footerMessage .= ' ' . Piwik::translate('UserCountry_ToGeolocateOldVisits',
-                            array('<a rel="noreferrer noopener" target="_blank" href="https://psstats.org/faq/how-to/#faq_167">', '</a>'));
+                            array('<a rel="noreferrer noopener" target="_blank" href="https://n3rds.work/faq/how-to/#faq_167">', '</a>'));
                 }
 
                 $view->config->show_footer_message = $footerMessage;

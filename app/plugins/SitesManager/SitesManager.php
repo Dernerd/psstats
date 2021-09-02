@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -361,12 +361,12 @@ class SitesManager extends \Piwik\Plugin
     public static function getInstructionUrlBySiteType($siteType)
     {
         $map = [
-            self::SITE_TYPE_JOOMLA => 'https://psstats.org/faq/new-to-piwik/how-do-i-install-the-psstats-analytics-tracking-code-on-joomla',
-            self::SITE_TYPE_SHAREPOINT => 'https://psstats.org/faq/how-to-install/faq_19424',
-            self::SITE_TYPE_SHOPIFY => 'https://psstats.org/faq/new-to-piwik/how-do-i-install-the-psstats-tracking-code-on-my-shopify-store',
-            self::SITE_TYPE_SQUARESPACE => 'https://psstats.org/faq/new-to-piwik/how-do-i-integrate-psstats-with-squarespace-website',
-            self::SITE_TYPE_WIX => 'https://psstats.org/faq/new-to-piwik/how-do-i-install-the-psstats-analytics-tracking-code-on-wix',
-            self::SITE_TYPE_WORDPRESS => 'https://psstats.org/faq/new-to-piwik/how-do-i-install-the-psstats-tracking-code-on-wordpress',
+            self::SITE_TYPE_JOOMLA => 'https://n3rds.work/faq/new-to-piwik/how-do-i-install-the-psstats-analytics-tracking-code-on-joomla',
+            self::SITE_TYPE_SHAREPOINT => 'https://n3rds.work/faq/how-to-install/faq_19424',
+            self::SITE_TYPE_SHOPIFY => 'https://n3rds.work/faq/new-to-piwik/how-do-i-install-the-psstats-tracking-code-on-my-shopify-store',
+            self::SITE_TYPE_SQUARESPACE => 'https://n3rds.work/faq/new-to-piwik/how-do-i-integrate-psstats-with-squarespace-website',
+            self::SITE_TYPE_WIX => 'https://n3rds.work/faq/new-to-piwik/how-do-i-install-the-psstats-analytics-tracking-code-on-wix',
+            self::SITE_TYPE_WORDPRESS => 'https://n3rds.work/faq/new-to-piwik/how-do-i-install-the-psstats-tracking-code-on-wordpress',
         ];
 
         return $map[$siteType] ? $map[$siteType] : false;

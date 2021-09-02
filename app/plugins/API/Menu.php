@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -55,7 +55,7 @@ class Menu extends \Piwik\Plugin\Menu
         $parsedOS = $ua->parse();
 
         if (!empty($parsedOS['short_name']) && in_array($parsedOS['short_name'], array(self::DD_SHORT_NAME_ANDROID, self::DD_SHORT_NAME_IOS))) {
-            $menu->addItem('Mobile_PsstatsMobile', null, 'https://psstats.org/mobile/', 4);
+            $menu->addItem('Mobile_PsstatsMobile', null, 'https://n3rds.work/mobile/', 4);
         }
     }
 

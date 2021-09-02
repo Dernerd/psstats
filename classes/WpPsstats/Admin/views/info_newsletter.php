@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -37,7 +37,7 @@ if (!$show_newsletter) {
 			<label for="<?php echo Info::FORM_NAME ?>">
 				<?php esc_html_e('Subscribe to our newsletter to receive regular information about Psstats, web analytics, and privacy. You can unsubscribe from it any time.', 'psstats'); ?>
 				<?php esc_html_e('This service uses MadMimi.', 'psstats'); ?>
-				<?php echo sprintf(esc_html__('Learn more about it on our %1$sPrivacy Policy page%2$s.', 'psstats'), '<a href="https://psstats.org/privacy-policy/" target="_blank" rel="noreferrer noopener">', '</a>'); ?>
+				<?php echo sprintf(esc_html__('Learn more about it on our %1$sPrivacy Policy page%2$s.', 'psstats'), '<a href="https://n3rds.work/privacy-policy/" target="_blank" rel="noreferrer noopener">', '</a>'); ?>
 			</label>
 			<br><br>
 			<input type="submit" class="button-secondary" value="<?php esc_attr_e('Subscribe', 'psstats');?>">

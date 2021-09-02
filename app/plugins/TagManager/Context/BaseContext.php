@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 namespace Piwik\Plugins\TagManager\Context;
@@ -166,7 +166,7 @@ abstract class BaseContext
         }
 
         if (count($this->nestedVariableCals) > 500) {
-            // eg PsstatsConfiguration variable referencing itself in a variable like psstatsUrl=https://psstats.org{{PsstatsConfiguration}}
+            // eg PsstatsConfiguration variable referencing itself in a variable like psstatsUrl=https://n3rds.work{{PsstatsConfiguration}}
             $entries = array_slice($this->nestedVariableCals, -3); // show last 3 entities in error message
             $entries = array_unique($entries);
             throw new EntityRecursionException('It seems an entity references itself or a recursion is caused in some other way. It may be related due to these entites: "'.implode(',', $entries). '". Please check if the entity references itself maybe or if a recursion might happen in another way.');

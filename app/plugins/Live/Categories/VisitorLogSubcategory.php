@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -21,7 +21,7 @@ class VisitorLogSubcategory extends Subcategory
     {
         $help = '<p>' . Piwik::translate('Live_VisitorLogSubcategoryHelp1') . '</p>';
         $help .= '<p>' . Piwik::translate('Live_VisitorLogSubcategoryHelp2') . '</p>';
-        $help .= '<p><a href="https://psstats.org/docs/real-time/" target="_blank" rel="noreferrer noopener">' . Piwik::translate('Live_VisitorLogSubcategoryHelp3') . '</a></p>';
+        $help .= '<p><a href="https://n3rds.work/docs/real-time/" target="_blank" rel="noreferrer noopener">' . Piwik::translate('Live_VisitorLogSubcategoryHelp3') . '</a></p>';
         return $help;
     }
 }

@@ -1,4 +1,4 @@
-These are community-contributed definitions for search engine and social network detections list maintained and used by [Psstats](https://psstats.org/) (formerly Piwik), the leading open source web analytics platform.
+These are community-contributed definitions for search engine and social network detections list maintained and used by [Psstats](https://n3rds.work/) (formerly Piwik), the leading open source web analytics platform.
 
 # Social Networks
 

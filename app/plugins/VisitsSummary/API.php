@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -136,7 +136,7 @@ class API extends \Piwik\Plugin\API
         if (!SettingsPiwik::isUniqueVisitorsEnabled($period)) {
             throw new \Exception(
                 "The metric " . $metric . " is not enabled for the requested period. " .
-                "Please see this FAQ: https://psstats.org/faq/how-to/faq_113/"
+                "Please see this FAQ: https://n3rds.work/faq/how-to/faq_113/"
             );
         }
     }

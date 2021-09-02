@@ -32,7 +32,7 @@
             {% if isInternetEnabled %}
             <a class="title">{{ updateCheck|raw }}</a>
             {% else %}
-            <a class="title" href="https://psstats.org/changelog/" target="_blank" rel="noreferrer noopener">
+            <a class="title" href="https://n3rds.work/changelog/" target="_blank" rel="noreferrer noopener">
                 <span id="updateCheckLinkContainer">
                     {{ 'CoreHome_SeeAvailableVersions'|translate }}
                 </span>
@@ -45,12 +45,12 @@
             {% if isMultiServerEnvironment %}
                 {{ 'CoreHome_OneClickUpdateNotPossibleAsMultiServerEnvironment'|translate("<a rel='noreferrer noopener' href='https://builds.psstats.org/piwik-" ~ latest_version_available ~ ".zip'>builds.psstats.org</a>")|raw }}
             {% else %}
-                {{ 'General_PiwikXIsAvailablePleaseUpdateNow'|translate(latest_version_available,"<br /><a href='index.php?module=CoreUpdater&amp;action=newVersionAvailable'>","</a>","<a target='_blank' rel='noreferrer noopener' href='https://psstats.org/changelog/'>","</a>")|raw }}
+                {{ 'General_PiwikXIsAvailablePleaseUpdateNow'|translate(latest_version_available,"<br /><a href='index.php?module=CoreUpdater&amp;action=newVersionAvailable'>","</a>","<a target='_blank' rel='noreferrer noopener' href='https://n3rds.work/changelog/'>","</a>")|raw }}
             {% endif %}
             <br />
         {% elseif latest_version_available and not isPiwikDemo and hasSomeViewAccess and not isUserIsAnonymous %}
             {% set updateSubject = 'General_NewUpdatePiwikX'|translate(latest_version_available)|e('url') %}
-            {{ 'General_PiwikXIsAvailablePleaseNotifyPiwikAdmin'|translate("<a target='_blank' rel='noreferrer noopener' href='https://psstats.org/'>Psstats</a> <a target='_blank' rel='noreferrer noopener' href='https://psstats.org/changelog/'>" ~ latest_version_available ~ "</a>", "<a href='mailto:" ~ superUserEmails ~ "?subject=" ~ updateSubject ~ "'>", "</a>")|raw }}
+            {{ 'General_PiwikXIsAvailablePleaseNotifyPiwikAdmin'|translate("<a target='_blank' rel='noreferrer noopener' href='https://n3rds.work/'>Psstats</a> <a target='_blank' rel='noreferrer noopener' href='https://n3rds.work/changelog/'>" ~ latest_version_available ~ "</a>", "<a href='mailto:" ~ superUserEmails ~ "?subject=" ~ updateSubject ~ "'>", "</a>")|raw }}
             <br />
         {% endif %}
 

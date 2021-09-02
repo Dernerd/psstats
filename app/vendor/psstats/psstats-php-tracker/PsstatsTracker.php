@@ -5,7 +5,7 @@
  * For more information, see README.md
  *
  * @license released under BSD License http://www.opensource.org/licenses/bsd-license.php
- * @link https://psstats.org/docs/tracking-api/
+ * @link https://n3rds.work/docs/tracking-api/
  *
  * @category Psstats
  * @package PsstatsTracker
@@ -289,7 +289,7 @@ class PsstatsTracker
 
     /**
      * Sets Visit Custom Variable.
-     * See https://psstats.org/docs/custom-variables/
+     * See https://n3rds.work/docs/custom-variables/
      *
      * @param int $id Custom variable slot ID from 1-5
      * @param string $name Custom variable name

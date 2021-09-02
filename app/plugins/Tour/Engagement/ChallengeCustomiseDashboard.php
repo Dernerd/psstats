@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -54,7 +54,7 @@ class ChallengeCustomiseDashboard extends Challenge
 
     public function getUrl()
     {
-        return 'https://psstats.org/docs/piwik-tour/#dashboard-widgets';
+        return 'https://n3rds.work/docs/piwik-tour/#dashboard-widgets';
     }
 
 

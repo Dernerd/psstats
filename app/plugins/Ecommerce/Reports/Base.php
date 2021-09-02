@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -19,7 +19,7 @@ abstract class Base extends Report
     {
         $this->module   = 'Goals';
         $this->categoryId = 'Goals_Ecommerce';
-        $this->onlineGuideUrl = 'https://psstats.org/docs/ecommerce-analytics/';
+        $this->onlineGuideUrl = 'https://n3rds.work/docs/ecommerce-analytics/';
     }
 
     public function isEnabled()

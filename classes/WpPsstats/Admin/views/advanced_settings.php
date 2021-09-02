@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  * Code Based on
@@ -46,7 +46,7 @@ if ( $was_updated ) {
             <td width="50%">
 	            <?php esc_html_e( 'Wir haben festgestellt, dass Du die folgende IP-Adresse hast:', 'psstats' ) ?>
 	            <?php echo esc_html( $psstats_detected_ip ) ?> <br>
-	            <?php echo sprintf(esc_html__( 'Um diesen Wert mit Deiner tatsächlichen IP-Adresse zu vergleichen, %1$sklicke bitte hier%2$s.', 'psstats' ), '<a rel="noreferrer noopener" target="_blank" href="https://psstats.org/ip.php">', '</a>') ?><br><br>
+	            <?php echo sprintf(esc_html__( 'Um diesen Wert mit Deiner tatsächlichen IP-Adresse zu vergleichen, %1$sklicke bitte hier%2$s.', 'psstats' ), '<a rel="noreferrer noopener" target="_blank" href="https://n3rds.work/ip.php">', '</a>') ?><br><br>
                 <?php esc_html_e( 'Sollte Deine IP-Adresse nicht mit dem obigen Wert übereinstimmen, befindet sich Dein WordPress möglicherweise hinter einem Proxy und Du musst möglicherweise einen anderen HTTP-Header auswählen, je nachdem, welcher der Werte auf der linken Seite Deine richtige IP-Adresse anzeigt.', 'psstats' ) ?>
             </td>
         </tr>
@@ -60,7 +60,7 @@ if ( $was_updated ) {
 				?>
             </td>
             <td width="50%">
-            Wenn Du das Psstats-Plugin deinstallierst, werden standardmäßig alle Daten gelöscht und können nur dann wiederhergestellt werden, wenn Du über Backups verfügst. Wenn Du diese Funktion deaktivierst, bleiben die verfolgten Daten in der Datenbank erhalten. Dies kann nützlich sein, um ein versehentliches Löschen aller Deiner historischen Analysedaten zu verhindern, wenn Du das Plugin deinstallierst. <a href="https://psstats.org/faq/wordpress/how-do-i-delete-or-reset-the-psstats-for-wordpress-data-completely/" target="_blank" rel="noreferrer noopener">Mehr erfahren</a>
+            Wenn Du das Psstats-Plugin deinstallierst, werden standardmäßig alle Daten gelöscht und können nur dann wiederhergestellt werden, wenn Du über Backups verfügst. Wenn Du diese Funktion deaktivierst, bleiben die verfolgten Daten in der Datenbank erhalten. Dies kann nützlich sein, um ein versehentliches Löschen aller Deiner historischen Analysedaten zu verhindern, wenn Du das Plugin deinstallierst. <a href="https://n3rds.work/faq/wordpress/how-do-i-delete-or-reset-the-psstats-for-wordpress-data-completely/" target="_blank" rel="noreferrer noopener">Mehr erfahren</a>
             </td>
         </tr>
         <?php } ?>

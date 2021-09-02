@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  * https://github.com/braekling/psstats
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 	echo sprintf(
 		__( 'The source code of the software is open-source so hundreds of people have reviewed it to ensure it is %1$ssecure%2$s and keeps your data private.', 'psstats' ),
-		'<a href="https://psstats.org/security/" rel="noreferrer noopener">',
+		'<a href="https://n3rds.work/security/" rel="noreferrer noopener">',
 		'</a>'
 	);
 	?>

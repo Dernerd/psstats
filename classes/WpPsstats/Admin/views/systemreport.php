@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -219,17 +219,17 @@ if ( ! function_exists( 'psstats_format_value_text' ) ) {
 		?>
 		<h3><?php esc_html_e( 'Popular Troubleshooting FAQs', 'psstats' ); ?></h3>
 		<ul class="psstats-list">
-			<li><a href="https://psstats.org/faq/wordpress/psstats-for-wordpress-is-not-showing-any-statistics-not-archiving-how-do-i-fix-it/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Psstats is not showing any statistics / reports, how do I fix it?', 'psstats' ); ?></a></li>
-			<li><a href="https://psstats.org/faq/wordpress/i-cannot-open-backend-page-how-do-i-troubleshoot-it/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'I cannot open the Psstats Reporting, Admin, or Tag Manager page, how do I troubleshoot it?', 'psstats' ); ?></a></li>
-			<li><a href="https://psstats.org/faq/wordpress/i-have-a-problem-how-do-i-troubleshoot-and-enable-wp_debug/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'I have an issue with the plugin, how do I troubleshoot and enable debug mode?', 'psstats' ); ?></a></li>
-			<li><a href="https://psstats.org/faq/wordpress/how-do-i-manually-delete-all-psstats-for-wordpress-data/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'How do I manually delete or reset all Psstats for WordPress data?', 'psstats' ); ?></a></li>
-			<li><a href="https://psstats.org/faq/wordpress/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'View all FAQs', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/faq/wordpress/psstats-for-wordpress-is-not-showing-any-statistics-not-archiving-how-do-i-fix-it/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Psstats is not showing any statistics / reports, how do I fix it?', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/faq/wordpress/i-cannot-open-backend-page-how-do-i-troubleshoot-it/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'I cannot open the Psstats Reporting, Admin, or Tag Manager page, how do I troubleshoot it?', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/faq/wordpress/i-have-a-problem-how-do-i-troubleshoot-and-enable-wp_debug/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'I have an issue with the plugin, how do I troubleshoot and enable debug mode?', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/faq/wordpress/how-do-i-manually-delete-all-psstats-for-wordpress-data/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'How do I manually delete or reset all Psstats for WordPress data?', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/faq/wordpress/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'View all FAQs', 'psstats' ); ?></a></li>
 		</ul>
 		<?php include 'info_bug_report.php'; ?>
 		<h4><?php esc_html_e( 'Before you create an issue', 'psstats' ); ?></h4>
 		<p><?php esc_html_e( 'If you experience any issue in Psstats, it is always a good idea to first check your webserver logs (if possible) for any errors.', 'psstats' ); ?>
 			<br/>
-			<?php echo sprintf( esc_html__( 'You may also want to enable %1$s.', 'psstats' ), '<a href="https://psstats.org/faq/wordpress/i-have-a-problem-how-do-i-troubleshoot-and-enable-wp_debug/" target="_blank" rel="noreferrer noopener"><code>WP_DEBUG</code></a>' ); ?>
+			<?php echo sprintf( esc_html__( 'You may also want to enable %1$s.', 'psstats' ), '<a href="https://n3rds.work/faq/wordpress/i-have-a-problem-how-do-i-troubleshoot-and-enable-wp_debug/" target="_blank" rel="noreferrer noopener"><code>WP_DEBUG</code></a>' ); ?>
 			<?php echo sprintf( esc_html__( 'To debug issues that happen in the background, for example report generation during a cronjob, you might also want to enable %1$s.', 'psstats' ), '<code>WP_DEBUG_LOG</code>' ); ?>
 
 		</p>
@@ -240,7 +240,7 @@ if ( ! function_exists( 'psstats_format_value_text' ) ) {
 			esc_html__( 'You may want to disable %1$s in your %2$s and set up an actual cronjob and %3$scheck out our recommended server sizing%4$s.', 'psstats' ),
 			'<code>DISABLE_WP_CRON</code>',
 			'<code>wp-config.php</code>',
-			'<a target="_blank" rel="noreferrer noopener" href="https://psstats.org/docs/requirements/#recommended-servers-sizing-cpu-ram-disks">',
+			'<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/docs/requirements/#recommended-servers-sizing-cpu-ram-disks">',
 			'</a>'
 		);
 		?>

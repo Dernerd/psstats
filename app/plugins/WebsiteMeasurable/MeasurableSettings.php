@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -335,7 +335,7 @@ class MeasurableSettings extends \Piwik\Settings\Measurable\MeasurableSettings
             $field->inlineHelp = Piwik::translate('SitesManager_EcommerceHelp')
                 . '<br />'
                 . Piwik::translate('SitesManager_PiwikOffersEcommerceAnalytics',
-                    array("<a href='https://psstats.org/docs/ecommerce-analytics/' target='_blank'>", '</a>'));
+                    array("<a href='https://n3rds.work/docs/ecommerce-analytics/' target='_blank'>", '</a>'));
             $field->uiControl = FieldConfig::UI_CONTROL_SINGLE_SELECT;
             $field->availableValues = array(
                 0 => Piwik::translate('SitesManager_NotAnEcommerceSite'),

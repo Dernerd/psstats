@@ -1,4 +1,4 @@
-This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam) maintained by [Psstats](https://psstats.org/), the leading open source web analytics platform.
+This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam) maintained by [Psstats](https://n3rds.work/), the leading open source web analytics platform.
 
 ## Usage
 
@@ -56,7 +56,7 @@ Now as a daily cron job so the list stays up to date:
 
 ### In Psstats (formerly Piwik)
 
-This list is included in each [Psstats](https://psstats.org) release so that referrer spam is filtered automatically. Psstats will also automatically update this list to its latest version every week.
+This list is included in each [Psstats](https://n3rds.work) release so that referrer spam is filtered automatically. Psstats will also automatically update this list to its latest version every week.
 
 ## Contributing
 

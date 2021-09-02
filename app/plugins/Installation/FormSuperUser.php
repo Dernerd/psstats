@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -59,10 +59,10 @@ class FormSuperUser extends QuickForm2
             ));
 
         $professionalServicesNewsletter = Piwik::translate('Installation_ProfessionalServicesNewsletter',
-            array("<a href='https://psstats.org/support/?pk_medium=App_Newsletter_link&pk_source=Psstats_App&pk_campaign=App_Installation' style='color:#444;' rel='noreferrer noopener' target='_blank'>", "</a>")
+            array("<a href='https://n3rds.work/support/?pk_medium=App_Newsletter_link&pk_source=Psstats_App&pk_campaign=App_Installation' style='color:#444;' rel='noreferrer noopener' target='_blank'>", "</a>")
         );
 
-        $privacyNoticeLink = '<a href="https://psstats.org/privacy-policy/" target="_blank" rel="noreferrer noopener">';
+        $privacyNoticeLink = '<a href="https://n3rds.work/privacy-policy/" target="_blank" rel="noreferrer noopener">';
         $privacyNotice = '<div class="form-help email-privacy-notice">' . Piwik::translate('Installation_EmailPrivacyNotice', [$privacyNoticeLink, '</a>'])
             . '</div>';
 

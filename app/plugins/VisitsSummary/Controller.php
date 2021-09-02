@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -79,7 +79,7 @@ class Controller extends \Piwik\Plugin\Controller
             . $this->translator->translate('General_ColumnNbActionsDocumentation') . '<br />'
 
             . '<b>' . $this->translator->translate('General_ColumnNbUsers') . ':</b> '
-            . $this->translator->translate('General_ColumnNbUsersDocumentation') . ' (<a rel="noreferrer noopener" target="_blank" href="https://psstats.org/docs/user-id/">User ID</a>)<br />'
+            . $this->translator->translate('General_ColumnNbUsersDocumentation') . ' (<a rel="noreferrer noopener" target="_blank" href="https://n3rds.work/docs/user-id/">User ID</a>)<br />'
 
             . '<b>' . $this->translator->translate('General_ColumnActionsPerVisit') . ':</b> '
             . $this->translator->translate('General_ColumnActionsPerVisitDocumentation');

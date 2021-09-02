@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -162,7 +162,7 @@ abstract class ControllerAdmin extends Controller
         $message .= " ";
 
         $message .= Piwik::translate('General_ReadThisToLearnMore',
-            array('<a rel="noreferrer noopener" target="_blank" href="https://psstats.org/faq/how-to/faq_91/">', '</a>')
+            array('<a rel="noreferrer noopener" target="_blank" href="https://n3rds.work/faq/how-to/faq_91/">', '</a>')
           );
 
         $notification = new Notification($message);

@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 namespace Piwik\ProfessionalServices;
@@ -55,7 +55,7 @@ class Advertising
      */
     public function getPromoUrlForProfessionalServices($campaignMedium, $campaignContent = '')
     {
-        $url = 'https://psstats.org/support-plans/?';
+        $url = 'https://n3rds.work/support-plans/?';
 
         $campaign = $this->getCampaignParametersForPromoUrl(
             $name = self::CAMPAIGN_NAME_PROFESSIONAL_SERVICES,

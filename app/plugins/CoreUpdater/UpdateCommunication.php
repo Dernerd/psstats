@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -83,7 +83,7 @@ class UpdateCommunication
     {
         $version = str_replace('.', '-', $version);
 
-        $link = sprintf('https://psstats.org/changelog/psstats-%s/', $version);
+        $link = sprintf('https://n3rds.work/changelog/psstats-%s/', $version);
 
         return $link;
     }

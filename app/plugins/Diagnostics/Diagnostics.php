@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -48,7 +48,7 @@ class Diagnostics extends Plugin
         $lastSuccessfulRun = CronArchivingLastRunCheck::getTimeSinceLastSuccessfulRun();
         if ($lastSuccessfulRun > CronArchivingLastRunCheck::SECONDS_IN_DAY) {
             $content = Piwik::translate('Diagnostics_NoDataForReportArchivingNotRun', [
-                '<a href="https://psstats.org/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">',
+                '<a href="https://n3rds.work/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">',
                 '</a>',
             ]);
 

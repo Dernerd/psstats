@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  * Code Based on
@@ -55,7 +55,7 @@ if ( $was_updated ) {
 
         $psstats_manually_network = '';
         if ( $settings->is_network_enabled() ) {
-            $psstats_manually_network = ' ' . sprintf( esc_html__( 'You can use these variables: %1$s. %2$sLearn more%3$s', 'psstats' ), '{PSSTATS_IDSITE}, {PSSTATS_API_ENDPOINT}, {PSSTATS_JS_ENDPOINT}', '<a href="https://psstats.org/faq/wordpress/how-can-i-configure-the-tracking-code-manually-when-i-have-wordpress-network-enabled-in-multisite-mode/" target="_blank" rel="noreferrer noopener">', '</a>' );
+            $psstats_manually_network = ' ' . sprintf( esc_html__( 'You can use these variables: %1$s. %2$sLearn more%3$s', 'psstats' ), '{PSSTATS_IDSITE}, {PSSTATS_API_ENDPOINT}, {PSSTATS_JS_ENDPOINT}', '<a href="https://n3rds.work/faq/wordpress/how-can-i-configure-the-tracking-code-manually-when-i-have-wordpress-network-enabled-in-multisite-mode/" target="_blank" rel="noreferrer noopener">', '</a>' );
         }
 
 		if ( ! empty( $containers ) ) {
@@ -81,11 +81,11 @@ if ( $was_updated ) {
 
 		$psstats_form->show_checkbox( 'track_ecommerce', esc_html__( 'Enable ecommerce', 'psstats' ), esc_html__( 'Matom can track Ecommerce orders, abandoned carts and product views for WooCommerce, Easy Digital Analytics, MemberPress, and more. Disabling this feature will also remove Ecommerce reports from the Psstats UI.', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager' );
 
-		$psstats_form->show_checkbox( 'track_search', esc_html__( 'Track search', 'psstats' ), esc_html__( 'Use Psstats\'s advanced Site Search Analytics feature.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://psstats.org/docs/site-search/#track-site-search-using-the-tracking-api-advanced-users-only" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager' );
+		$psstats_form->show_checkbox( 'track_search', esc_html__( 'Track search', 'psstats' ), esc_html__( 'Use Psstats\'s advanced Site Search Analytics feature.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/site-search/#track-site-search-using-the-tracking-api-advanced-users-only" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager' );
 
-		$psstats_form->show_checkbox( 'track_404', esc_html__( 'Track 404', 'psstats' ), esc_html__( 'Psstats can automatically add a 404-category to track 404-page-visits.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats FAQ%2$s.', 'psstats' ), '<a href="https://psstats.org/faq/how-to/faq_60/" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually' );
+		$psstats_form->show_checkbox( 'track_404', esc_html__( 'Track 404', 'psstats' ), esc_html__( 'Psstats can automatically add a 404-category to track 404-page-visits.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats FAQ%2$s.', 'psstats' ), '<a href="https://n3rds.work/faq/how-to/faq_60/" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually' );
 
-		$psstats_form->show_checkbox( 'track_jserrors', esc_html__( 'Track JS errors', 'psstats' ), esc_html__( 'Enable to track JavaScript errors that occur on your website as Psstats events.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats FAQ%2$s.', 'psstats' ), '<a href="https://psstats.org/faq/how-to/how-do-i-enable-basic-javascript-error-tracking-and-reporting-in-psstats-browser-console-error-messages/" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_checkbox( 'track_jserrors', esc_html__( 'Track JS errors', 'psstats' ), esc_html__( 'Enable to track JavaScript errors that occur on your website as Psstats events.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats FAQ%2$s.', 'psstats' ), '<a href="https://n3rds.work/faq/how-to/how-do-i-enable-basic-javascript-error-tracking-and-reporting-in-psstats-browser-console-error-messages/" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
 
 		echo '<tr class="' . $psstats_full_generated_tracking_group . ' psstats-track-option-manually' . ( $psstats_is_not_tracking ? ' hidden' : '' ) . '">';
 		echo '<th scope="row"><label for="add_post_annotations">' . esc_html__( 'Add annotation on new post of type', 'psstats' ) . '</label>:</th><td>';
@@ -93,7 +93,7 @@ if ( $was_updated ) {
 		foreach ( get_post_types( array(), 'objects' ) as $post_type ) {
 			echo '<input type="checkbox" ' . ( isset( $psstats_filter [ $post_type->name ] ) && $psstats_filter [ $post_type->name ] ? 'checked="checked" ' : '' ) . 'value="1" name="psstats[add_post_annotations][' . $post_type->name . ']" /> ' . $post_type->label . ' &nbsp; ';
 		}
-		echo '<span class="dashicons dashicons-editor-help" style="cursor: pointer;" onclick="jQuery(\'#add_post_annotations-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="add_post_annotations-desc">' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://psstats.org/docs/annotations/" rel="noreferrer noopener" target="_BLANK">', '</a>' ) . '</p></td></tr>';
+		echo '<span class="dashicons dashicons-editor-help" style="cursor: pointer;" onclick="jQuery(\'#add_post_annotations-desc\').toggleClass(\'hidden\');"></span> <p class="description hidden" id="add_post_annotations-desc">' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/annotations/" rel="noreferrer noopener" target="_BLANK">', '</a>' ) . '</p></td></tr>';
 
 		$psstats_form->show_select(
 			'track_content',
@@ -131,7 +131,7 @@ if ( $was_updated ) {
 
 		$psstats_form->show_checkbox( 'track_feed', esc_html__( 'Track RSS feeds', 'psstats' ), esc_html__( 'Enable to track posts in feeds via tracking pixel.', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager' );
 
-		$psstats_form->show_checkbox( 'track_feed_addcampaign', esc_html__( 'Track RSS feed links as campaign', 'psstats' ), esc_html__( 'This will add Psstats campaign parameters to the RSS feed links.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://psstats.org/docs/tracking-campaigns/" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager', true, 'jQuery(\'tr.psstats-feed_campaign-option\').toggle(\'hidden\');' );
+		$psstats_form->show_checkbox( 'track_feed_addcampaign', esc_html__( 'Track RSS feed links as campaign', 'psstats' ), esc_html__( 'This will add Psstats campaign parameters to the RSS feed links.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/tracking-campaigns/" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager', true, 'jQuery(\'tr.psstats-feed_campaign-option\').toggle(\'hidden\');' );
 
 		$psstats_form->show_input( 'track_feed_campaign', esc_html__( 'RSS feed campaign', 'psstats' ), esc_html__( 'Keyword: post name.', 'psstats' ), $psstats_is_not_generated_tracking || ! $settings->get_global_option( 'track_feed_addcampaign' ), $psstats_full_generated_tracking_group . ' psstats-feed_campaign-option psstats-track-option-tagmanager' );
 

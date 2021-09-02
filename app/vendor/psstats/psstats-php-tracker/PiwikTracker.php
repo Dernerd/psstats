@@ -5,7 +5,7 @@
  * For more information, see README.md
  *
  * @license released under BSD License http://www.opensource.org/licenses/bsd-license.php
- * @link https://psstats.org/docs/tracking-api/
+ * @link https://n3rds.work/docs/tracking-api/
  *
  * @category Psstats
  * @package PsstatsTracker

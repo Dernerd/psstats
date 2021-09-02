@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -21,6 +21,6 @@ class SiteSearchSubcategory extends Subcategory
     {
         return '<p>' . Piwik::translate('Actions_SiteSearchSubcategoryHelp1') . '</p>'
             . '<p>' . Piwik::translate('Actions_SiteSearchSubcategoryHelp2') . '</p>'
-            . '<p><a href="https://psstats.org/docs/site-search/" rel="noreferrer noopener" target="_blank">' . Piwik::translate('Actions_SiteSearchSubcategoryHelp3') . '</a></p>';
+            . '<p><a href="https://n3rds.work/docs/site-search/" rel="noreferrer noopener" target="_blank">' . Piwik::translate('Actions_SiteSearchSubcategoryHelp3') . '</a></p>';
     }
 }

@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -20,6 +20,6 @@ class ManageGoalsSubcategory extends Subcategory
     public function getHelp()
     {
         return '<p>' . Piwik::translate('Goals_ManageGoalsSubcategoryHelp1') . '</p>'
-            . '<p><a href="https://psstats.org/docs/tracking-goals-web-analytics/" rel="noreferrer noopener" target="_blank">' . Piwik::translate('Goals_ManageGoalsSubcategoryHelp2') . '</a></p>';
+            . '<p><a href="https://n3rds.work/docs/tracking-goals-web-analytics/" rel="noreferrer noopener" target="_blank">' . Piwik::translate('Goals_ManageGoalsSubcategoryHelp2') . '</a></p>';
     }
 }

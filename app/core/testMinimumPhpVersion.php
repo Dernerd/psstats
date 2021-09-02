@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -65,7 +65,7 @@ if ($minimumPhpInvalid) {
                     "<br/>" . $composerInstall.
                     " This will initialize composer for Psstats and download libraries we use in vendor/* directory.".
                     "\n\n<br/><br/>Then reload this page to access your analytics reports." .
-                    "\n\n<br/><br/>For more information check out this FAQ: <a href='https://psstats.org/faq/how-to-install/faq_18271/' rel='noreferrer noopener' target='_blank'>How do I use Psstats from the Git repository?</a>." .
+                    "\n\n<br/><br/>For more information check out this FAQ: <a href='https://n3rds.work/faq/how-to-install/faq_18271/' rel='noreferrer noopener' target='_blank'>How do I use Psstats from the Git repository?</a>." .
                     "\n\n<br/><br/>Note: if for some reasons you cannot install composer, instead install the latest Psstats release from ".
                     "<a href='https://builds.psstats.org/piwik.zip' rel='noreferrer noopener'>builds.psstats.org</a>.</p>";
     }
@@ -151,11 +151,11 @@ if (!function_exists('Piwik_GetErrorMessagePage')) {
 
         if ($optionalLinks) {
             $optionalLinks = '<ul>
-                            <li><a rel="noreferrer noopener" target="_blank" href="https://psstats.org">Psstats.org homepage</a></li>
-                            <li><a rel="noreferrer noopener" target="_blank" href="https://psstats.org/faq/">Frequently Asked Questions</a></li>
-                            <li><a rel="noreferrer noopener" target="_blank" href="https://psstats.org/docs/">User Guides</a></li>
+                            <li><a rel="noreferrer noopener" target="_blank" href="https://n3rds.work">Psstats.org homepage</a></li>
+                            <li><a rel="noreferrer noopener" target="_blank" href="https://n3rds.work/faq/">Frequently Asked Questions</a></li>
+                            <li><a rel="noreferrer noopener" target="_blank" href="https://n3rds.work/docs/">User Guides</a></li>
                             <li><a rel="noreferrer noopener" target="_blank" href="https://forum.psstats.org/">Psstats Forums</a></li>
-                            <li><a rel="noreferrer noopener" target="_blank" href="https://psstats.org/support/?pk_campaign=App_AnErrorOccured&pk_source=Psstats_App&pk_medium=ProfessionalServicesLink">Professional Support for Psstats</a></li>
+                            <li><a rel="noreferrer noopener" target="_blank" href="https://n3rds.work/support/?pk_campaign=App_AnErrorOccured&pk_source=Psstats_App&pk_medium=ProfessionalServicesLink">Professional Support for Psstats</a></li>
                             </ul>';
         }
         if ($optionalLinkBack) {

@@ -19,13 +19,13 @@ Other issues will typically be rewarded by 242 USD (or more or less depending on
 We encourage you to responsibly report issues via our [Psstats Bug Bounty Program on HackerOne](https://hackerone.com/psstats) or you can also 
 [email us at security@psstats.org](mailto:security@psstats.org?subject=Reporting%20Vulnerability%20in%20Psstats).
 
-If you have found a security issue in Psstats please read [our security notes](https://psstats.org/security/) regarding responsible disclosures.
+If you have found a security issue in Psstats please read [our security notes](https://n3rds.work/security/) regarding responsible disclosures.
 
 
 ## Improve your Psstats Server Security 
 
-[Secure Psstats server](https://psstats.org/docs/security/): follow these steps to keep your Psstats data safe.
+[Secure Psstats server](https://n3rds.work/docs/security/): follow these steps to keep your Psstats data safe.
 
 ## Security announcements
 
-Please subscribe to [the Changelog](https://psstats.org/changelog/) ([rss feed](https://psstats.org/changelog/feed/)) to be notified of new releases (including security releases).
+Please subscribe to [the Changelog](https://n3rds.work/changelog/) ([rss feed](https://n3rds.work/changelog/feed/)) to be notified of new releases (including security releases).

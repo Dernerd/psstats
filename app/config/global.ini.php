@@ -494,7 +494,7 @@ enable_framed_settings = 0
 ; Note that the token used will be in the URL in the iframe, and thus will be stored in webserver
 ; logs and possibly other places. Using write or admin token_auths can be seen as a security risk,
 ; though it can be necessary in some use cases. We do not recommend enabling this setting, for more
-; information view the FAQ: https://psstats.org/faq/troubleshooting/faq_147/
+; information view the FAQ: https://n3rds.work/faq/troubleshooting/faq_147/
 enable_framed_allow_write_admin_token_auth = 0
 
 ; language cookie name for session
@@ -827,7 +827,7 @@ debug = 0
 ; see the log output as well.
 debug_on_demand = 0
 
-; This setting is described in this FAQ: https://psstats.org/faq/how-to/faq_175/
+; This setting is described in this FAQ: https://n3rds.work/faq/how-to/faq_175/
 ; Note: generally this should only be set to 1 in an intranet setting, where most users have the same configuration (browsers, OS)
 ; and the same IP. If left to 0 in this setting, all visitors will be counted as one single visitor.
 trust_visitors_cookies = 0

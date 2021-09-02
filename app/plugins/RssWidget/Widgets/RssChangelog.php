@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -41,7 +41,7 @@ class RssChangelog extends \Piwik\Widget\Widget
     public function render()
     {   
         try {
-            return $this->getFeed('https://psstats.org/changelog/feed/');
+            return $this->getFeed('https://n3rds.work/changelog/feed/');
         } catch (\Exception $e) {
             return $this->error($e);
         }  

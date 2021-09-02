@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -176,12 +176,12 @@ class Failures
                 case self::FAILURE_ID_INVALID_SITE:
                     $failure['problem'] = Piwik::translate('CoreAdminHome_TrackingFailureInvalidSiteProblem');
                     $failure['solution'] = Piwik::translate('CoreAdminHome_TrackingFailureInvalidSiteSolution');
-                    $failure['solution_url'] = 'https://psstats.org/faq/how-to/faq_30838/';
+                    $failure['solution_url'] = 'https://n3rds.work/faq/how-to/faq_30838/';
                     break;
                 case self::FAILURE_ID_NOT_AUTHENTICATED:
                     $failure['problem'] = Piwik::translate('CoreAdminHome_TrackingFailureAuthenticationProblem');
                     $failure['solution'] = Piwik::translate('CoreAdminHome_TrackingFailureAuthenticationSolution');
-                    $failure['solution_url'] = 'https://psstats.org/faq/how-to/faq_30835/';
+                    $failure['solution_url'] = 'https://n3rds.work/faq/how-to/faq_30835/';
                     break;
             }
         }

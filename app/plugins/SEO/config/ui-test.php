@@ -11,7 +11,7 @@ return array(
             } elseif (strpos($aUrl, 'www.bing.com') ) {
                 $response = file_get_contents(PIWIK_INCLUDE_PATH . '/plugins/SEO/tests/resources/bing_response.html');
             } elseif (strpos($aUrl, 'archive.org') ) {
-                $response = '{"timestamp": "19900101", "url": "psstats.org", "archived_snapshots": {"closest": {"timestamp": "20180109155124", "available": true, "status": "200", "url": "http://web.archive.org/web/20180109155124/https://psstats.org"}}}';
+                $response = '{"timestamp": "19900101", "url": "psstats.org", "archived_snapshots": {"closest": {"timestamp": "20180109155124", "available": true, "status": "200", "url": "http://web.archive.org/web/20180109155124/https://n3rds.work"}}}';
             } elseif (strpos($aUrl, 'www.who.is') ) {
                 $response = file_get_contents(PIWIK_INCLUDE_PATH . '/plugins/SEO/tests/resources/whois_response.html');
             } elseif (strpos($aUrl, 'www.whois.com') ) {

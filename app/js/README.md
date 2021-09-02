@@ -22,7 +22,7 @@ The js/ folder contains:
   attempt to block tracking, you can change your tracking code to use "js/"
   instead of "piwik.js" and "psstats.php", respectively.
 
-  Note that in order for [Page Overlay](https://psstats.org/docs/page-overlay/) to work, the Piwik tracker method `setAPIUrl()` needs to be called with its parameter pointing to the root directory of Piwik. E.g.:
+  Note that in order for [Page Overlay](https://n3rds.work/docs/page-overlay/) to work, the Piwik tracker method `setAPIUrl()` needs to be called with its parameter pointing to the root directory of Piwik. E.g.:
 
   ```js
   _paq.push(['setAPIUrl', u]);
@@ -59,4 +59,4 @@ VisitorGeolocatorTest
 * We use /*! to include Piwik's license header in the minified source. Read
   Stallman's "The JavaScript Trap" for more information.
 
-* Information about the current version number you have installed can be found under [What version of Piwik do I have?](https://psstats.org/faq/how-to-update/faq_8/). 
+* Information about the current version number you have installed can be found under [What version of Piwik do I have?](https://n3rds.work/faq/how-to-update/faq_8/). 

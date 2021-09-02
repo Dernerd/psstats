@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -39,7 +39,7 @@ class GetCountry extends Base
             // if we're using the default location provider, add a note explaining how it works
             $footerMessage = Piwik::translate("General_Note") . ': '
                 . Piwik::translate('UserCountry_DefaultLocationProviderExplanation',
-                    array('<a rel="noreferrer noopener" target="_blank" href="https://psstats.org/docs/geo-locate/">', '</a>'));
+                    array('<a rel="noreferrer noopener" target="_blank" href="https://n3rds.work/docs/geo-locate/">', '</a>'));
 
             $view->config->show_footer_message = $footerMessage;
         }

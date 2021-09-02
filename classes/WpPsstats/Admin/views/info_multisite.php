@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         Your Psstats will then run a lot faster, you can put Psstats on a separate server if needed, and it allows you to make use of additional features such as %5$sRoll-Up Reporting%6$s.',
 			'psstats'
 		),
-		'<a href="https://psstats.org/psstats-on-premise/" target="_blank" rel="noreferrer noopener">',
+		'<a href="https://n3rds.work/psstats-on-premise/" target="_blank" rel="noreferrer noopener">',
 		'</a>',
 		'<a href="https://wordpress.org/plugins/wp-piwik/" target="_blank" rel="noreferrer noopener">',
 		'</a>',

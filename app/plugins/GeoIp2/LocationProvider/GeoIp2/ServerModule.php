@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -352,7 +352,7 @@ class ServerModule extends GeoIp2
     {
         $comment = Piwik::translate('GeoIp2_GeoIPLocationProviderNotRecommended') . ' ';
         $comment .= Piwik::translate('GeoIp2_LocationProviderDesc_ServerModule2', array(
-            '<a href="https://psstats.org/docs/geo-locate/" rel="noreferrer noopener" target="_blank">', '', '', '</a>'
+            '<a href="https://n3rds.work/docs/geo-locate/" rel="noreferrer noopener" target="_blank">', '', '', '</a>'
         ));
 
         return $comment;

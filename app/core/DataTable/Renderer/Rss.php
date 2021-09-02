@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -78,7 +78,7 @@ class Rss extends Renderer
 		<guid>$thisPiwikUrl</guid>
 		<link>$thisPiwikUrl</link>
 		<title>$title</title>
-		<author>https://psstats.org</author>
+		<author>https://n3rds.work</author>
 		<description>";
 
             $out .= Common::sanitizeInputValue($this->renderDataTable($subtable));
@@ -113,7 +113,7 @@ class Rss extends Renderer
 <rss version=\"2.0\">
   <channel>
     <title>psstats statistics - RSS</title>
-    <link>https://psstats.org</link>
+    <link>https://n3rds.work</link>
     <description>Psstats RSS feed</description>
     <pubDate>$generationDate</pubDate>
     <generator>psstats</generator>

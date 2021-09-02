@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         %3$splease give us a review%4$s and spread the word about us.',
 			'psstats'
 		),
-		'<a target="_blank" rel="noreferrer noopener" href="https://psstats.org/team/">',
+		'<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/team/">',
 		'</a>',
 		'<a target="_blank" rel="noreferrer noopener" href="https://wordpress.org/support/plugin/psstats/reviews/?rate=5#new-post">',
 		'<span class="dashicons-before dashicons-star-filled" style="color:gold;"></span><span class="dashicons-before dashicons-star-filled" style="color:gold;"></span><span class="dashicons-before dashicons-star-filled" style="color:gold;"></span><span class="dashicons-before dashicons-star-filled" style="color:gold;"></span><span class="dashicons-before dashicons-star-filled" style="color:gold;"></span></a>'
@@ -68,10 +68,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="psstats-footer">
 		<ul>
 			<li>
-				<a target="_blank" rel="noreferrer noopener" href="https://psstats.org/newsletter/"><span
+				<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/newsletter/"><span
 						class="dashicons-before dashicons-email"></span></a>
 				<a target="_blank" rel="noreferrer noopener"
-				   href="https://psstats.org/newsletter/"><?php esc_html_e( 'Newsletter', 'psstats' ); ?></a>
+				   href="https://n3rds.work/newsletter/"><?php esc_html_e( 'Newsletter', 'psstats' ); ?></a>
 			</li>
 			<li>
 				<a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/Psstats.org"><span
@@ -92,13 +92,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</ul>
 		<ul>
 			<li><a target="_blank" rel="noreferrer noopener"
-				   href="https://psstats.org/blog/"><?php esc_html_e( 'Blog', 'psstats' ); ?></a></li>
+				   href="https://n3rds.work/blog/"><?php esc_html_e( 'Blog', 'psstats' ); ?></a></li>
 			<li><a target="_blank" rel="noreferrer noopener"
 				   href="https://developer.psstats.org"><?php esc_html_e( 'Developers', 'psstats' ); ?></a></li>
 			<li><a target="_blank" rel="noreferrer noopener"
 				   href="https://plugins.psstats.org"><?php esc_html_e( 'Marketplace', 'psstats' ); ?></a></li>
 			<li><a target="_blank" rel="noreferrer noopener"
-				   href="https://psstats.org/thank-you-all/"><?php esc_html_e( 'Credits', 'psstats' ); ?></a></li>
+				   href="https://n3rds.work/thank-you-all/"><?php esc_html_e( 'Credits', 'psstats' ); ?></a></li>
 		</ul>
 	</div>
 </div>

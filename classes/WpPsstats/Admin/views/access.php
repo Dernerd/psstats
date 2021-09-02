@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -58,13 +58,13 @@ use WpPsstats\Admin\AccessSettings;
         }
     ?>
 	<?php esc_html_e( 'Erfahre mehr über die Unterschiede zwischen diesen Psstats-Rollen:', 'psstats' ); ?>
-	<a href="https://psstats.org/faq/general/faq_70/" target="_blank" rel="noopener"><?php esc_html_e( 'Ansicht', 'psstats' ); ?></a>,
-	<a href="https://psstats.org/faq/general/faq_26910/" target="_blank"
+	<a href="https://n3rds.work/faq/general/faq_70/" target="_blank" rel="noopener"><?php esc_html_e( 'Ansicht', 'psstats' ); ?></a>,
+	<a href="https://n3rds.work/faq/general/faq_26910/" target="_blank"
 	   rel="noopener"><?php esc_html_e( 'Schreiben', 'psstats' ); ?></a>,
-	<a href="https://psstats.org/faq/general/faq_69/" target="_blank" rel="noopener"><?php esc_html_e( 'Admin', 'psstats' ); ?></a>,
-	<a href="https://psstats.org/faq/general/faq_35/" target="_blank"
+	<a href="https://n3rds.work/faq/general/faq_69/" target="_blank" rel="noopener"><?php esc_html_e( 'Admin', 'psstats' ); ?></a>,
+	<a href="https://n3rds.work/faq/general/faq_35/" target="_blank"
 	   rel="noopener"><?php esc_html_e( 'Superuser', 'psstats' ); ?></a><br/>
-	<?php esc_html_e( 'Möchtest Du auf die Startseite umleiten, wenn sie nicht eingeloggt sind?', 'psstats' ); ?> <a href="https://psstats.org/faq/wordpress/how-do-i-hide-my-wordpress-login-url-when-someone-accesses-a-psstats-report-directly/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Mehr erfahren', 'psstats' ); ?></a>
+	<?php esc_html_e( 'Möchtest Du auf die Startseite umleiten, wenn sie nicht eingeloggt sind?', 'psstats' ); ?> <a href="https://n3rds.work/faq/wordpress/how-do-i-hide-my-wordpress-login-url-when-someone-accesses-a-psstats-report-directly/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Mehr erfahren', 'psstats' ); ?></a>
 </p>
 
 <h2><?php esc_html_e( 'Rollen', 'psstats' ); ?></h2>

@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -36,15 +36,15 @@ It’s now our job to ensure you get the best possible Psstats experience withou
 <br>
 <strong>1. Speed up your Psstats by generating your reports in the background</strong><br>
 This is a common problem for first time users that can easily be fixed in a few minutes. What you’ll need to do is set up auto-archiving of your reports. I have provided you with a link of step-by-step instructions on how to do this below:<br>
-<a href="https://psstats.org/docs/setup-auto-archiving/">&gt;&gt; Set up auto-archiving of your reports</a><br><br>
+<a href="https://n3rds.work/docs/setup-auto-archiving/">&gt;&gt; Set up auto-archiving of your reports</a><br><br>
 <strong>2. Get the server size right for your traffic</strong><br>
 Psstats is a platform designed to be fast, no matter the size of your database and how many visits you’re tracking. Here we can recommend the best infrastructure to host your Psstats.<br>
-<a href="https://psstats.org/docs/requirements/#recommended-servers-sizing-cpu-ram-disks">&gt;&gt; Learn the recommended server configuration and sizing to run Psstats with speed</a><br>
+<a href="https://n3rds.work/docs/requirements/#recommended-servers-sizing-cpu-ram-disks">&gt;&gt; Learn the recommended server configuration and sizing to run Psstats with speed</a><br>
 <br>
 <strong>3. Next, make sure your data is secure</strong><br>
 Privacy and security are of utmost importance to the Psstats team and we want to make sure security is up to the standard you need.<br>
 Below is a link that will give your Psstats administrator a list of tips and best practices to improve security.<br>
-<a href="https://psstats.org/docs/security/">&gt;&gt; Tips for staying secure in Psstats</a><br>
+<a href="https://n3rds.work/docs/security/">&gt;&gt; Tips for staying secure in Psstats</a><br>
 <br>
 <strong>Need more help?</strong><br>
 <ul><li>Join our forum</li>

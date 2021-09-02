@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -38,7 +38,7 @@ $psstats_extra_url_params = '&' . http_build_query(
             </p>
             <p><a href="https://builds.psstats.org/psstats-marketplace-for-wordpress-latest.zip" rel="noreferrer noopener" class="button"><?php esc_html_e( 'Download Psstats Marketplace for WordPress', 'psstats' ); ?></a>
 
-            <a target="_blank" href="https://psstats.org/faq/wordpress/how-do-i-install-a-psstats-marketplace-plugin-in-psstats-for-wordpress/"><span class="dashicons-before dashicons-video-alt3"></span></a> <a target="_blank" href="https://psstats.org/faq/wordpress/how-do-i-install-a-psstats-marketplace-plugin-in-psstats-for-wordpress/"><?php esc_html_e( 'Install instructions', 'psstats' ); ?></a>
+            <a target="_blank" href="https://n3rds.work/faq/wordpress/how-do-i-install-a-psstats-marketplace-plugin-in-psstats-for-wordpress/"><span class="dashicons-before dashicons-video-alt3"></span></a> <a target="_blank" href="https://n3rds.work/faq/wordpress/how-do-i-install-a-psstats-marketplace-plugin-in-psstats-for-wordpress/"><?php esc_html_e( 'Install instructions', 'psstats' ); ?></a>
            </p>
         </div>
 	<?php } ?>

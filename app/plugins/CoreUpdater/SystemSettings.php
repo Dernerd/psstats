@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -125,7 +125,7 @@ class SystemSettings extends \Piwik\Settings\Plugin\SystemSettings
             $field->inlineHelp = Piwik::translate('CoreUpdater_Utf8mb4ConversionHelp', [
                 '�',
                 '<code>' . PIWIK_INCLUDE_PATH . '/console core:convert-to-utf8mb4</code>',
-                '<a href="https://psstats.org/faq/how-to-update/how-to-convert-the-database-to-utf8mb4-charset/" rel="noreferrer noopener" target="_blank">',
+                '<a href="https://n3rds.work/faq/how-to-update/how-to-convert-the-database-to-utf8mb4-charset/" rel="noreferrer noopener" target="_blank">',
                 '</a>'
             ]);
         });

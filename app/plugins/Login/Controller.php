@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -338,7 +338,7 @@ class Controller extends \Piwik\Plugin\ControllerAdmin
 
     protected function getMessageExceptionNoAccess()
     {
-        $message = Piwik::translate('Login_InvalidNonceOrHeadersOrReferrer', array('<a target="_blank" rel="noreferrer noopener" href="https://psstats.org/faq/how-to-install/#faq_98">', '</a>'));
+        $message = Piwik::translate('Login_InvalidNonceOrHeadersOrReferrer', array('<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/faq/how-to-install/#faq_98">', '</a>'));
 
         $message .= $this->getMessageExceptionNoAccessWhenInsecureConnectionMayBeUsed();
 
@@ -357,7 +357,7 @@ class Controller extends \Piwik\Plugin\ControllerAdmin
         if(Url::isSecureConnectionAssumedByPiwikButNotForcedYet()) {
             $message = '<br/><br/>' . Piwik::translate('Login_InvalidNonceSSLMisconfigured',
                     array(
-                        '<a target="_blank" rel="noreferrer noopener" href="https://psstats.org/faq/how-to/faq_91/">',
+                        '<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/faq/how-to/faq_91/">',
                         '</a>',
                         'config/config.ini.php',
                         '<pre>force_ssl=1</pre>',

@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -1083,7 +1083,7 @@ class CronArchive
         // Recommend to disable browser archiving when using this script
         if (Rules::isBrowserTriggerEnabled()) {
             $this->logger->info("- If you execute this script at least once per hour (or more often) in a crontab, you may disable 'Browser trigger archiving' in Psstats UI > Settings > General Settings.");
-            $this->logger->info("  See the doc at: https://psstats.org/docs/setup-auto-archiving/");
+            $this->logger->info("  See the doc at: https://n3rds.work/docs/setup-auto-archiving/");
         }
 
         $cliMulti = new CliMulti($this->logger);

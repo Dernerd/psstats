@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -57,7 +57,7 @@ class CronArchivingLastRunCheck implements Diagnostic
         if (empty($lastRunTime)) {
             $comment = $this->translator->translate('Diagnostics_CronArchivingHasNotRun')
                 . '<br/><br/>' . $this->translator->translate('Diagnostics_CronArchivingRunDetails',
-                    [$coreArchiveShort, $mailto, $commandToRerun, '<a href="https://psstats.org/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>']);
+                    [$coreArchiveShort, $mailto, $commandToRerun, '<a href="https://n3rds.work/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>']);
             return [DiagnosticResult::singleResult($label, DiagnosticResult::STATUS_ERROR, $comment)];
         }
 
@@ -72,7 +72,7 @@ class CronArchivingLastRunCheck implements Diagnostic
             . '<br/><br/>' .
             $this->translator->translate(
                 'Diagnostics_CronArchivingRunDetails',
-                [$coreArchiveShort, $mailto, $commandToRerun, '<a href="https://psstats.org/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>']
+                [$coreArchiveShort, $mailto, $commandToRerun, '<a href="https://n3rds.work/docs/setup-auto-archiving/" target="_blank" rel="noreferrer noopener">', '</a>']
             );
 
         // check archiving has been run recently

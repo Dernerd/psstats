@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 namespace Piwik\Plugins\TagManager\Template\Tag;
@@ -37,7 +37,7 @@ class CustomHtmlTag extends BaseTag
                 $field->customUiControlTemplateFile = self::FIELD_TEMPLATE_TEXTAREA_VARIABLE;
                 $field->uiControl = FieldConfig::UI_CONTROL_TEXTAREA;
                 $field->description = 'This tag is ideal when you need to add for example custom styles or custom JavaScript or when you are looking for a specific tag which is not yet supported. With this tag you can append any HTML to the bottom of your page, add styles, or execute JavaScript. Note: You can replace content within the HTML with variables by putting a variable name in curly brackets like this {{PageUrl}}.';
-                $field->inlineHelp = '<a href="https://psstats.org/faq/tag-manager/faq_26815/">Learn more</a>';
+                $field->inlineHelp = '<a href="https://n3rds.work/faq/tag-manager/faq_26815/">Learn more</a>';
                 $field->validators[] = new NotEmpty();
             }),
             $this->makeSetting('htmlPosition', 'bodyEnd', FieldConfig::TYPE_STRING, function (FieldConfig $field) {

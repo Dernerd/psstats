@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -79,7 +79,7 @@ class Response
                 Common::sendResponseCode(400);
             }
             Common::printDebug("Empty request => Psstats page");
-            echo "This resource is part of Psstats. Keep full control of your data with the leading free and open source <a href='https://psstats.org' target='_blank' rel='noopener noreferrer nofollow'>web analytics & conversion optimisation platform</a>.<br>\n";
+            echo "This resource is part of Psstats. Keep full control of your data with the leading free and open source <a href='https://n3rds.work' target='_blank' rel='noopener noreferrer nofollow'>web analytics & conversion optimisation platform</a>.<br>\n";
             echo "This file is the endpoint for the Psstats tracking API. If you want to access the Psstats UI or use the Reporting API, please use <a href='index.php'>index.php</a> instead.";
         } else {
             $this->outputApiResponse($tracker);

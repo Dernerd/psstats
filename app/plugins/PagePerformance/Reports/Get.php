@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -30,7 +30,7 @@ class Get extends \Piwik\Plugin\Report
 
         $this->name = Piwik::translate('PagePerformance_Overview');
         $this->documentation = Piwik::translate('PagePerformance_OverviewDocumentation');
-        $this->onlineGuideUrl = 'https://psstats.org/faq/how-to/how-do-i-see-page-performance-reports/';
+        $this->onlineGuideUrl = 'https://n3rds.work/faq/how-to/how-do-i-see-page-performance-reports/';
         $this->processedMetrics = Metrics::getAllPagePerformanceMetrics();
         $this->metrics = Metrics::getAllPagePerformanceMetrics();
     }

@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 namespace Piwik\Plugins\TwoFactorAuth;
@@ -103,7 +103,7 @@ class Controller extends \Piwik\Plugin\Controller
                      }
                 }
             } else {
-                $messageNoAccess = Piwik::translate('Login_InvalidNonceOrHeadersOrReferrer', array('<a target="_blank" rel="noreferrer noopener" href="https://psstats.org/faq/how-to-install/#faq_98">', '</a>'));
+                $messageNoAccess = Piwik::translate('Login_InvalidNonceOrHeadersOrReferrer', array('<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/faq/how-to-install/#faq_98">', '</a>'));
             }
         }
         $superUsers = Request::processRequest('UsersManager.getUsersHavingSuperUserAccess', [], []);

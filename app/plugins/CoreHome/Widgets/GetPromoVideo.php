@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -37,7 +37,7 @@ class GetPromoVideo extends Widget
         $view = new View('@CoreHome/getPromoVideo');
         $view->shareText     = $this->translator->translate('CoreHome_SharePiwikShort');
         $view->shareTextLong = $this->translator->translate('CoreHome_SharePiwikLong');
-        $view->promoVideoUrl = 'https://psstats.org/docs/videos/';
+        $view->promoVideoUrl = 'https://n3rds.work/docs/videos/';
 
         return $view->render();
     }

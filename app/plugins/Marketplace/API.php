@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -15,7 +15,7 @@ use Piwik\Plugins\Marketplace\Api\Service;
 use Piwik\Plugins\Marketplace\Plugins\InvalidLicenses;
 
 /**
- * The Marketplace API lets you manage your license key so you can download & install in one-click <a target="_blank" rel="noreferrer" href="https://psstats.org/recommends/premium-plugins/">paid premium plugins</a> you have subscribed to.
+ * The Marketplace API lets you manage your license key so you can download & install in one-click <a target="_blank" rel="noreferrer" href="https://n3rds.work/recommends/premium-plugins/">paid premium plugins</a> you have subscribed to.
  *
  * @method static \Piwik\Plugins\Marketplace\API getInstance()
  */

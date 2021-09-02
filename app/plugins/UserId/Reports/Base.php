@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -15,6 +15,6 @@ abstract class Base extends Report
     protected function init()
     {
         $this->categoryId = 'General_Visitors';
-        $this->onlineGuideUrl = 'https://psstats.org/docs/user-id/';
+        $this->onlineGuideUrl = 'https://n3rds.work/docs/user-id/';
     }
 }

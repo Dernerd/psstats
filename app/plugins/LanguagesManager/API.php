@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  *
@@ -22,7 +22,7 @@ use Piwik\Translation\Loader\DevelopmentLoader;
  * The LanguagesManager API lets you access existing Psstats translations, and change Users languages preferences.
  *
  * "getTranslationsForLanguage" will return all translation strings for a given language,
- * so you can leverage Psstats translations in your application (and automatically benefit from the <a href='https://psstats.org/translations/' rel='noreferrer' target='_blank'>40+ translations</a>!).
+ * so you can leverage Psstats translations in your application (and automatically benefit from the <a href='https://n3rds.work/translations/' rel='noreferrer' target='_blank'>40+ translations</a>!).
  * This is mostly useful to developers who integrate Psstats API results in their own application.
  *
  * You can also request the default language to load for a user via "getLanguageForUser",

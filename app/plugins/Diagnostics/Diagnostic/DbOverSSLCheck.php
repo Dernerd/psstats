@@ -55,7 +55,7 @@ class DbOverSSLCheck implements Diagnostic
             }
         }
 
-        $comment .= '<br />' . '<a target="_blank" rel="noreferrer noopener" href="https://psstats.org/faq/"> FAQ on psstats.org</a>';
+        $comment .= '<br />' . '<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/faq/"> FAQ on psstats.org</a>';
 
         return array(DiagnosticResult::singleResult($label, DiagnosticResult::STATUS_WARNING, $comment));
     }

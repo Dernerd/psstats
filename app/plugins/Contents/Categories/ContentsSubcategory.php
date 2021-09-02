@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -20,6 +20,6 @@ class ContentsSubcategory extends Subcategory
     public function getHelp()
     {
         return '<p>' . Piwik::translate('Contents_ContentsSubcategoryHelp1') . '</p>'
-            . '<p><a href="https://psstats.org/docs/content-tracking/" rel="noreferrer noopener" target="_blank">' . Piwik::translate('Contents_ContentsSubcategoryHelp2') . '</a></p>';
+            . '<p><a href="https://n3rds.work/docs/content-tracking/" rel="noreferrer noopener" target="_blank">' . Piwik::translate('Contents_ContentsSubcategoryHelp2') . '</a></p>';
     }
 }

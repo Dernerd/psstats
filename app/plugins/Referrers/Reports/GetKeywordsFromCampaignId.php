@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -20,7 +20,7 @@ class GetKeywordsFromCampaignId extends Base
         $this->dimension     = new Keyword();
         $this->name          = Piwik::translate('Referrers_Campaigns');
         $this->documentation = Piwik::translate('Referrers_CampaignsReportDocumentation',
-                               array('<br />', '<a href="https://psstats.org/docs/tracking-campaigns/" rel="noreferrer noopener" target="_blank">', '</a>'));
+                               array('<br />', '<a href="https://n3rds.work/docs/tracking-campaigns/" rel="noreferrer noopener" target="_blank">', '</a>'));
         $this->isSubtableReport = true;
         $this->order = 10;
     }

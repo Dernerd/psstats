@@ -3,7 +3,7 @@
 		{{ 'GeoIp2_GeoIPUpdaterInstructions'|translate('<a href="http://www.maxmind.com/?rId=piwik" rel="noreferrer noopener">','</a>','<a rel="noreferrer noopener" href="https://db-ip.com/?refid=mtm">','</a>')|raw }}
         <br/><br/>
 		{% if dbipLiteUrl|default is not empty %}{{ 'GeoIp2_GeoLiteCityLink'|translate('<a rel="noreferrer noopener" href="'~dbipLiteUrl|e('html_attr')~'">',dbipLiteUrl|e('html'),'</a>')|raw }}<br/><br/>{% endif %}
-		{{ 'UserCountry_MaxMindLinkExplanation'|translate('<a href="https://psstats.org/faq/how-to/how-do-i-get-the-geolocation-download-url-for-the-free-maxmind-db/" rel="noreferrer noopener" target="_blank">', '</a>')|raw }}
+		{{ 'UserCountry_MaxMindLinkExplanation'|translate('<a href="https://n3rds.work/faq/how-to/how-do-i-get-the-geolocation-download-url-for-the-free-maxmind-db/" rel="noreferrer noopener" target="_blank">', '</a>')|raw }}
 
 		<span ng-show="locationUpdater.geoipDatabaseInstalled">
 			<br/><br/>{{ 'GeoIp2_GeoIPUpdaterIntro'|translate }}:

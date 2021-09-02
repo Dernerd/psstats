@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -389,7 +389,7 @@ class Php extends GeoIp2
                 array('<strong>', '</strong>'));
         }
 
-        $installDocs = '<a rel="noreferrer"  target="_blank" href="https://psstats.org/faq/how-to/#faq_163">'
+        $installDocs = '<a rel="noreferrer"  target="_blank" href="https://n3rds.work/faq/how-to/#faq_163">'
             . Piwik::translate('UserCountry_HowToInstallGeoIPDatabases')
             . '</a>';
 

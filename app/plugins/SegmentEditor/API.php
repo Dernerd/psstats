@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -128,7 +128,7 @@ class API extends \Piwik\Plugin\API
             if (Rules::isBrowserTriggerEnabled()) {
                 $message = "Pre-processed segments can only be created if browser triggered archiving is disabled.";
                 if (Piwik::hasUserSuperUserAccess()) {
-                    $message .= " To disable browser archiving follow the instructions here: https://psstats.org/docs/setup-auto-archiving/.";
+                    $message .= " To disable browser archiving follow the instructions here: https://n3rds.work/docs/setup-auto-archiving/.";
                 }
                 throw new Exception($message);
             }

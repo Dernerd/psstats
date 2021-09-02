@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -65,7 +65,7 @@ class CoreUpdater extends \Piwik\Plugin
         if ($updater->getComponentUpdates() !== null) {
             if (FrontController::shouldRethrowException()) {
                 throw new Exception("Piwik and/or some plugins have been upgraded to a new version. \n" .
-                    "--> Please run the update process first. See documentation: https://psstats.org/docs/update/ \n");
+                    "--> Please run the update process first. See documentation: https://n3rds.work/docs/update/ \n");
             } elseif ($module === 'API' && ('' == $action || 'index' == $action))  {
 
                 $outputFormat = strtolower(Common::getRequestVar('format', 'xml', 'string', $_GET + $_POST));

@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  * Code Based on
@@ -41,7 +41,7 @@ if ($invalid_format) { ?>
 	    <?php
 	    echo sprintf(
 		    __( 'To use MaxMind instead of the default DB-IP geolocation database %1$s get a MaxMind license key%2$s and then configure this key below.', 'psstats' ),
-		    '<a target="_blank" rel="noreferrer noopener" href="https://psstats.org/faq/how-to/how-do-i-get-a-license-key-for-the-maxmind-geolocation-database/">', '</a>'
+		    '<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/faq/how-to/how-do-i-get-a-license-key-for-the-maxmind-geolocation-database/">', '</a>'
 	    );
 	    ?>
     </p>

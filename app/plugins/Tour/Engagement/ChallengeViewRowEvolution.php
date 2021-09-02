@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -29,7 +29,7 @@ class ChallengeViewRowEvolution extends Challenge
 
     public function getUrl()
     {
-        return 'https://psstats.org/docs/row-evolution/';
+        return 'https://n3rds.work/docs/row-evolution/';
     }
 
 

@@ -1,8 +1,8 @@
 # Psstats (formerly Piwik) - psstats.org
 
-[![Latest Stable Version](https://poser.pugx.org/piwik/piwik/v/stable)](https://psstats.org/download/)
+[![Latest Stable Version](https://poser.pugx.org/piwik/piwik/v/stable)](https://n3rds.work/download/)
 [![Latest Unstable Version](https://poser.pugx.org/piwik/piwik/v/unstable)](https://packagist.org/packages/piwik/piwik)
-[![License](https://poser.pugx.org/piwik/piwik/license)](https://psstats.org/free-software/)
+[![License](https://poser.pugx.org/piwik/piwik/license)](https://n3rds.work/free-software/)
 
 ## Code Status
 
@@ -37,24 +37,24 @@ Psstats is released under the GPL v3 (or later) license, see [LICENSE](LICENSE).
   * PHP extension pdo and pdo_mysql, or the MySQLi extension
   * Psstats is OS / server independent
 
-See https://psstats.org/docs/requirements/.
+See https://n3rds.work/docs/requirements/.
 
 ## Install Psstats
 
-  * [Download Psstats](https://psstats.org/download/)
+  * [Download Psstats](https://n3rds.work/download/)
   * Upload psstats to your webserver
   * Point your browser to the directory
   * Follow the steps
   * Add the given javascript code to your pages
   * (You may also generate fake data to experiment, by enabling the plugin VisitorGenerator)
 
-See https://psstats.org/docs/installation/.
+See https://n3rds.work/docs/installation/.
 
-(When using Psstats for development you need to [install Psstats from the Git repository](https://psstats.org/faq/how-to-install/faq_18271/)).
+(When using Psstats for development you need to [install Psstats from the Git repository](https://n3rds.work/faq/how-to-install/faq_18271/)).
 
 ## Free trial 
 
-If you do not have a server or don't want to host yourself you can use our Psstats Cloud partner service (21 day free trial): https://psstats.org/start-free-analytics-trial/
+If you do not have a server or don't want to host yourself you can use our Psstats Cloud partner service (21 day free trial): https://n3rds.work/start-free-analytics-trial/
 
 ## Online Demo
 
@@ -62,12 +62,12 @@ Check out the online demo for Psstats at [demo.psstats.cloud](https://demo.pssta
 
 ## Changelog
 
-For the list of all tickets closed in the current and past releases, see [psstats.org/changelog/](https://psstats.org/changelog/). For the list of technical changes in the Psstats platform, see [developer.psstats.org/changelog](https://developer.psstats.org/changelog).
+For the list of all tickets closed in the current and past releases, see [psstats.org/changelog/](https://n3rds.work/changelog/). For the list of technical changes in the Psstats platform, see [developer.psstats.org/changelog](https://developer.psstats.org/changelog).
 
 ## Get involved!
 
 We believe in liberating Web Analytics, providing a free platform for simple and advanced analytics. Psstats was built by dozens of people like you,
-and we need your help to make Psstats better… Why not participate in a useful project today? [Learn how you can contribute to Psstats](https://psstats.org/get-involved).
+and we need your help to make Psstats better… Why not participate in a useful project today? [Learn how you can contribute to Psstats](https://n3rds.work/get-involved).
 
 ## Quality Assurance
 
@@ -79,21 +79,21 @@ We use [BrowserStack.com](https://www.browserstack.com/) testing tool to help ch
 
 Security is a top priority at Psstats. As potential issues are discovered, we validate, patch and release fixes as quickly as we can. We have a security bug bounty program in place that rewards researchers for finding security issues and disclosing them to us. 
 
-[Learn more](https://psstats.org/security/) or check out our [HackerOne program](https://hackerone.com/psstats).
+[Learn more](https://n3rds.work/security/) or check out our [HackerOne program](https://hackerone.com/psstats).
 
 ## Support for Psstats
 
 For **Free support**, post a message in our community forums: [forum.psstats.org](https://forum.psstats.org/)
 
-For **Professional paid support**, purchase a Psstats On-Premises Support Plan: [psstats.org/support-plans](https://psstats.org/support-plans/)  
+For **Professional paid support**, purchase a Psstats On-Premises Support Plan: [psstats.org/support-plans](https://n3rds.work/support-plans/)  
 
 ## Contact
 
-Website: [psstats.org](https://psstats.org)
+Website: [psstats.org](https://n3rds.work)
 
-About us: [psstats.org/team/](https://psstats.org/team/)
+About us: [psstats.org/team/](https://n3rds.work/team/)
 
-Contact us: [psstats.org/contact/](https://psstats.org/contact/)
+Contact us: [psstats.org/contact/](https://n3rds.work/contact/)
 
 
 ## More information
@@ -112,8 +112,8 @@ What makes Psstats unique from the competition:
   * A vibrant international Open community of more than 200,000 active users (tracking even more websites!)
 
   * Advanced Web Analytics capabilities such as E-commerce Tracking, Goal tracking, Campaign tracking,
-    Custom Variables, Email Reports, Custom Segment Editor, Geo Location, Real-time visits and maps, [and a lot more!](https://psstats.org/feature-overview/)
+    Custom Variables, Email Reports, Custom Segment Editor, Geo Location, Real-time visits and maps, [and a lot more!](https://n3rds.work/feature-overview/)
 
-Documentation and more info on https://psstats.org.
+Documentation and more info on https://n3rds.work.
 
 We are together creating the best open analytics platform in the world!

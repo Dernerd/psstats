@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -21,7 +21,7 @@ abstract class Base extends \Piwik\Plugin\Report
     protected function init()
     {
         $this->categoryId = 'Goals_Goals';
-        $this->onlineGuideUrl = 'https://psstats.org/docs/tracking-goals-web-analytics/';
+        $this->onlineGuideUrl = 'https://n3rds.work/docs/tracking-goals-web-analytics/';
     }
 
     protected function addReportMetadataForEachGoal(&$availableReports, $infos, $goalNameFormatter, $isGoalSummaryReport = false)

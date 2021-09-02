@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -548,7 +548,7 @@ class SystemReport {
 								'name'    => 'Proxy header',
 								'value'   => $header,
 								'is_warning' => true,
-								'comment' => 'A proxy header is set which means you maybe need to configure a proxy header in the Advanced settings to make location reporting work. If the location in your reports is detected correctly, you can ignore this warning. Learn more: https://psstats.org/faq/wordpress/how-do-i-fix-the-proxy-header-warning-in-the-psstats-for-wordpress-system-report/',
+								'comment' => 'A proxy header is set which means you maybe need to configure a proxy header in the Advanced settings to make location reporting work. If the location in your reports is detected correctly, you can ignore this warning. Learn more: https://n3rds.work/faq/wordpress/how-do-i-fix-the-proxy-header-warning-in-the-psstats-for-wordpress-system-report/',
 							);
 						}
 					}
@@ -670,7 +670,7 @@ class SystemReport {
 				$error['is_warning'] = !empty($error['name']) && stripos($error['name'], 'archiv') !== false && $error['name'] !== 'archive_boot';
 				$error['is_error'] = $is_plugin_update_error;
 				if ($is_plugin_update_error) {
-					$error['comment'] = 'Please reach out to us and include the copied system report (see https://psstats.org/faq/wordpress/how-do-i-troubleshoot-a-failed-database-upgrade-in-psstats-for-wordpress/ for more info)<br><br>You can also retry the update manually by clicking in the top on the "Troubleshooting" tab and then clicking on the "Run updater" button.' . $error['comment'];
+					$error['comment'] = 'Please reach out to us and include the copied system report (see https://n3rds.work/faq/wordpress/how-do-i-troubleshoot-a-failed-database-upgrade-in-psstats-for-wordpress/ for more info)<br><br>You can also retry the update manually by clicking in the top on the "Troubleshooting" tab and then clicking on the "Run updater" button.' . $error['comment'];
 				} elseif ($skip_plugin_update) {
 					$error['comment'] = 'As there are no outstanding plugin updates it looks like this log can be ignored.<br><br>' . $error['comment'];
 				}
@@ -686,7 +686,7 @@ class SystemReport {
 					$rows[] = array(
 						'name'    => 'Cli has no MySQL',
 						'value'   => true,
-						'comment' => 'It looks like MySQL is not available on CLI. Please read our FAQ on how to fix this issue: https://psstats.org/faq/wordpress/how-do-i-fix-the-error-your-php-installation-appears-to-be-missing-the-mysql-extension-which-is-required-by-wordpress-in-psstats-system-report/ ',
+						'comment' => 'It looks like MySQL is not available on CLI. Please read our FAQ on how to fix this issue: https://n3rds.work/faq/wordpress/how-do-i-fix-the-error-your-php-installation-appears-to-be-missing-the-mysql-extension-which-is-required-by-wordpress-in-psstats-system-report/ ',
 						'is_error' => true
 					);
 				}
@@ -910,7 +910,7 @@ class SystemReport {
 				'name'  => 'WP-Psstats (WP-Piwik) activated',
 				'value' => true,
 				'is_warning' => true,
-				'comment' => 'It is usually not recommended or needed to run Psstats for WordPress and WP-Psstats at the same time. To learn more about the differences between the two plugins view this URL: https://psstats.org/faq/wordpress/why-are-there-two-different-psstats-for-wordpress-plugins-what-is-the-difference-to-wp-psstats-integration-plugin/'
+				'comment' => 'It is usually not recommended or needed to run Psstats for WordPress and WP-Psstats at the same time. To learn more about the differences between the two plugins view this URL: https://n3rds.work/faq/wordpress/why-are-there-two-different-psstats-for-wordpress-plugins-what-is-the-difference-to-wp-psstats-integration-plugin/'
 			);
 
 			$mode = get_option ( 'wp-piwik_global-piwik_mode' );
@@ -938,7 +938,7 @@ class SystemReport {
 				'name'  => 'Compatible content directory',
 				'value' => $compatible_content_dir,
 				'is_warning' => true,
-				'comment' =>  __( 'It looks like you are maybe using a custom WordPress content directory. The Psstats reporting/admin pages might not work. You may be able to workaround this.', 'psstats' ) . ' ' . __( 'Learn more', 'psstats' ) . ': https://psstats.org/faq/wordpress/how-do-i-make-psstats-for-wordpress-work-when-i-have-a-custom-content-directory/'
+				'comment' =>  __( 'It looks like you are maybe using a custom WordPress content directory. The Psstats reporting/admin pages might not work. You may be able to workaround this.', 'psstats' ) . ' ' . __( 'Learn more', 'psstats' ) . ': https://n3rds.work/faq/wordpress/how-do-i-make-psstats-for-wordpress-work-when-i-have-a-custom-content-directory/'
 			);
 		}
 
@@ -1237,7 +1237,7 @@ class SystemReport {
 				$rows[] = array(
 					'name'       => esc_html__( 'Required permissions', 'psstats' ),
 					'value'      => esc_html__( 'Error', 'psstats' ),
-					'comment'    => esc_html__( 'Missing permissions', 'psstats' ) . ': ' . implode( ', ', $grants_missing ) . '. ' . __( 'Please check if any of these MySQL permission (grants) are missing and add them if needed.', 'psstats' ) . ' ' . __( 'Learn more', 'psstats' ) . ': https://psstats.org/faq/troubleshooting/how-do-i-check-if-my-mysql-user-has-all-required-grants/',
+					'comment'    => esc_html__( 'Missing permissions', 'psstats' ) . ': ' . implode( ', ', $grants_missing ) . '. ' . __( 'Please check if any of these MySQL permission (grants) are missing and add them if needed.', 'psstats' ) . ' ' . __( 'Learn more', 'psstats' ) . ': https://n3rds.work/faq/troubleshooting/how-do-i-check-if-my-mysql-user-has-all-required-grants/',
 					'is_warning' => true,
 				);
 			} else {
@@ -1416,7 +1416,7 @@ class SystemReport {
 				$rows[] = array(
 					'name'     => __( 'Not compatible plugins', 'psstats' ),
 					'value'    => count( $used_not_compatible ),
-					'comment'  => implode( ', ', $used_not_compatible ) . '<br><br> Psstats may work fine when using these plugins but there may be some issues. For more information see<br>https://psstats.org/faq/wordpress/which-plugins-is-psstats-for-wordpress-known-to-be-not-compatible-with/ ' . $additional_comment,
+					'comment'  => implode( ', ', $used_not_compatible ) . '<br><br> Psstats may work fine when using these plugins but there may be some issues. For more information see<br>https://n3rds.work/faq/wordpress/which-plugins-is-psstats-for-wordpress-known-to-be-not-compatible-with/ ' . $additional_comment,
 					'is_warning' => $is_warning,
 					'is_error' => $is_error,
 				);

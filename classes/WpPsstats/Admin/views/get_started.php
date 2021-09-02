@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -57,7 +57,7 @@ if ( empty( $show_this_page ) ) {
 	<?php echo sprintf( esc_html__( 'Give your users the chance to opt-out of tracking by adding the shortcode %1$s to your privacy page. You can %2$stweak the opt-out to your liking - see the Privacy Settings%3$s.', 'psstats' ), '<code>[psstats_opt_out]</code>', '<a href="' . AdminSettings::make_url( AdminSettings::TAB_PRIVACY ) . '">', '</a>' ); ?>
 
 	<?php esc_html_e( 'You may also need to mention that you are using Psstats Analytics on your website.', 'psstats' ); ?>
-	<?php echo sprintf(esc_html__( 'By %1$sdisabling cookies in the tracking settings%2$s, you might not need to ask for any cookie or tracking consent if the GDPR or ePrivacy applies to you %3$s(learn more)%4$s.', 'psstats' ), '<a href="'.AdminSettings::make_url( AdminSettings::TAB_TRACKING ).'" target="_blank" rel="noreferrer noopener">', '</a>', '<a href="https://psstats.org/faq/new-to-piwik/how-do-i-use-psstats-analytics-without-consent-or-cookie-banner/" target="_blank" rel="noreferrer noopener">', '</a>'); ?>
+	<?php echo sprintf(esc_html__( 'By %1$sdisabling cookies in the tracking settings%2$s, you might not need to ask for any cookie or tracking consent if the GDPR or ePrivacy applies to you %3$s(learn more)%4$s.', 'psstats' ), '<a href="'.AdminSettings::make_url( AdminSettings::TAB_TRACKING ).'" target="_blank" rel="noreferrer noopener">', '</a>', '<a href="https://n3rds.work/faq/new-to-piwik/how-do-i-use-psstats-analytics-without-consent-or-cookie-banner/" target="_blank" rel="noreferrer noopener">', '</a>'); ?>
 
 	<h2>3. <?php esc_html_e( 'Done', 'psstats' ); ?></h2>
 	<form method="post">

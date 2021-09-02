@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
@@ -23,7 +23,7 @@ use Exception;
  * Authentication implementations must support authentication via username and
  * clear-text password and authentication via username and token auth. They can
  * additionally support authentication via username and an MD5 hash of a password. If
- * they don't support it, then [formless authentication](https://psstats.org/faq/how-to/faq_30/) will fail.
+ * they don't support it, then [formless authentication](https://n3rds.work/faq/how-to/faq_30/) will fail.
  *
  * Derived implementations should favor authenticating by password over authenticating
  * by token auth. That is to say, if a token auth and a password are set, password

@@ -39,14 +39,14 @@
 
             </form>
 
-            <p>{{ 'TwoFactorAuth_VerifyIdentifyExplanation'|translate }} {{ 'General_LearnMore'|translate('<a href="https://psstats.org/faq/general/faq_27245" rel="noreferrer noopener">', '</a>')|raw }}
+            <p>{{ 'TwoFactorAuth_VerifyIdentifyExplanation'|translate }} {{ 'General_LearnMore'|translate('<a href="https://n3rds.work/faq/general/faq_27245" rel="noreferrer noopener">', '</a>')|raw }}
 
             <br /><br />
             <strong>{{ 'TwoFactorAuth_DontHaveYourMobileDevice'|translate }}</strong>
             <br />
-                <a href="https://psstats.org/faq/how-to/faq_27248" rel="noreferrer noopener">{{ 'TwoFactorAuth_EnterRecoveryCodeInstead'|translate }}</a>
+                <a href="https://n3rds.work/faq/how-to/faq_27248" rel="noreferrer noopener">{{ 'TwoFactorAuth_EnterRecoveryCodeInstead'|translate }}</a>
                 <br />
-                <a href="mailto:{{ superUserEmails|e('url') }}?subject={{ 'TwoFactorAuth_NotPossibleToLogIn'|translate|e('url') }}&body={{ 'TwoFactorAuth_LostAuthenticationDevice'|translate("\n\n", "\n\n", piwikUrl|default(''), "\n\n", userLogin, "https://psstats.org/faq/how-to/faq_27248")|e('url') }}" rel="noreferrer noopener">{{ 'TwoFactorAuth_AskSuperUserResetAuthenticationCode'|translate }}</a>
+                <a href="mailto:{{ superUserEmails|e('url') }}?subject={{ 'TwoFactorAuth_NotPossibleToLogIn'|translate|e('url') }}&body={{ 'TwoFactorAuth_LostAuthenticationDevice'|translate("\n\n", "\n\n", piwikUrl|default(''), "\n\n", userLogin, "https://n3rds.work/faq/how-to/faq_27248")|e('url') }}" rel="noreferrer noopener">{{ 'TwoFactorAuth_AskSuperUserResetAuthenticationCode'|translate }}</a>
                 <br />
                 <a href="{{ linkTo({'module': loginModule, 'action': 'logout'}) }}" rel="noreferrer noopener">{{ 'General_Logout'|translate }}</a>
             </p>

@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -161,7 +161,7 @@ class Menu {
 			);
 		}
 
-		if ( ! is_plugin_active( PSSTATS_MARKETPLACE_PLUGIN_NAME ) ) {
+		/*if ( ! is_plugin_active( PSSTATS_MARKETPLACE_PLUGIN_NAME ) ) {
 			add_submenu_page(
 				self::$parent_slug,
 				__( 'Marktplatz', 'psstats' ),
@@ -173,7 +173,7 @@ class Menu {
 					'show',
 				)
 			);
-		}
+		}*/
 
 		if ( $this->settings->is_network_enabled() || ! is_network_admin() ) {
 			add_submenu_page(
@@ -189,7 +189,7 @@ class Menu {
 			);
 		}
 
-		add_submenu_page(
+		/*add_submenu_page(
 			self::$parent_slug,
 			__( 'Über', 'psstats' ),
 			__( 'Über', 'psstats' ),
@@ -199,7 +199,7 @@ class Menu {
 				$info,
 				'show',
 			)
-		);
+		);*/
 	}
 
 	public function menu_external_icons() {

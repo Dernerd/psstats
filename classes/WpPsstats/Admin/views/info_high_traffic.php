@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // if accessed directly
 }
 ?>
-<p>If your website gets a lot of traffic we recommend installing <a href="https://psstats.org/psstats-on-premise/"
+<p>If your website gets a lot of traffic we recommend installing <a href="https://n3rds.work/psstats-on-premise/"
 													   target="_blank" rel="noreferrer noopener">Psstats
 		On-Premise</a>
 	separately (it's free as well) in combination with the <a href="https://wordpress.org/plugins/wp-piwik/"

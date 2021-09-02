@@ -2,7 +2,7 @@
 /**
  * Psstats - free/libre analytics platform
  *
- * @link https://psstats.org
+ * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  * @package psstats
  */
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     data is stored in your WordPress. You own the data, nobody else.',
 			'psstats'
 		),
-		'<a target="_blank" rel="noreferrer noopener" href="https://psstats.org">',
+		'<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work">',
 		'</a>',
 		'<strong>',
 		'</strong>'
