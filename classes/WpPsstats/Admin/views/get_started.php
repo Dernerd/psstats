@@ -29,7 +29,7 @@ if ( empty( $show_this_page ) ) {
 <div class="wrap">
 	<div id="icon-plugins" class="icon32"></div>
 
-	<h1><?php esc_html_e( 'Start getting a full picture of your visitors', 'psstats' ); ?></h1>
+	<h1><?php esc_html_e( 'Mache Dir ein vollständiges Bild von Deinen Besuchern', 'psstats' ); ?></h1>
 
 	<?php
 	if ( $was_updated ) {
@@ -38,33 +38,33 @@ if ( empty( $show_this_page ) ) {
 	?>
 
 	<?php if ( $settings->is_tracking_enabled() ) { ?>
-		<h2>1. <?php esc_html_e( 'Tracking is enabled', 'psstats' ); ?> <span class="dashicons dashicons-yes" style="color: green;"></span></h2>
-		<p><?php esc_html_e('Tracking should be working now and you don\'t have to do anything else to set up tracking.') ?> <a href="<?php echo AdminSettings::make_url( AdminSettings::TAB_TRACKING ); ?>"><?php esc_html_e( 'Click here to optionally configure the tracking code to your liking (not required).', 'psstats' ); ?></a></p>
+		<h2>1. <?php esc_html_e( 'Tracking ist aktiviert', 'psstats' ); ?> <span class="dashicons dashicons-yes" style="color: green;"></span></h2>
+		<p><?php esc_html_e('Das Tracking sollte jetzt funktionieren und Du musst nichts weiter tun, um das Tracking einzurichten.') ?> <a href="<?php echo AdminSettings::make_url( AdminSettings::TAB_TRACKING ); ?>"><?php esc_html_e( 'Klicke hier, um den Tracking-Code optional nach Deinen Wünschen zu konfigurieren (nicht erforderlich).', 'psstats' ); ?></a></p>
 
 	<?php } else { ?>
-		<h2>1. <?php esc_html_e( 'Enable tracking', 'psstats' ); ?></h2>
+		<h2>1. <?php esc_html_e( 'Tracking aktivieren', 'psstats' ); ?></h2>
 
 		<form
-			method="post"><?php esc_html_e( 'Tracking is currently disabled', 'psstats' ); ?> <?php wp_nonce_field( GetStarted::NONCE_NAME ); ?>
+			method="post"><?php esc_html_e( 'Tracking ist derzeit deaktiviert', 'psstats' ); ?> <?php wp_nonce_field( GetStarted::NONCE_NAME ); ?>
 			<input type="hidden" name="<?php echo GetStarted::FORM_NAME; ?>[track_mode]"
 				   value="<?php echo esc_attr( TrackingSettings::TRACK_MODE_DEFAULT ); ?>">
-			<input type="submit" class="button-primary" value="<?php esc_html_e( 'Enable tracking now', 'psstats' ); ?>">
+			<input type="submit" class="button-primary" value="<?php esc_html_e( 'Tracking jetzt aktivieren', 'psstats' ); ?>">
 		</form>
 	<?php } ?>
 
-	<h2>2. <?php esc_html_e( 'Update your privacy page', 'psstats' ); ?></h2>
+	<h2>2. <?php esc_html_e( 'Aktualisiere Deine Datenschutzseite', 'psstats' ); ?></h2>
 
-	<?php echo sprintf( esc_html__( 'Give your users the chance to opt-out of tracking by adding the shortcode %1$s to your privacy page. You can %2$stweak the opt-out to your liking - see the Privacy Settings%3$s.', 'psstats' ), '<code>[psstats_opt_out]</code>', '<a href="' . AdminSettings::make_url( AdminSettings::TAB_PRIVACY ) . '">', '</a>' ); ?>
+	<?php echo sprintf( esc_html__( 'Gib Deinen Benutzern die Möglichkeit, das Tracking zu deaktivieren, indem Du Deiner Datenschutzseite den Shortcode %1$s hinzufügst. Du kannst die Abmeldung %2$nach Deinen Wünschen anpassen – siehe Datenschutzeinstellungen%3$s.', 'psstats' ), '<code>[psstats_opt_out]</code>', '<a href="' . AdminSettings::make_url( AdminSettings::TAB_PRIVACY ) . '">', '</a>' ); ?>
 
-	<?php esc_html_e( 'You may also need to mention that you are using Psstats Analytics on your website.', 'psstats' ); ?>
-	<?php echo sprintf(esc_html__( 'By %1$sdisabling cookies in the tracking settings%2$s, you might not need to ask for any cookie or tracking consent if the GDPR or ePrivacy applies to you %3$s(learn more)%4$s.', 'psstats' ), '<a href="'.AdminSettings::make_url( AdminSettings::TAB_TRACKING ).'" target="_blank" rel="noreferrer noopener">', '</a>', '<a href="https://n3rds.work/faq/new-to-piwik/how-do-i-use-psstats-analytics-without-consent-or-cookie-banner/" target="_blank" rel="noreferrer noopener">', '</a>'); ?>
+	<?php esc_html_e( 'Möglicherweise musst Du auch erwähnen, dass Du Psstats Analytics auf Deiner Webseite verwendest.', 'psstats' ); ?>
+	<?php echo sprintf(esc_html__( 'Durch %1$sDeaktivierung von Cookies in den Tracking-Einstellungen%2$s müssen Sie möglicherweise keine Cookie- oder Tracking-Zustimmung einholen, wenn die DSGVO oder ePrivacy auf Dich zutrifft %3$s(weitere Informationen)%4$s.', 'psstats' ), '<a href="'.AdminSettings::make_url( AdminSettings::TAB_TRACKING ).'" target="_blank" rel="noreferrer noopener">', '</a>', '<a href="https://n3rds.work/docs/ps-stats-datenschutzgrundlagen/" target="_blank" rel="noreferrer noopener">', '</a>'); ?>
 
-	<h2>3. <?php esc_html_e( 'Done', 'psstats' ); ?></h2>
+	<h2>3. <?php esc_html_e( 'Fertig', 'psstats' ); ?></h2>
 	<form method="post">
 		<?php wp_nonce_field( GetStarted::NONCE_NAME ); ?>
 		<input type="hidden" name="<?php echo esc_attr( GetStarted::FORM_NAME ); ?>[show_get_started_page]"
 			   value="no">
-		<input type="submit" class="button-primary" value="<?php esc_html_e( 'Don\'t show this page anymore', 'psstats' ); ?>">
+		<input type="submit" class="button-primary" value="<?php esc_html_e( 'Diese Seite nicht mehr anzeigen', 'psstats' ); ?>">
 	</form>
 	<p>
 		<br/>
