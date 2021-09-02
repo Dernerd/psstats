@@ -27,8 +27,8 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '4.3.4-rc1',
-    'version' => '4.3.4.0-RC1',
+    'pretty_version' => '4.3.5-rc1',
+    'version' => '4.3.5.0-RC1',
     'aliases' => 
     array (
     ),
@@ -120,8 +120,8 @@ private static $installed = array (
     ),
     'psstats/psstats' => 
     array (
-      'pretty_version' => '4.3.4-rc1',
-      'version' => '4.3.4.0-RC1',
+      'pretty_version' => '4.3.5-rc1',
+      'version' => '4.3.5.0-RC1',
       'aliases' => 
       array (
       ),
