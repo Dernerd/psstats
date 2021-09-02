@@ -54,7 +54,7 @@ class Dashboard {
 			        // dont want to break dashboard if there is any issue with psstats ... eg in case bootstrap fails
                     // or is reinstalled but psstats not yet fully installed etc
 			        $logger = new Logger();
-			        $logger->log(sprintf('Failed to add Psstats widget %s to dashboard: %s', wp_json_encode($widget), $e->getMessage()));
+			        $logger->log(sprintf('Fehler beim Hinzufügen des PS STATS-Widget %s zum Dashboard: %s', wp_json_encode($widget), $e->getMessage()));
                 }
 			}
 		}

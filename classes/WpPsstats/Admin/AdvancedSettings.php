@@ -55,7 +55,7 @@ class AdvancedSettings implements AdminSettingsInterface {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Advanced', 'psstats' );
+		return esc_html__( 'Erweitert', 'psstats' );
 	}
 
 	private function update_if_submitted() {

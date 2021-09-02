@@ -38,7 +38,7 @@ class AccessSettings implements AdminSettingsInterface {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Access', 'psstats' );
+		return esc_html__( 'Zugriff', 'psstats' );
 	}
 
 	private function update_if_submitted() {

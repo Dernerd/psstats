@@ -29,7 +29,7 @@ class PrivacySettings implements AdminSettingsInterface {
     }
 
 	public function get_title() {
-		return esc_html__( 'Privacy & GDPR', 'psstats' );
+		return esc_html__( 'Datenschutz & DSGVO', 'psstats' );
 	}
 
 	public function show_settings() {

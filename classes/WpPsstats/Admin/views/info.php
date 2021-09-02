@@ -45,20 +45,16 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php
 		echo sprintf(
 			esc_html__(
-				'You can also help us by %1$sdonating%2$s or by %3$spurchasing premium plugins%4$s which fund the
+				'You can also help us by %1$sdonating%2$s which fund the
         development of the free Psstats Analytics version.',
 				'psstats'
 			),
-			'<a href="' . Menu::get_psstats_goto_url( Menu::REPORTING_GOTO_ADMIN ) . '">',
-			'</a>',
-			'<a href="https://plugins.psstats.org/premium" target="_blank" rel="noreferrer noopener">',
+			'<a href="https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/" target="_blank" rel="noreferrer noopener">',
 			'</a>'
 		);
 		?>
         Every penny will help.
 	</p>
-
-	<?php require 'info_newsletter.php'; ?>
 
 	<h2><?php esc_html_e( 'High traffic websites', 'psstats' ); ?></h2>
 	<?php require 'info_high_traffic.php'; ?>
@@ -68,37 +64,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="psstats-footer">
 		<ul>
 			<li>
-				<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/newsletter/"><span
+				<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/"><span
 						class="dashicons-before dashicons-email"></span></a>
 				<a target="_blank" rel="noreferrer noopener"
-				   href="https://n3rds.work/newsletter/"><?php esc_html_e( 'Newsletter', 'psstats' ); ?></a>
+				   href="https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/"><?php esc_html_e( 'Newsletter', 'psstats' ); ?></a>
 			</li>
 			<li>
-				<a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/Psstats.org"><span
-						class="dashicons-before dashicons-facebook"></span></a>
-				<a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/Psstats.org">Facebook</a>
-			</li>
-			<li>
-				<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/psstats_org"><span
-						class="dashicons-before dashicons-twitter"></span></a>
-				<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/psstats_org">Twitter</a>
-			</li>
-			<li>
-				<a target="_blank" rel="noreferrer noopener" href="https://www.linkedin.com/groups/867857/">Linkedin</a>
-			</li>
-			<li>
-				<a target="_blank" rel="noreferrer noopener" href="https://github.com/psstats-org/psstats">GitHub</a>
+				<a target="_blank" rel="noreferrer noopener" href="https://github.com/Dernerd/psstats">GitHub</a>
 			</li>
 		</ul>
 		<ul>
 			<li><a target="_blank" rel="noreferrer noopener"
 				   href="https://n3rds.work/blog/"><?php esc_html_e( 'Blog', 'psstats' ); ?></a></li>
-			<li><a target="_blank" rel="noreferrer noopener"
-				   href="https://developer.psstats.org"><?php esc_html_e( 'Developers', 'psstats' ); ?></a></li>
-			<li><a target="_blank" rel="noreferrer noopener"
-				   href="https://plugins.psstats.org"><?php esc_html_e( 'Marketplace', 'psstats' ); ?></a></li>
-			<li><a target="_blank" rel="noreferrer noopener"
-				   href="https://n3rds.work/thank-you-all/"><?php esc_html_e( 'Credits', 'psstats' ); ?></a></li>
 		</ul>
 	</div>
 </div>
