@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Psstats Analytics - Ethische Statistiken. Mächtige Einblicke.
  * Description: Die Piestingtaler Google Analytics-Alternative, welche Dir die volle Kontrolle über Deine Daten gibt und die Privatsphäre Deiner Nutzer schützt. Kostenlos, sicher und offen.
- * Author: Psstats
+ * Author: DerN3rd
  * Author URI: https://n3rds.work
  * Version: 4.3.5
  * Domain Path: /languages

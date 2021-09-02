@@ -150,8 +150,8 @@ class Menu {
 		if ( $can_psstats_be_managed ) {
 			add_submenu_page(
 				self::$parent_slug,
-				__( 'Settings', 'psstats' ),
-				__( 'Settings', 'psstats' ),
+				__( 'Einstellungen', 'psstats' ),
+				__( 'Einstellungen', 'psstats' ),
 				Capabilities::KEY_SUPERUSER,
 				self::SLUG_SETTINGS,
 				array(
