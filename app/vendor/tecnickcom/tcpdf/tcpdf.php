@@ -9518,7 +9518,7 @@ class TCPDF {
 
 	/**
 	 * Adds some Metadata information (Document Information Dictionary)
-	 * (see Chapter 14.3.3 Document Information Dictionary of PDF32000_2008.pdf Reference)
+	 * (see Chapter 14.3.4 Document Information Dictionary of PDF32000_2008.pdf Reference)
 	 * @return int object id
 	 * @protected
 	 */

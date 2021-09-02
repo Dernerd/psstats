@@ -3,7 +3,7 @@ Contributors: psstatsteam
 Tags: psstats,piwik,analytics,statistics,stats,tracking,ecommerce
 Requires at least: 4.8
 Tested up to: 5.7
-Stable tag: 4.3.3
+Stable tag: 4.3.4
 Requires PHP: 7.2.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
