@@ -45,18 +45,18 @@ if ( ! function_exists( 'psstats_format_value_text' ) ) {
 	if ( $psstats_has_warning_and_no_errors ) {
 		?>
 			<div class="notice notice-warning">
-				<p><?php esc_html_e( 'There are some issues with your system. Psstats will run, but you might experience some minor problems. See below for more information.', 'psstats' ); ?></p>
+				<p><?php esc_html_e( 'Es gibt einige Probleme mit Deinem System. Psstats wird ausgeführt, aber es können einige kleinere Probleme auftreten. Siehe unten für weitere Informationen.', 'psstats' ); ?></p>
 			</div>
 		<?php
 	}
 	?>
 	<?php if ( $settings->is_network_enabled() && ! is_network_admin() && is_super_admin() ) { ?>
 		<div class="updated notice">
-			<p><?php esc_html_e( 'Only you are seeing this page as you are the super admin', 'psstats' ); ?></p>
+			<p><?php esc_html_e( 'Nur Du siehst diese Seite, da Du der Super-Admin bist', 'psstats' ); ?></p>
 		</div>
 	<?php } ?>
 	<div id="icon-plugins" class="icon32"></div>
-    <h1><?php psstats_header_icon(); ?> <?php esc_html_e( 'Diagnostics', 'psstats' ); ?></h1>
+    <h1><?php psstats_header_icon(); ?> <?php esc_html_e( 'Diagnose', 'psstats' ); ?></h1>
 
 	<h2 class="nav-tab-wrapper">
 		<a href="?page=<?php echo Menu::SLUG_SYSTEM_REPORT; ?>"
@@ -67,11 +67,11 @@ if ( ! function_exists( 'psstats_format_value_text' ) ) {
 
 	<?php if ( empty( $psstats_active_tab ) ) { ?>
 
-		<p><?php esc_html_e( 'Copy the below info in case our support team asks you for this information:', 'psstats' ); ?>
+		<p><?php esc_html_e( 'Kopiere die folgenden Informationen, falls unser Support-Team Dich nach diesen Informationen fragt:', 'psstats' ); ?>
 			<br/> <br/>
 			<a href="javascript:void(0);"
 			   onclick="var textarea = document.getElementById('psstats_system_report_info');textarea.select();document.execCommand('copy');"
-			   class='button-primary'><?php esc_html_e( 'Copy system report', 'psstats' ); ?></a>
+			   class='button-primary'><?php esc_html_e( 'Systembericht kopieren', 'psstats' ); ?></a>
 
 		</p>
 		<textarea style="width:100%;height: 200px;" readonly
@@ -158,58 +158,58 @@ if ( ! function_exists( 'psstats_format_value_text' ) ) {
 		?>
 
 	<?php } else { ?>
-		<h1><?php esc_html_e( 'Troubleshooting', 'psstats' ); ?></h1>
+		<h1><?php esc_html_e( 'Fehlerbehebung', 'psstats' ); ?></h1>
 
 		<form method="post">
 			<?php wp_nonce_field( SystemReport::NONCE_NAME ); ?>
 
             <input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_ARCHIVE_NOW ); ?>" type="submit"
                    class='button-primary'
-                   title="<?php esc_attr_e( 'If reports show no data even though they should, you may try to see if report generation works when manually triggering the report generation.', 'psstats' ) ?>"
-                   value="<?php esc_html_e( 'Archive reports', 'psstats' ); ?>">
+                   title="<?php esc_attr_e( 'Wenn Berichte keine Daten anzeigen, obwohl sie sollten, kannst Du versuchen, zu sehen, ob die Berichterstellung funktioniert, wenn Du die Berichterstellung manuell auslöst.', 'psstats' ) ?>"
+                   value="<?php esc_html_e( 'Berichte archivieren', 'psstats' ); ?>">
             <br/><br/>
             <input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_CLEAR_PSSTATS_CACHE ); ?>" type="submit"
                    class='button-primary'
-                   title="<?php esc_attr_e( 'Will reset / empty the Psstats cache which can be helpful if something is not working as expected for example after an update.', 'psstats' ) ?>"
-                   value="<?php esc_html_e( 'Clear Psstats cache', 'psstats' ); ?>">
+                   title="<?php esc_attr_e( 'Wird den Psstats-Cache zurücksetzen/leeren, was hilfreich sein kann, wenn etwas nicht wie erwartet funktioniert, zum Beispiel nach einem Update.', 'psstats' ) ?>"
+                   value="<?php esc_html_e( 'Psstats-Cache leeren', 'psstats' ); ?>">
             <br/><br/>
 			<?php if (!empty($psstats_has_exception_logs)) { ?>
                 <input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_CLEAR_LOGS ); ?>" type="submit"
                        class='button-primary'
-                       title="<?php esc_attr_e( 'Removes all stored Psstats logs that are shown in the system report', 'psstats' ) ?>"
-                       value="<?php esc_html_e( 'Clear system report logs', 'psstats' ); ?>">
+                       title="<?php esc_attr_e( 'Entfernt alle gespeicherten Psstats-Protokolle, die im Systembericht angezeigt werden', 'psstats' ) ?>"
+                       value="<?php esc_html_e( 'Systemberichtsprotokolle löschen', 'psstats' ); ?>">
                 <br/><br/>
 			<?php } ?>
 
             <input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_UPDATE_GEOIP_DB ); ?>" type="submit"
                    class='button-primary'
-                   title="<?php esc_attr_e( 'Updates the geolocation database which is used to detect the location (city/region/country) of visitors. This task is performed automatically. If the geolocation DB is not loaded or updated, you may need to trigger it manually to find the error which is causing it.', 'psstats' ) ?>"
-                   value="<?php esc_html_e( 'Install/Update Geo-IP DB', 'psstats' ); ?>">
+                   title="<?php esc_attr_e( 'Aktualisiert die Geolocation-Datenbank, die verwendet wird, um den Standort (Stadt/Region/Land) von Besuchern zu erkennen. Diese Aufgabe wird automatisch ausgeführt. Wenn die Geolocation-DB nicht geladen oder aktualisiert wird, musst Du sie möglicherweise manuell auslösen, um den Fehler zu finden, der sie verursacht.', 'psstats' ) ?>"
+                   value="<?php esc_html_e( 'Geo-IP-DB installieren/aktualisieren', 'psstats' ); ?>">
             <br/><br/>
             
 			<?php if ( ! $settings->is_network_enabled() || ! is_network_admin() ) { ?>
                 <input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_SYNC_USERS ); ?>" type="submit" class='button-primary'
-                       title="<?php esc_attr_e( 'Users are synced automatically. If for some reason a user cannot access Psstats pages even though the user has the permission, then triggering a manual sync may help to fix this issue immediately or it may show which error prevents the automatic syncing.', 'psstats' ) ?>"
-                       value="<?php esc_html_e( 'Sync users', 'psstats' ); ?>">
+                       title="<?php esc_attr_e( 'Benutzer werden automatisch synchronisiert. Wenn ein Benutzer aus irgendeinem Grund nicht auf Psstats-Seiten zugreifen kann, obwohl der Benutzer die Berechtigung hat, kann das Auslösen einer manuellen Synchronisierung helfen, dieses Problem sofort zu beheben, oder es kann anzeigen, welcher Fehler die automatische Synchronisierung verhindert.', 'psstats' ) ?>"
+                       value="<?php esc_html_e( 'Benutzer synchronisieren', 'psstats' ); ?>">
                 <br/><br/>
                 <input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_SYNC_SITE ); ?>" type="submit" class='button-primary'
-                       title="<?php esc_attr_e( 'Sites / blogs are synced automatically. If for some reason Psstats is not showing up for a specific blog, then triggering a manual sync may help to fix this issue immediately or it may show which error prevents the automatic syncing.', 'psstats' ) ?>"
-                       value="<?php esc_html_e( 'Sync site (blog)', 'psstats' ); ?>">
+                       title="<?php esc_attr_e( 'Seiten/Blogs werden automatisch synchronisiert. Wenn Psstats aus irgendeinem Grund für einen bestimmten Blog nicht angezeigt wird, kann das Auslösen einer manuellen Synchronisierung helfen, dieses Problem sofort zu beheben, oder es kann anzeigen, welcher Fehler die automatische Synchronisierung verhindert.', 'psstats' ) ?>"
+                       value="<?php esc_html_e( 'Webseite synchronisieren (Blog)', 'psstats' ); ?>">
                 <br/><br/>
                 <input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_RUN_UPDATER ); ?>" type="submit" class='button-primary'
-                       title="<?php esc_attr_e( 'Force trigger a Psstats update in case it failed error', 'psstats' ) ?>"
-                       value="<?php esc_html_e( 'Run Updater', 'psstats' ); ?>">
+                       title="<?php esc_attr_e( 'Erzwinge das Auslösen eines Psstats-Updates, falls es fehlgeschlagen ist', 'psstats' ) ?>"
+                       value="<?php esc_html_e( 'Updater ausführen', 'psstats' ); ?>">
 			<?php } ?>
 			<?php if ( $settings->is_network_enabled() ) { ?>
                 <input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_SYNC_ALL_USERS ); ?>" type="submit"
                        class='button-primary'
-                       title="<?php esc_attr_e( 'Users are synced automatically. If for some reason a user cannot access Psstats pages even though the user has the permission, then triggering a manual sync may help to fix this issue immediately or it may show which error prevents the automatic syncing.', 'psstats' ) ?>"
-                       value="<?php esc_html_e( 'Sync all users across sites / blogs', 'psstats' ); ?>">
+                       title="<?php esc_attr_e( 'Benutzer werden automatisch synchronisiert. Wenn ein Benutzer aus irgendeinem Grund nicht auf Psstats-Seiten zugreifen kann, obwohl der Benutzer die Berechtigung hat, kann das Auslösen einer manuellen Synchronisierung helfen, dieses Problem sofort zu beheben, oder es kann anzeigen, welcher Fehler die automatische Synchronisierung verhindert.', 'psstats' ) ?>"
+                       value="<?php esc_html_e( 'Alle Benutzer über Webseiten/Blogs hinweg synchronisieren', 'psstats' ); ?>">
                 <br/><br/>
 				<input name="<?php echo esc_attr( SystemReport::TROUBLESHOOT_SYNC_ALL_SITES ); ?>" type="submit"
-                       title="<?php esc_attr_e( 'Sites / blogs are synced automatically. If for some reason Psstats is not showing up for a specific blog, then triggering a manual sync may help to fix this issue immediately or it may show which error prevents the automatic syncing.', 'psstats' ) ?>"
+                       title="<?php esc_attr_e( 'Seiten/Blogs werden automatisch synchronisiert. Wenn Psstats aus irgendeinem Grund für einen bestimmten Blog nicht angezeigt wird, kann das Auslösen einer manuellen Synchronisierung helfen, dieses Problem sofort zu beheben, oder es kann anzeigen, welcher Fehler die automatische Synchronisierung verhindert.', 'psstats' ) ?>"
 					   class='button-primary'
-					   value="<?php esc_html_e( 'Sync all sites (blogs)', 'psstats' ); ?>">
+					   value="<?php esc_html_e( 'Alle Webseiten (Blogs) synchronisieren', 'psstats' ); ?>">
 			<?php } ?>
 		</form>
 
@@ -217,30 +217,30 @@ if ( ! function_exists( 'psstats_format_value_text' ) ) {
 		$show_troubleshooting_link = false;
 		include 'info_help.php';
 		?>
-		<h3><?php esc_html_e( 'Popular Troubleshooting FAQs', 'psstats' ); ?></h3>
+		<h3><?php esc_html_e( 'Beliebte FAQs zur Fehlerbehebung', 'psstats' ); ?></h3>
 		<ul class="psstats-list">
-			<li><a href="https://n3rds.work/faq/wordpress/psstats-for-wordpress-is-not-showing-any-statistics-not-archiving-how-do-i-fix-it/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Psstats is not showing any statistics / reports, how do I fix it?', 'psstats' ); ?></a></li>
-			<li><a href="https://n3rds.work/faq/wordpress/i-cannot-open-backend-page-how-do-i-troubleshoot-it/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'I cannot open the Psstats Reporting, Admin, or Tag Manager page, how do I troubleshoot it?', 'psstats' ); ?></a></li>
-			<li><a href="https://n3rds.work/faq/wordpress/i-have-a-problem-how-do-i-troubleshoot-and-enable-wp_debug/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'I have an issue with the plugin, how do I troubleshoot and enable debug mode?', 'psstats' ); ?></a></li>
-			<li><a href="https://n3rds.work/faq/wordpress/how-do-i-manually-delete-all-psstats-for-wordpress-data/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'How do I manually delete or reset all Psstats for WordPress data?', 'psstats' ); ?></a></li>
-			<li><a href="https://n3rds.work/faq/wordpress/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'View all FAQs', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/docs/ps-stats-problemloesungs-faqs/#psstats-zeigt-keine-statistiken-berichte-an" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Psstats zeigt keine Statistiken/Berichte an, wie kann ich das beheben?', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/docs/ps-stats-problemloesungs-faqs/#psstats-admin-seite-nicht-oeffnen" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Ich kann die Psstats-Berichterstellungs-, Admin- oder Tag Manager-Seite nicht öffnen. Wie behebe ich das Problem?', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/docs/ps-stats-problemloesungs-faqs/#problem-mit-plugin-debug-aktivieren" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Ich habe ein Problem mit dem Plugin, wie kann ich Fehler beheben und den Debug-Modus aktivieren?', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/docs/ps-stats-problemloesungs-faqs/#alle-psstats-daten-loeschen" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'Wie lösche oder setze ich alle Psstats für WordPress-Daten manuell zurück?', 'psstats' ); ?></a></li>
+			<li><a href="https://n3rds.work/docs/ps-stats-problemloesungs-faqs/" target="_blank" rel="noreferrer noopener"><?php esc_html_e( 'View all FAQs', 'psstats' ); ?></a></li>
 		</ul>
 		<?php include 'info_bug_report.php'; ?>
-		<h4><?php esc_html_e( 'Before you create an issue', 'psstats' ); ?></h4>
-		<p><?php esc_html_e( 'If you experience any issue in Psstats, it is always a good idea to first check your webserver logs (if possible) for any errors.', 'psstats' ); ?>
+		<h4><?php esc_html_e( 'Bevor Du ein Problem erstellst', 'psstats' ); ?></h4>
+		<p><?php esc_html_e( 'Wenn bei Ps Stats ein Problem auftritt, ist es immer eine gute Idee, zuerst Deine Webserver-Logs (wenn möglich) auf Fehler zu überprüfen.', 'psstats' ); ?>
 			<br/>
-			<?php echo sprintf( esc_html__( 'You may also want to enable %1$s.', 'psstats' ), '<a href="https://n3rds.work/faq/wordpress/i-have-a-problem-how-do-i-troubleshoot-and-enable-wp_debug/" target="_blank" rel="noreferrer noopener"><code>WP_DEBUG</code></a>' ); ?>
-			<?php echo sprintf( esc_html__( 'To debug issues that happen in the background, for example report generation during a cronjob, you might also want to enable %1$s.', 'psstats' ), '<code>WP_DEBUG_LOG</code>' ); ?>
+			<?php echo sprintf( esc_html__( 'Vielleicht möchtest Du auch %1$s aktivieren.', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-problemloesungs-faqs/#problem-mit-plugin-debug-aktivieren" target="_blank" rel="noreferrer noopener"><code>WP_DEBUG</code></a>' ); ?>
+			<?php echo sprintf( esc_html__( 'Um im Hintergrund auftretende Probleme zu beheben, z. B. die Berichterstellung während eines Cronjobs, möchtest Du möglicherweise auch %1$s aktivieren.', 'psstats' ), '<code>WP_DEBUG_LOG</code>' ); ?>
 
 		</p>
-		<h3><?php esc_html_e( 'Having performance issues?', 'psstats' ); ?></h3>
+		<h3><?php esc_html_e( 'Hast Du Leistungsprobleme?', 'psstats' ); ?></h3>
 		<p>
 		<?php
 		echo sprintf(
-			esc_html__( 'You may want to disable %1$s in your %2$s and set up an actual cronjob and %3$scheck out our recommended server sizing%4$s.', 'psstats' ),
+			esc_html__( 'Vielleicht möchtest Du %1$s in Deinem %2$s deaktivieren und einen tatsächlichen Cronjob einrichten und %3$schecke unsere empfohlene Servergröße%4$s.', 'psstats' ),
 			'<code>DISABLE_WP_CRON</code>',
 			'<code>wp-config.php</code>',
-			'<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/docs/requirements/#recommended-servers-sizing-cpu-ram-disks">',
+			'<a target="_blank" rel="noreferrer noopener" href="https://n3rds.work/docs/psstats-hard-software-anforderungen/">',
 			'</a>'
 		);
 		?>

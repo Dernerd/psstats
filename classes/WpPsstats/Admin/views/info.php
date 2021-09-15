@@ -45,18 +45,18 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php
 		echo sprintf(
 			esc_html__(
-				'You can also help us by %1$sdonating%2$s which fund the
-        development of the free Psstats Analytics version.',
+				'Du kannst uns auch helfen, indem Du %1$sspendest%2$s zur Finanzierung der
+				Entwicklung der kostenlosen Psstats Analytics-Version.',
 				'psstats'
 			),
 			'<a href="https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/" target="_blank" rel="noreferrer noopener">',
 			'</a>'
 		);
 		?>
-        Every penny will help.
+        Jeder Cent wird helfen.
 	</p>
 
-	<h2><?php esc_html_e( 'High traffic websites', 'psstats' ); ?></h2>
+	<h2><?php esc_html_e( 'Webseiten mit hohem Traffic', 'psstats' ); ?></h2>
 	<?php require 'info_high_traffic.php'; ?>
 
 	<?php require 'info_bug_report.php'; ?>
