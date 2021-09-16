@@ -1,6 +1,6 @@
 <?php
 /**
- * Psstats - free/libre analytics platform
+ * PS Stats - kostenlose/freie Analyseplattform
  *
  * For more information, see README.md
  *

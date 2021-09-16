@@ -1,6 +1,6 @@
 <?php
 /**
- * Psstats - free/libre analytics platform
+ * PS Stats - kostenlose/freie Analyseplattform
  *
  * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
@@ -20,7 +20,7 @@ final class Version
      * The current Psstats version.
      * @var string
      */
-    const VERSION = '4.3.5-rc1';
+    const VERSION = '4.3.6-rc1';
     const MAJOR_VERSION = 4;
 
     public function isStableVersion($version)

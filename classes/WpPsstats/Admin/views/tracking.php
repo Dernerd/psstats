@@ -1,6 +1,6 @@
 <?php
 /**
- * Psstats - free/libre analytics platform
+ * PS Stats - kostenlose/freie Analyseplattform
  *
  * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
@@ -109,7 +109,7 @@ if ( $was_updated ) {
 			$psstats_full_generated_tracking_group
 		);
 
-		$psstats_form->show_input( 'add_download_extensions', esc_html__( 'Füge neue Dateitypen für das Download-Tracking hinzu', 'psstats' ), esc_html__( 'Füge Dateierweiterungen für das Download-Tracking hinzu, geteilt durch einen vertikalen Balken (&#124;).', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client/#tracking-outlinks-und-ignoriere-alias-domains" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_input( 'add_download_extensions', esc_html__( 'Füge neue Dateitypen für das Download-Tracking hinzu', 'psstats' ), esc_html__( 'Füge Dateierweiterungen für das Download-Tracking hinzu, geteilt durch einen vertikalen Balken (&#124;).', 'psstats' ) . ' ' . sprintf( esc_html__( 'Siehe %1$sPS Stats Dokumentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client#tracking-outlinks-und-ignoriere-alias-domains" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group );
 
 		$psstats_form->show_checkbox( 'limit_cookies', esc_html__( 'Cookie-Lebensdauer begrenzen', 'psstats' ), esc_html__( 'Du kannst die Cookie-Lebensdauer begrenzen, um die Verfolgung Deiner Benutzer bei Bedarf über einen längeren Zeitraum zu vermeiden.', 'psstats' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group, true, 'jQuery(\'tr.psstats-cookielifetime-option\').toggleClass(\'psstats-hidden\');' );
 
@@ -119,86 +119,86 @@ if ( $was_updated ) {
 
 		$psstats_form->show_input( 'limit_cookies_referral', esc_html__( 'Referral-Timeout (Sekunden)', 'psstats' ), false, $psstats_is_not_generated_tracking || ! $settings->get_global_option( 'limit_cookies' ), $psstats_full_generated_tracking_group . ' psstats-cookielifetime-option' . ( $settings->get_global_option( 'limit_cookies' ) ? '' : ' psstats-hidden' ) );
 
-		$psstats_form->show_checkbox( 'track_admin', esc_html__( 'Track admin pages', 'psstats' ), esc_html__( 'Aktivieren, um Benutzer auf Admin-Seiten zu verfolgen (denke daran, den Tracking-Filter entsprechend zu konfigurieren).', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager' );
+		$psstats_form->show_checkbox( 'track_admin', esc_html__( 'Verfolge Admin-Seiten', 'psstats' ), esc_html__( 'Aktivieren, um Benutzer auf Admin-Seiten zu verfolgen (denke daran, den Tracking-Filter entsprechend zu konfigurieren).', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager' );
 
-		$psstats_form->show_checkbox( 'track_across', esc_html__( 'Track subdomains in the same website', 'psstats' ), esc_html__( 'Adds *.-prefix to cookie domain.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://developer.psstats.org/guides/tracking-javascript-guide#tracking-subdomains-in-the-same-website" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_checkbox( 'track_across', esc_html__( 'Verfolge Subdomains auf derselben Webseite', 'psstats' ), esc_html__( 'Fügt *.-Präfix zur Cookie-Domain hinzu.', 'psstats' ) . ' ' . sprintf( esc_html__( 'Siehe %1$sPS Stats Dokumentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client#tracking-subdomains-in-the-same-website" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group );
 
-		$psstats_form->show_checkbox( 'track_across_alias', esc_html__( 'Do not count subdomains as outlink', 'psstats' ), esc_html__( 'Adds *.-prefix to tracked domain.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://developer.psstats.org/guides/tracking-javascript-guide#outlink-tracking-exclusions" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_checkbox( 'track_across_alias', esc_html__( 'Subdomains nicht als Outlink zählen', 'psstats' ), esc_html__( 'Fügt *.-Präfix zur verfolgten Domain hinzu.', 'psstats' ) . ' ' . sprintf( esc_html__( 'Siehe %1$sPS Stats dokumentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client#outlink-tracking-exclusions" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group );
 
-		$psstats_form->show_checkbox( 'track_crossdomain_linking', esc_html__( 'Enable cross domain linking', 'psstats' ), esc_html__( 'When enabled, it will make sure to use the same visitor ID for the same visitor across several domains. This works only when this feature is enabled because the visitor ID is stored in a cookie and cannot be read on the other domain by default. When this feature is enabled, it will append a URL parameter "pk_vid" that contains the visitor ID when a user clicks on a URL that belongs to one of your domains. For this feature to work, you also have to configure which domains should be treated as local in your Psstats website settings.', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_checkbox( 'track_crossdomain_linking', esc_html__( 'Cross-Domain-Linking aktivieren', 'psstats' ), esc_html__( 'Wenn sie aktiviert ist, wird sichergestellt, dass dieselbe Besucher-ID für denselben Besucher in mehreren Domänen verwendet wird. Dies funktioniert nur, wenn diese Funktion aktiviert ist, da die Besucher-ID in einem Cookie gespeichert wird und standardmäßig auf der anderen Domain nicht gelesen werden kann. Wenn diese Funktion aktiviert ist, wird ein URL-Parameter "pk_vid" angehängt, der die Besucher-ID enthält, wenn ein Benutzer auf eine URL klickt, die zu einer Deiner Domains gehört. Damit diese Funktion funktioniert, musst Du auch in Deinen PS Stats-Webseiten-Einstellungen konfigurieren, welche Domains als lokal behandelt werden sollen.', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
 
-		$psstats_form->show_checkbox( 'force_post', esc_html__( 'Force POST requests', 'psstats' ), esc_html__( 'When enabled, Psstats will always use POST requests. This can be helpful should you experience for example HTTP 414 URI too long errors in your tracking code.', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_checkbox( 'force_post', esc_html__( 'POST-Anfragen erzwingen', 'psstats' ), esc_html__( 'When enabled, Psstats will always use POST requests. This can be helpful should you experience for example HTTP 414 URI too long errors in your tracking code.', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
 
-		$psstats_form->show_checkbox( 'track_feed', esc_html__( 'Track RSS feeds', 'psstats' ), esc_html__( 'Enable to track posts in feeds via tracking pixel.', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager' );
+		$psstats_form->show_checkbox( 'track_feed', esc_html__( 'RSS-Feeds verfolgen', 'psstats' ), esc_html__( 'Aktiviere das Verfolgen von Beiträgen in Feeds über Tracking-Pixel.', 'psstats' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager' );
 
-		$psstats_form->show_checkbox( 'track_feed_addcampaign', esc_html__( 'Track RSS feed links as campaign', 'psstats' ), esc_html__( 'This will add Psstats campaign parameters to the RSS feed links.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/tracking-campaigns/" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager', true, 'jQuery(\'tr.psstats-feed_campaign-option\').toggle(\'hidden\');' );
+		$psstats_form->show_checkbox( 'track_feed_addcampaign', esc_html__( 'Verfolge RSS-Feed-Links als Kampagne', 'psstats' ), esc_html__( 'Dadurch werden die PS Stats-Kampagnenparameter zu den RSS-Feed-Links hinzugefügt.', 'psstats' ) . ' ' . sprintf( esc_html__( 'Siehe %1$sPS Stats Dokumentation%2$s.', 'psstats' ), '<a https://n3rds.work/docs/ps-stats-tracking-von-marketingkampagnen/" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager', true, 'jQuery(\'tr.psstats-feed_campaign-option\').toggle(\'hidden\');' );
 
-		$psstats_form->show_input( 'track_feed_campaign', esc_html__( 'RSS feed campaign', 'psstats' ), esc_html__( 'Keyword: post name.', 'psstats' ), $psstats_is_not_generated_tracking || ! $settings->get_global_option( 'track_feed_addcampaign' ), $psstats_full_generated_tracking_group . ' psstats-feed_campaign-option psstats-track-option-tagmanager' );
+		$psstats_form->show_input( 'track_feed_campaign', esc_html__( 'RSS-Feed-Kampagne', 'psstats' ), esc_html__( 'Schlagwort: Beitragsname.', 'psstats' ), $psstats_is_not_generated_tracking || ! $settings->get_global_option( 'track_feed_addcampaign' ), $psstats_full_generated_tracking_group . ' psstats-feed_campaign-option psstats-track-option-tagmanager' );
 
-		$psstats_form->show_input( 'track_heartbeat', esc_html__( 'Enable heartbeat timer', 'psstats' ), __( 'Enable a heartbeat timer to get more accurate visit lengths by sending periodical HTTP ping requests as long as the site is opened. Enter the time between the pings in seconds (Psstats default: 15) to enable or 0 to disable this feature. <strong>Note:</strong> This will cause a lot of additional HTTP requests on your site.', 'psstats' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_input( 'track_heartbeat', esc_html__( 'Heartbeat-Timer aktivieren', 'psstats' ), __( 'Aktiviere einen Heartbeat-Timer, um genauere Besuchszeiten zu erhalten, indem Du regelmäßige HTTP-Ping-Anfragen sendest, solange die Webseite geöffnet ist. Gib die Zeit zwischen den Pings in Sekunden (Psstats-Standard: 15) ein, um diese Funktion zu aktivieren, oder 0, um diese Funktion zu deaktivieren. <strong>Hinweis:</strong> Dies führt zu vielen zusätzlichen HTTP-Anfragen auf Deiner Website.', 'psstats' ), $psstats_is_not_generated_tracking, $psstats_full_generated_tracking_group );
 
 		$psstats_form->show_select(
 			'track_user_id',
-			__( 'User ID Tracking', 'psstats' ),
+			__( 'Benutzer-ID-Tracking', 'psstats' ),
 			array(
-				'disabled'    => esc_html__( 'Disabled', 'psstats' ),
-				'uid'         => esc_html__( 'WP User ID', 'psstats' ),
-				'email'       => esc_html__( 'Email Address', 'psstats' ),
-				'username'    => esc_html__( 'Username', 'psstats' ),
-				'displayname' => esc_html__( 'Display Name (Not Recommended!)', 'psstats' ),
+				'disabled'    => esc_html__( 'Deaktiviert', 'psstats' ),
+				'uid'         => esc_html__( 'WP-Benutzer-ID', 'psstats' ),
+				'email'       => esc_html__( 'Email Addresse', 'psstats' ),
+				'username'    => esc_html__( 'Benutzername', 'psstats' ),
+				'displayname' => esc_html__( 'Anzeigename (nicht empfohlen!)', 'psstats' ),
 			),
-			__( 'When a user is logged in to WordPress, track their &quot;User ID&quot;. You can select which field from the User\'s profile is tracked as the &quot;User ID&quot;. When enabled, Tracking based on Email Address is recommended.', 'psstats' ),
+			__( 'Wenn ein Benutzer bei WordPress angemeldet ist, verfolge seine &quot;Benutzer-ID&quot;. Du kannst auswählen, welches Feld aus dem Benutzerprofil als "Benutzer-ID" verfolgt wird. Wenn aktiviert, wird Tracking basierend auf E-Mail-Adresse empfohlen.', 'psstats' ),
 			'',
 			$psstats_is_not_tracking,
 			$psstats_full_generated_tracking_group . ' psstats-track-option-tagmanager'
 		);
 
-		$psstats_form->show_checkbox( 'track_datacfasync', esc_html__( 'Add data-cfasync=false', 'psstats' ), esc_html__( 'Adds data-cfasync=false to the script tag, e.g., to ask Rocket Loader to ignore the script.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sCloudFlare Knowledge Base%2$s.', 'psstats' ), '<a href="https://support.cloudflare.com/hc/en-us/articles/200169436-How-can-I-have-Rocket-Loader-ignore-my-script-s-in-Automatic-Mode-" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . '  psstats-track-option-tagmanager' );
+		$psstats_form->show_checkbox( 'track_datacfasync', esc_html__( 'data-cfasync=false hinzufügen', 'psstats' ), esc_html__( 'Fügt data-cfasync=false zum Skript-Tag hinzu, um z.B. Rocket Loader aufzufordern, das Skript zu ignorieren.', 'psstats' ) . ' ' . sprintf( esc_html__( 'Siehe %1$sCloudFlare Knowledge Base%2$s.', 'psstats' ), '<a href="https://support.cloudflare.com/hc/en-us/articles/200169436-How-can-I-have-Rocket-Loader-ignore-my-script-s-in-Automatic-Mode-" rel="noreferrer noopener" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group . '  psstats-track-option-tagmanager' );
 
-		$psstats_submit_button = '<tr><td colspan="2"><p class="submit"><input name="Submit" type="submit" class="button-primary" value="' . esc_attr__( 'Save Changes', 'psstats' ) . '" /></p></td></tr>';
+		$psstats_submit_button = '<tr><td colspan="2"><p class="submit"><input name="Submit" type="submit" class="button-primary" value="' . esc_attr__( 'Änderungen speichern', 'psstats' ) . '" /></p></td></tr>';
 
-		$psstats_form->show_input( 'set_download_extensions', esc_html__( 'Define all file types for download tracking', 'psstats' ), esc_html__( 'Replace Psstats\'s default file extensions for download tracking, divided by a vertical bar (&#124;). Leave blank to keep Psstats\'s default settings.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats documentation%2$s.', 'psstats' ), '<a href="https://developer.psstats.org/guides/tracking-javascript-guide#file-extensions-for-tracking-downloads" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_input( 'set_download_extensions', esc_html__( 'Definiere alle Dateitypen für das Download-Tracking', 'psstats' ), esc_html__( 'Ersetze die standardmäßigen Dateierweiterungen von PS Stats für das Download-Tracking, geteilt durch einen vertikalen Balken (&#124;). Leer lassen, um die Standardeinstellungen von PS Stats beizubehalten.', 'psstats' ) . ' ' . sprintf( esc_html__( 'Siehe %1$sPS Stats Dokumentation%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client#download-and-outlink-tracking" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
 
-		$psstats_form->show_input( 'set_download_classes', esc_html__( 'Set classes to be treated as downloads', 'psstats' ), esc_html__( 'Set classes to be treated as downloads (in addition to piwik_download), divided by a vertical bar (&#124;). Leave blank to keep Psstats\'s default settings.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats JavaScript Tracking Client reference%2$s.', 'psstats' ), '<a href="https://developer.psstats.org/api-reference/tracking-javascript" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_input( 'set_download_classes', esc_html__( 'Lege fest, dass Klassen als Downloads behandelt werden', 'psstats' ), esc_html__( 'Lege Klassen fest, die als Downloads behandelt werden sollen (zusätzlich zu piwik_download), geteilt durch einen vertikalen Strich (&#124;). Leer lassen, um die Standardeinstellungen von PS Stats beizubehalten.', 'psstats' ) . ' ' . sprintf( esc_html__( 'Siehe %1$sPS Stats JavaScript-Tracking-Client-Referenz%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
 
-		$psstats_form->show_input( 'set_link_classes', esc_html__( 'Set classes to be treated as outlinks', 'psstats' ), esc_html__( 'Set classes to be treated as outlinks (in addition to piwik_link), divided by a vertical bar (&#124;). Leave blank to keep Psstats\'s default settings.', 'psstats' ) . ' ' . sprintf( esc_html__( 'See %1$sPsstats JavaScript Tracking Client reference%2$s.', 'psstats' ), '<a href="https://developer.psstats.org/api-reference/tracking-javascript" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
+		$psstats_form->show_input( 'set_link_classes', esc_html__( 'Lege fest, dass Klassen als Outlinks behandelt werden', 'psstats' ), esc_html__( 'Lege Klassen fest, die als Outlinks behandelt werden sollen (zusätzlich zu piwik_link), geteilt durch einen vertikalen Strich (&#124;). Leer lassen, um die Standardeinstellungen von PS Stats beizubehalten.', 'psstats' ) . ' ' . sprintf( esc_html__( 'Siehe %1$sPS Stats JavaScript-Tracking-Client-Referenz%2$s.', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client" target="_BLANK">', '</a>' ), $psstats_is_not_tracking, $psstats_full_generated_tracking_group );
 
-		$psstats_form->show_textarea( 'noscript_code', esc_html__( 'Noscript code', 'psstats' ), 2, 'This is a preview of your &lt;noscript&gt; code which is part of your tracking code. Will only show if the noscript feature is enabled.', $psstats_is_not_tracking, 'psstats-track-option psstats-track-option-default  psstats-track-option-manually', true, '', ( $settings->get_global_option( 'track_mode' ) !== 'manually' ), false );
+		$psstats_form->show_textarea( 'noscript_code', esc_html__( 'Noscript Code', 'psstats' ), 2, 'Dies ist eine Vorschau Deines &lt;noscript&gt; Code, der Teil Deines Tracking-Codes ist. Wird nur angezeigt, wenn die Noscript-Funktion aktiviert ist.', $psstats_is_not_tracking, 'psstats-track-option psstats-track-option-default  psstats-track-option-manually', true, '', ( $settings->get_global_option( 'track_mode' ) !== 'manually' ), false );
 
-		$psstats_form->show_checkbox( 'track_noscript', __( 'Add &lt;noscript&gt;', 'psstats' ), __( 'Adds the &lt;noscript&gt; code to your footer.', 'psstats' ) . ' This can be useful if you have a lot of visitors that have JavaScript disabled.', $psstats_is_not_tracking, 'psstats-track-option psstats-track-option-default  psstats-track-option-manually' );
+		$psstats_form->show_checkbox( 'track_noscript', __( '&lt;noscript&gt; hinzufügen', 'psstats' ), __( 'Fügt den &lt;noscript&gt; Code in deine Fußzeile ein.', 'psstats' ) . ' Dies kann nützlich sein, wenn Du viele Besucher hast, bei denen JavaScript deaktiviert ist.', $psstats_is_not_tracking, 'psstats-track-option psstats-track-option-default  psstats-track-option-manually' );
 
 		$psstats_form->show_select(
 			'force_protocol',
-			__( 'Force Psstats to use a specific protocol', 'psstats' ),
+			__( 'Zwinge PS Stats, ein bestimmtes Protokoll zu verwenden', 'psstats' ),
 			array(
-				'disabled' => esc_html__( 'Disabled (default)', 'psstats' ),
+				'disabled' => esc_html__( 'Deaktiviert (Standard)', 'psstats' ),
 				'https'    => esc_html__( 'https (SSL)', 'psstats' ),
 			),
-			__( 'Choose if you want to explicitly want to force Psstats to use HTTP or HTTPS. Does not work with a CDN URL.', 'psstats' ),
+			__( 'Wähle aus, ob Du PS Stats explizit zwingen möchtest, HTTP oder HTTPS zu verwenden. Funktioniert nicht mit einer CDN-URL.', 'psstats' ),
 			'',
 			$psstats_is_not_tracking,
 			$psstats_full_generated_tracking_group . ' psstats-track-option-tagmanager'
 		);
 		$psstats_form->show_select(
 			'track_codeposition',
-			__( 'JavaScript code position', 'psstats' ),
+			__( 'JavaScript-Codeposition', 'psstats' ),
 			array(
 				'footer' => esc_html__( 'Footer', 'psstats' ),
 				'header' => esc_html__( 'Header', 'psstats' ),
 			),
-			__( 'Choose whether the JavaScript code is added to the footer or the header.', 'psstats' ),
+			__( 'Wähle aus, ob der JavaScript-Code der Fußzeile oder der Kopfzeile hinzugefügt wird.', 'psstats' ),
 			'',
 			$psstats_is_not_tracking,
 			'psstats-track-option psstats-track-option-default  psstats-track-option-tagmanager psstats-track-option-manually'
 		);
 		$psstats_form->show_select(
 			'track_api_endpoint',
-			__( 'Endpoint for HTTP Tracking API', 'psstats' ),
+			__( 'Endpunkt für HTTP-Tracking-API', 'psstats' ),
 			array(
-				'default' => esc_html__( 'Default', 'psstats' ),
-				'restapi' => esc_html__( 'Through WordPress Rest API', 'psstats' ),
+				'default' => esc_html__( 'Standard', 'psstats' ),
+				'restapi' => esc_html__( 'Über WordPress Rest API', 'psstats' ),
 			),
-			__( 'By default the HTTP Tracking API points to your Psstats plugin directory "' . esc_html( $psstats_paths->get_tracker_api_url_in_psstats_dir() ) . '". You can choose to use the WP Rest API (' . esc_html( $psstats_paths->get_tracker_api_rest_api_endpoint() ) . ') instead for example to hide psstats.php or if the other URL doesn\'t work for you. Note: If the tracking mode "Tag Manager" is selected, then this URL currently only applies to the feed tracking.', 'psstats' ),
+			__( 'Standardmäßig zeigt die HTTP-Tracking-API auf Dein PS Stats-Plugin-Verzeichnis "' . esc_html( $psstats_paths->get_tracker_api_url_in_psstats_dir() ) . '". Du kannst stattdessen die WP Rest API (' . esc_html( $psstats_paths->get_tracker_api_rest_api_endpoint() ) . ') verwenden, um beispielsweise psstats.php auszublenden oder wenn die andere URL für Dich nicht funktioniert. Hinweis: Wenn der Tracking-Modus "Tag Manager" ausgewählt ist, gilt diese URL derzeit nur für das Feed-Tracking.', 'psstats' ),
 			'',
 			$psstats_is_not_tracking,
 			$psstats_full_generated_tracking_group . ' psstats-track-option-manually psstats-track-option-tagmanager'
@@ -206,29 +206,29 @@ if ( $was_updated ) {
 
 		$psstats_form->show_select(
 			'track_js_endpoint',
-			__( 'Endpoint for JavaScript tracker', 'psstats' ),
+			__( 'Endpunkt für JavaScript-Tracker', 'psstats' ),
 			array(
-				'default' => esc_html__( 'Default', 'psstats' ),
-				'restapi' => esc_html__( 'Through WordPress Rest API (slower)', 'psstats' ),
-				'plugin' => esc_html__( 'Plugin (an alternative JS file if the default is blocked by the webserver)', 'psstats' ),
+				'default' => esc_html__( 'Standard', 'psstats' ),
+				'restapi' => esc_html__( 'Über WordPress Rest API (langsamer)', 'psstats' ),
+				'plugin' => esc_html__( 'Plugin (eine alternative JS-Datei, wenn der Standard vom Webserver blockiert wird)', 'psstats' ),
 			),
-			__( 'By default the JS tracking code will be loaded from "' . esc_html( $psstats_paths->get_js_tracker_url_in_psstats_dir() ) . '". You can choose to serve the JS file through the WP Rest API (' . esc_html( $psstats_paths->get_js_tracker_rest_api_endpoint() ) . ') for example to hide psstats.js. Please note that this means every request to the JavaScript file will launch WordPress PHP and therefore will be slower compared to your webserver serving the JS file directly. Using the "Plugin" method will cause issues with our paid Heatmap and Session Recording, Form Analytics, and Media Analyics plugin.', 'psstats' ),
+			__( 'Standardmäßig wird der JS-Tracking-Code von "' . esc_html( $psstats_paths->get_js_tracker_url_in_psstats_dir() ) . '" geladen. Du kannst die JS-Datei über die WP Rest API bereitstellen (' . esc_html( $psstats_paths->get_js_tracker_rest_api_endpoint() ) . '), um beispielsweise psstats.js auszublenden. Bitte beachte, dass dies bedeutet, dass jede Anfrage an die JavaScript-Datei WordPress PHP startet und daher langsamer ist als Dein Webserver, der die JS-Datei direkt bereitstellt.', 'psstats' ),
 			'',
 			$psstats_is_not_tracking,
 			$psstats_full_generated_tracking_group
 		);
 
-		$psstats_form->show_headline(esc_html__('For Developers', 'psstats'), 'psstats-track-option psstats-track-option-default psstats-track-option-disabled psstats-track-option-manually psstats-track-option-tagmanager');
+		$psstats_form->show_headline(esc_html__('Für Entwickler', 'psstats'), 'psstats-track-option psstats-track-option-default psstats-track-option-disabled psstats-track-option-manually psstats-track-option-tagmanager');
 
 		$psstats_form->show_select(
 			'tracker_debug',
-			__( 'Tracker Debug Mode', 'psstats' ),
+			__( 'Tracker-Debug-Modus', 'psstats' ),
 			array(
-				'disabled' => esc_html__( 'Disabled (recommended)', 'psstats' ),
-				'always'    => esc_html__( 'Always enabled', 'psstats' ),
-				'on_demand'    => esc_html__( 'Enabled on demand', 'psstats' ),
+				'disabled' => esc_html__( 'Deaktiviert (empfohlen)', 'psstats' ),
+				'always'    => esc_html__( 'Immer aktiviert', 'psstats' ),
+				'on_demand'    => esc_html__( 'Bei Bedarf aktiviert', 'psstats' ),
 			),
-			__( 'For security and privacy reasons you should only enable this setting for as short time of a time as possible.', 'psstats' ),
+			__( 'Aus Sicherheits- und Datenschutzgründen solltest Du diese Einstellung nur so kurz wie möglich aktivieren.', 'psstats' ),
 			'',
 			$psstats_is_not_tracking,
 			$psstats_full_generated_tracking_group . ' psstats-track-option-disabled psstats-track-option-manually psstats-track-option-tagmanager'
@@ -243,12 +243,12 @@ if ( $was_updated ) {
 
 <?php if ( $psstats_is_not_tracking && ! $settings->is_network_enabled() ) { // Can't show it for multisite as idsite and url is always different. ?>
 <div id="psstats_default_tracking_code">
-	<h2><?php esc_html_e( 'JavaScript tracking code', 'psstats' ); ?></h2>
+	<h2><?php esc_html_e( 'JavaScript-Tracking-Code', 'psstats' ); ?></h2>
 	<p>
-		<?php echo sprintf( esc_html__( 'Wanting to embed the tracking code manually into your site or using a different plugin? No problem! Simply copy/paste below tracking code. Want to adjust it? %1$sCheck out our developer documentation.%2$s', 'psstats' ), '<a href="https://developer.psstats.org/guides/tracking-javascript-guide" target="_blank" rel="noreferrer noopener">', '</a>' ); ?>
+		<?php echo sprintf( esc_html__( 'Möchtest Du den Tracking-Code manuell in Deine Webseite einbetten oder ein anderes Plugin verwenden? Kein Problem! Kopiere einfach den folgenden Tracking-Code und füge ihn ein. Möchtest Du es anpassen? %1$sSieh Dir unsere Entwicklerdokumentation an.%2$s', 'psstats' ), '<a href="https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client" target="_blank" rel="noreferrer noopener">', '</a>' ); ?>
 	</p>
 	<?php echo '<pre><textarea>' . esc_html( implode( ";\n", explode( ';', $psstats_default_tracking_code['script'] ) ) ) . '</textarea></pre>'; ?>
-	<h3><?php esc_html_e( 'NoScript tracking code', 'psstats' ); ?></h3>
+	<h3><?php esc_html_e( 'NoScript-Tracking-Code', 'psstats' ); ?></h3>
 	   <?php echo '<pre><textarea class="no_script">' . esc_html( $psstats_default_tracking_code['noscript'] ) . '</textarea></pre>'; ?>
 </div>
 <?php } ?>

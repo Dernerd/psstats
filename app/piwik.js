@@ -1,5 +1,5 @@
 /*!!
- * Psstats - free/libre analytics platform
+ * PS Stats - kostenlose/freie Analyseplattform
  *
  * JavaScript tracking client
  *
@@ -76,7 +76,7 @@ if (typeof window.Psstats !== "object") {
                                 } else { if (ao) { ah.push(ao); break } }
                             }
                             if (aq[aw]) { aq[aw].apply(aq, ap) } else {
-                                var ay = "The method '" + aw + '\' was not found in "_paq" variable.  Please have a look at the Psstats tracker documentation: https://developer.psstats.org/api-reference/tracking-javascript';
+                                var ay = "The method '" + aw + '\' was not found in "_paq" variable.  Please have a look at the Psstats tracker documentation: https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client';
                                 ak(ay);
                                 if (!ax) { throw new TypeError(ay) }
                             }
@@ -2166,7 +2166,7 @@ if (typeof window.Psstats !== "object") {
                         if (ao === ap) {
                             af(au[ar]);
                             delete au[ar];
-                            if (av[ap] > 1 && ap !== "addTracker" && ap !== "enableLinkTracking") { ak("The method " + ap + ' is registered more than once in "_paq" variable. Only the last call has an effect. Please have a look at the multiple Psstats trackers documentation: https://developer.psstats.org/guides/tracking-javascript-guide#multiple-piwik-trackers') }
+                            if (av[ap] > 1 && ap !== "addTracker" && ap !== "enableLinkTracking") { ak("The method " + ap + ' is registered more than once in "_paq" variable. Only the last call has an effect. Please have a look at the multiple Psstats trackers documentation: https://n3rds.work/docs/ps-stats-entwickler-javascript-tracking-client#multiple-piwik-trackers') }
                             av[ap]++
                         }
                     }

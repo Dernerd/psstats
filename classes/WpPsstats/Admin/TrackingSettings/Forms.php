@@ -1,6 +1,6 @@
 <?php
 /**
- * Psstats - free/libre analytics platform
+ * PS Stats - kostenlose/freie Analyseplattform
  *
  * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
@@ -42,7 +42,7 @@ class Forms {
 	 * @return string full description HTML
 	 */
 	public function get_description( $id, $description, $hide_description = true ) {
-		$title = esc_html__( 'Click to read help', 'psstats' );
+		$title = esc_html__( 'Klicke hier, um die Hilfe zu lesen', 'psstats' );
 
 		return sprintf( '<span class="dashicons dashicons-editor-help" title="%1$s" style="cursor: pointer;" onclick="jQuery(\'#%2$s-desc\').toggleClass(\'hidden\');"></span> <p class="description' . ( $hide_description ? ' hidden' : '' ) . '" id="%2$s-desc">%3$s</p>', $title, esc_attr( $id ), $description );
 	}

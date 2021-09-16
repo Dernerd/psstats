@@ -1,7 +1,7 @@
 /* Psstats Javascript - cb=482038ef2a3202cc80e97d43c495f456*/
 
 /*!
- * Psstats - free/libre analytics platform
+ * PS Stats - kostenlose/freie Analyseplattform
  *
  * @link http://psstats.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
@@ -4563,5 +4563,7 @@
             h = "";
         if (f) h = "\u221e";
         else {
-            g = hh(k);
-            
+            g = hh(k)
+        }
+    }
+});

@@ -1,5 +1,5 @@
 /*!
- * Psstats - free/libre analytics platform
+ * PS Stats - kostenlose/freie Analyseplattform
  *
  * Psstats Tag Manager
  *

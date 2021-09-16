@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name: Psstats Analytics - Ethische Statistiken. Mächtige Einblicke.
+ * Plugin Name: PS Stats Analytics - Ethische Statistiken. Mächtige Einblicke.
  * Description: Die Piestingtaler Google Analytics-Alternative, welche Dir die volle Kontrolle über Deine Daten gibt und die Privatsphäre Deiner Nutzer schützt. Kostenlos, sicher und offen.
  * Author: DerN3rd
  * Author URI: https://n3rds.work
- * Version: 4.3.5
+ * Version: 4.3.6
  * Domain Path: /languages
  * WC requires at least: 2.4.0
  * WC tested up to: 5.2.0
  *
- * Psstats - free/libre analytics platform
+ * PS Stats - free/libre analytics platform
  *
  * @link https://n3rds.work
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
